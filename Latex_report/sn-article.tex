@@ -1,0 +1,252 @@
+%Version 3.1 December 2024
+% See section 11 of the User Manual for version history
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                 %%
+%% Please do not use \input{...} to include other tex files.       %%
+%% Submit your LaTeX manuscript as one .tex document.              %%
+%%                                                                 %%
+%% All additional figures and files should be attached             %%
+%% separately and not embedded in the \TeX\ document itself.       %%
+%%                                                                 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%\documentclass[referee,sn-basic]{sn-jnl}% referee option is meant for double line spacing
+
+%%=======================================================%%
+%% to print line numbers in the margin use lineno option %%
+%%=======================================================%%
+
+%%\documentclass[lineno,pdflatex,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
+
+%%=========================================================================================%%
+%% the documentclass is set to pdflatex as default. You can delete it if not appropriate.  %%
+%%=========================================================================================%%
+
+%%\documentclass[sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
+
+%%Note: the following reference styles support Namedate and Numbered referencing. By default the style follows the most common style. To switch between the options you can add or remove Numbered in the optional parenthesis. 
+%%The option is available for: sn-basic.bst, sn-chicago.bst%  
+ 
+%%\documentclass[pdflatex,sn-nature]{sn-jnl}% Style for submissions to Nature Portfolio journals
+%%\documentclass[pdflatex,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
+\documentclass[pdflatex,sn-mathphys-num]{sn-jnl}% Math and Physical Sciences Numbered Reference Style
+%%\documentclass[pdflatex,sn-mathphys-ay]{sn-jnl}% Math and Physical Sciences Author Year Reference Style
+%%\documentclass[pdflatex,sn-aps]{sn-jnl}% American Physical Society (APS) Reference Style
+%%\documentclass[pdflatex,sn-vancouver-num]{sn-jnl}% Vancouver Numbered Reference Style
+%%\documentclass[pdflatex,sn-vancouver-ay]{sn-jnl}% Vancouver Author Year Reference Style
+%%\documentclass[pdflatex,sn-apa]{sn-jnl}% APA Reference Style
+%%\documentclass[pdflatex,sn-chicago]{sn-jnl}% Chicago-based Humanities Reference Style
+
+%%%% Standard Packages
+%%<additional latex packages if required can be included here>
+
+\usepackage{graphicx}%
+\usepackage{multirow}%
+\usepackage{amsmath,amssymb,amsfonts}%
+\usepackage{amsthm}%
+\usepackage{mathrsfs}%
+\usepackage[title]{appendix}%
+\usepackage{xcolor}%
+\usepackage{textcomp}%
+\usepackage{manyfoot}%
+\usepackage{booktabs}%
+\usepackage{algorithm}%
+\usepackage{algorithmicx}%
+\usepackage{algpseudocode}%
+\usepackage{listings}%
+%%%%
+
+%%%%%=============================================================================%%%%
+%%%%  Remarks: This template is provided to aid authors with the preparation
+%%%%  of original research articles intended for submission to journals published 
+%%%%  by Springer Nature. The guidance has been prepared in partnership with 
+%%%%  production teams to conform to Springer Nature technical requirements. 
+%%%%  Editorial and presentation requirements differ among journal portfolios and 
+%%%%  research disciplines. You may find sections in this template are irrelevant 
+%%%%  to your work and are empowered to omit any such section if allowed by the 
+%%%%  journal you intend to submit to. The submission guidelines and policies 
+%%%%  of the journal take precedence. A detailed User Manual is available in the 
+%%%%  template package for technical guidance.
+%%%%%=============================================================================%%%%
+
+%% as per the requirement new theorem styles can be included as shown below
+\theoremstyle{thmstyleone}%
+\newtheorem{theorem}{Theorem}%  meant for continuous numbers
+%%\newtheorem{theorem}{Theorem}[section]% meant for sectionwise numbers
+%% optional argument [theorem] produces theorem numbering sequence instead of independent numbers for Proposition
+\newtheorem{proposition}[theorem]{Proposition}% 
+%%\newtheorem{proposition}{Proposition}% to get separate numbers for theorem and proposition etc.
+
+\theoremstyle{thmstyletwo}%
+\newtheorem{example}{Example}%
+\newtheorem{remark}{Remark}%
+
+\theoremstyle{thmstylethree}%
+\newtheorem{definition}{Definition}%
+
+\raggedbottom
+%%\unnumbered% uncomment this for unnumbered level heads
+
+\begin{document}
+
+\title[Proxy-Lag Cascade Ensemble for EV Charging Forecast]{Proxy-Lag Cascade Ensemble: A Multi-Horizon Architecture for EV Charging Utilization Forecasting}
+
+\author*[1]{\fnm{Xuan-Thanh} \sur{Trinh}}\email{thanh.tx@hust.edu.vn}
+
+\affil*[1]{\orgdiv{School of Electrical Engineering}, \orgname{Hanoi University of Science and Technology}, \orgaddress{\city{Hanoi}, \country{Vietnam}}}
+
+\abstract{The rapid expansion of Electric Vehicle (EV) charging infrastructure introduces severe non-linear fluctuations in grid demand, necessitating highly accurate utilization forecasting models. Traditional forecasting methods often fail to capture abrupt load peaks or succumb to phase lag when attempting multi-horizon predictions. In this paper, we propose a novel Proxy-Lag Cascade Ensemble architecture inspired by Model Predictive Control (MPC) principles. The architecture consists of a 24-hour Rule-Based Two-Stage trajectory model and a 1-hour Residual Corrector model. By employing Target Power Transformation (TPT) alongside a mathematically formulated Custom Peak Loss function, our methodology effectively captures extreme peak behaviors while strictly avoiding data leakage. We demonstrate that tree-based tabular models, specifically XGBoost, achieve a state-of-the-art RMSE of 0.0664, surpassing both deep learning approaches and traditional time-series baselines. The robust theoretical alignment between the macro-level predictive trajectory and micro-level residual correction establishes a new standard for EV demand forecasting, ensuring stability for modern smart grids.}
+
+\keywords{Electric Vehicle, Load Forecasting, XGBoost, Residual Boosting, Phase Lag, Two-Stage Architecture}
+
+\maketitle
+
+\section{Introduction}\label{sec1}
+
+% The Problem
+% The Gap
+% Literature Review & Related Works
+% Our Contributions
+
+\section{Material and Methodology}\label{sec2}
+
+\subsection{Data Preprocessing and Feature Engineering}\label{subsec2_1}
+% Data Cleaning & Resampling
+% Baseline Feature Engineering Rationale
+% Data Splitting Strategy and Normalization
+
+\subsection{Data Characteristic Analysis and Algorithm Selection}\label{subsec2_2}
+% Small Data & Camel Peak
+% Theoretical Rationale for Tabular Models
+% Limitations of Baseline Models
+
+\subsection{The Mathematics of Peak Catching: Custom Loss and Target Power Transformation (TPT)}\label{subsec2_3}
+% Rejection of Input Manipulation (SMOGN)
+% Custom Peak Loss Formulation
+% Target Power Transformation
+
+\subsection{Overcoming the Valley: The Two-Stage Rule-Based Architecture}\label{subsec2_4}
+% Occam's Razor vs. Classifier
+% Rule-Based Trigger and the 0.55 Threshold
+% Operational Formulation (Piecewise Function)
+
+\subsection{Compensation Thinking: The 24h Horizon Limitation}\label{subsec2_5}
+% Blind Spot of the 24h Horizon
+
+\subsection{Building the 1h Corrector Layer: From Failed Attempts to the Proxy-Lag Cascade}\label{subsec2_6}
+% Rejection of Failed Methods (TPT/1h, Kinematic Features, DTW Loss)
+% The Breakthrough of Residual Boosting
+% The Ultimate Solution: Proxy-Lag Cascade
+
+\section{Results and Discussion}\label{sec3}
+
+\subsection{Superiority of Tabular Models over Deep Learning}\label{subsec3_1}
+% RMSE Comparison
+
+\subsection{Performance of Peak-Catching Mathematics and Two-Stage Architecture}\label{subsec3_2}
+% TPT Impact
+% Perfection of the Two-Stage Rule-Based Model
+
+\subsection{Breaking Phase Lag with Residual and Proxy-Lag Integration}\label{subsec3_3}
+% The Phase Lag Obsession
+% Residual Boosting Breakthrough
+% The Proxy-Lag Cascade Conclusion
+
+\subsection{State-of-the-Art Performance and Deployment Discussion}\label{subsec3_4}
+% SOTA RMSE (0.0664)
+% Discussion on Production Readiness
+
+\section{Conclusion}\label{sec4}
+% Summary of Contributions
+% Future Works 
+
+\backmatter
+
+\bmhead{Supplementary information}
+
+If your article has accompanying supplementary file/s please state so here. 
+
+Authors reporting data from electrophoretic gels and blots should supply the full unprocessed scans for key as part of their Supplementary information. This may be requested by the editorial team/s if it is missing.
+
+Please refer to Journal-level guidance for any specific requirements.
+
+\bmhead{Acknowledgements}
+
+Acknowledgements are not compulsory. Where included they should be brief. Grant or contribution numbers may be acknowledged.
+
+Please refer to Journal-level guidance for any specific requirements.
+
+\section*{Declarations}
+
+Some journals require declarations to be submitted in a standardised format. Please check the Instructions for Authors of the journal to which you are submitting to see if you need to complete this section. If yes, your manuscript must contain the following sections under the heading `Declarations':
+
+\begin{itemize}
+\item Funding
+\item Conflict of interest/Competing interests (check journal-specific guidelines for which heading to use)
+\item Ethics approval and consent to participate
+\item Consent for publication
+\item Data availability 
+\item Materials availability
+\item Code availability 
+\item Author contribution
+\end{itemize}
+
+\noindent
+If any of the sections are not relevant to your manuscript, please include the heading and write `Not applicable' for that section. 
+
+%%===================================================%%
+%% For presentation purpose, we have included        %%
+%% \bigskip command. Please ignore this.             %%
+%%===================================================%%
+\bigskip
+\begin{flushleft}%
+Editorial Policies for:
+
+\bigskip\noindent
+Springer journals and proceedings: \url{https://www.springer.com/gp/editorial-policies}
+
+\bigskip\noindent
+Nature Portfolio journals: \url{https://www.nature.com/nature-research/editorial-policies}
+
+\bigskip\noindent
+\textit{Scientific Reports}: \url{https://www.nature.com/srep/journal-policies/editorial-policies}
+
+\bigskip\noindent
+BMC journals: \url{https://www.biomedcentral.com/getpublished/editorial-policies}
+\end{flushleft}
+
+\begin{appendices}
+
+\section{Section title of first appendix}\label{secA1}
+
+An appendix contains supplementary information that is not an essential part of the text itself but which may be helpful in providing a more comprehensive understanding of the research problem or it is information that is too cumbersome to be included in the body of the paper.
+
+%%=============================================%%
+%% For submissions to Nature Portfolio Journals %%
+%% please use the heading ``Extended Data''.   %%
+%%=============================================%%
+
+%%=============================================================%%
+%% Sample for another appendix section			       %%
+%%=============================================================%%
+
+%% \section{Example of another appendix section}\label{secA2}%
+%% Appendices may be used for helpful, supporting or essential material that would otherwise 
+%% clutter, break up or be distracting to the text. Appendices can consist of sections, figures, 
+%% tables and equations etc.
+
+\end{appendices}
+
+%%===========================================================================================%%
+%% If you are submitting to one of the Nature Portfolio journals, using the eJP submission   %%
+%% system, please include the references within the manuscript file itself. You may do this  %%
+%% by copying the reference list from your .bbl file, paste it into the main manuscript .tex %%
+%% file, and delete the associated \verb+\bibliography+ commands.                            %%
+%%===========================================================================================%%
+
+\bibliography{sn-bibliography}% common bib file
+%% if required, the content of .bbl file can be included here once bbl is generated
+%%\input sn-article.bbl
+
+\end{document}

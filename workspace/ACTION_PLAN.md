@@ -55,22 +55,45 @@ Xây dựng một hệ thống phân tích, dự báo và so sánh các mô hìn
   - **Description:** Cập nhật `evaluate.py` xuất 8 hình (7 ngày liên tục và 7 ngày riêng) cho cả model Base và model SMOGN.
   - **Assigned:** `code_generator`
 
-- [ ] **Task 4.3: Triển khai cấm thuật Target Power Transformation (TPT)** (TODO)
+- [x] **Task 4.3: Triển khai cấm thuật Target Power Transformation (TPT)** (DONE)
   - **Description:** Lũy thừa bậc 3 target ($y^3$) trước khi train. Sửa Custom Loss threshold thành $0.7^3 = 0.343$. Căn bậc 3 ($y^{1/3}$) kết quả predict. Xuất 8 biểu đồ TPT.
   - **Assigned:** `code_generator`
 
+- [x] **Task 4.4: Xây dựng Rule-Based Two-Stage Model** (DONE)
+  - **Description:** Tối ưu hóa hệ thống từ 3 xuống 2 mô hình. Dùng Base Model làm Trigger (Nếu Base >= 0.55 -> Kích hoạt TPT). Giải quyết thung lũng lạc đà an toàn.
+  - **Assigned:** `code_generator`
+
+- [x] **Task 4.5: Xây dựng Exponential Decay Blending (SOTA)** (DONE)
+  - **Description:** Khắc phục Bướu lạc đà triệt để bằng cách Trộn hàm phân rã (Decay Weight) giữa MPC (t+1) và Two-Stage (t+24). Phá kỷ lục RMSE 0.0715.
+  - **Assigned:** `code_generator`
+
+- [x] **Task 4.6: Xây dựng mô hình Dự báo 1h (Corrector Support - Base)** (DONE)
+  - **Description:** Tạo thư mục `code_model_1h`, lấy phần xử lý dữ liệu từ code cũ. Chỉ tập trung so sánh LGBM và XGBoost cho dự báo `t+1` (Horizon = 1). Bước đầu chạy model base chưa dùng kỹ thuật nâng cao.
+  - **Assigned:** `code_generator`
+
+- [x] **Task 4.7: Tối ưu hóa mô hình Dự báo 1h (Hyper-tuning & Custom Techniques)** (DONE)
+  - **Description:** Chạy tuần tự 3 kỹ thuật nâng cao để phá vỡ giới hạn RMSE 0.0668 của mô hình t+1 (LGBM và XGBoost).
+  - [x] **4.7.1:** Áp dụng Custom Peak Loss Function. (DONE)
+  - [x] **4.7.2:** Áp dụng Target Power Transformation (TPT - $y^3$). (DONE)
+  - [x] **4.7.3:** Áp dụng dự báo biến thiên Delta ($\Delta y$). (DONE)
+  - **Assigned:** `code_generator`
+
+- [x] **Task 4.8: Khảo sát Nâng cao Đặc biệt cho mô hình 1h** (DONE)
+  - **Description:** Áp dụng các kỹ thuật SOTA để triệt tiêu Lag Effect.
+  - [x] **4.8.1:** Kinematic Features (Vận tốc, Gia tốc, Rolling). (DONE)
+  - [x] **4.8.2:** DTW Loss / Cân bằng trễ pha. (SKIPPED - Incompatible with Tree Gradients)
+  - [x] **4.8.3:** Ủy thác cho Sĩ quan Trinh sát (Researcher) tìm kiếm giải pháp đột phá trên Literature. (DONE)
+  - **Assigned:** `researcher`
+
+- [x] **Task 4.9: Kiến trúc Residual Boosting (The Gold Standard)** (DONE)
+  - **Description:** Xây dựng mô hình 1h dựa trên nguyên lý dự báo phần dư (Residual) sau khi đã triệt tiêu chu kỳ (Seasonal Baseline).
+  - **Assigned:** `code_generator`
+
+- [x] **Task 4.10: Tác chiến Kép (Ensemble 24h & 1h Residual)** (DONE)
+  - **Description:** Kết hợp mô hình 24h (Neo giữ chu kỳ) và 1h Residual (Bắt đỉnh đột biến) bằng phương pháp trung bình (0.5 - 0.5) để xem giới hạn RMSE có bị phá vỡ không.
+  - **Assigned:** `code_generator`
+
 ### Checkpoint: Core Features
-- [ ] Tất cả biểu đồ và số liệu đã sẵn sàng cho báo cáo.
-
-### Phase 3: Documentation & Q&A
-- [ ] **Task 5: Soạn thảo Báo cáo LaTeX**
-  - **Description:** Viết file `.tex` chuẩn 4 phần theo Mind Map của Tư lệnh.
-  - **Assigned:** `latex_writer`
-  - **Reviewer:** `english_teacher` & `domain_reviewer`
-  - **Acceptance criteria:**
-    - [ ] File PDF biên dịch thành công.
-    - [ ] Nội dung đầy đủ 4 phần (Intro, Material & Method, Results & Discussion, Conclusion).
-
 - [ ] **Task 6: Viết tài liệu Defense Q&A**
   - **Description:** Tổng hợp các câu hỏi bảo vệ đồ án: Tại sao chọn Custom Loss? Tại sao resample 1 giờ? So sánh LSTM vs XGBoost ở điểm nào?
   - **Assigned:** `general_expert`
