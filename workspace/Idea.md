@@ -39,5 +39,16 @@ Trong quá trình thiết kế đặc trưng (Feature Engineering), hội đồn
 - **Nguyên lý gốc:** Chỉ áp dụng Lag (1, 2, 24) và Rolling Window (3h, 6h) cho biến mục tiêu `utilization_rate` để tối ưu hóa sức mạnh nội tại (Target is King), giảm thiểu bùng nổ chiều dữ liệu (Curse of Dimensionality) và chống Overfitting.
 - **Tình huống mở rộng (Extension Cases):** Nếu cần đưa thêm dữ liệu ngoại lai vào để so sánh, mô hình sẽ CHỈ ưu tiên chọn 2 biến sau:
   1. **`traffic_congestion_index` (Chỉ số kẹt xe):** Áp dụng `Rolling 3h` để đo lường "Độ tích lũy kẹt xe/Cạn pin" của EV trên đường, dự báo làn sóng sạc đột biến sau khi thông xe.
-  2. **`current_price` (Giá điện hiện tại):** Áp dụng `Lag 1` hoặc `Price Diff` (Đạo hàm giá) để bắt "Cú sốc giá" (Price Shock). Sự sụt giảm giá đột ngột so với 1 giờ trước là Trigger tâm lý cực mạnh kích thích người dùng sạc xe.
 - Tất cả các biến khác (thời gian, sự kiện, thời tiết) đều bị loại khỏi danh sách làm Lag/Window do tính quy luật tĩnh hoặc thay đổi quá chậm, nếu đưa vào chỉ gây nhiễu loạn (Noise).
+
+## 6. Lịch sử Thử nghiệm (Experiment Logs & Failures)
+Trong khoa học dữ liệu, việc chứng minh một phương pháp thất bại cũng có giá trị ngang với một phương pháp thành công. 
+- **Thất bại của SMOGN (Synthetic Minority Over-sampling Technique for Regression):**
+  - **Kỳ vọng:** Dùng thuật toán k-NN để nội suy và nhân bản các điểm Peak.
+  - **Thực tế:** Thất bại do nội suy làm vỡ cấu trúc biến Categorical/Ordinal (VD: `hour_of_day = 8.5`). Gây tẩu hỏa nhập ma cho mô hình trên tập Test (Garbage In, Garbage Out).
+  - **Quyết định:** Loại bỏ SMOGN để bảo vệ độ tinh khiết của Không gian Đặc trưng (Feature Space).
+
+- **Giải pháp Tối thượng: Target Power Transformation (TPT) kết hợp Custom Loss**
+  - **Nguyên lý Toán học:** Thay vì bóp méo Đầu vào (X), ta bóp méo Đầu ra (Y) bằng phép Lũy thừa bậc 3 ($y^3$). Vùng đáy (0.2) sẽ bị nén lại ($0.2^3 = 0.008$), trong khi vùng Đỉnh (0.9) vẫn giữ khoảng cách rất lớn ($0.9^3 = 0.729$).
+  - **Hiệu ứng Kép (Double-Nuke):** Khoảng cách vật lý ở vùng đỉnh bị kéo giãn ra gấp nhiều lần. Kết hợp với hàm `custom_peak_weighted_mse` (Ngưỡng kích hoạt dời từ 0.7 thành $0.7^3 = 0.343$, phạt 50x). Bản năng sinh tồn của thuật toán sẽ dồn 100% lực lượng vào việc khớp các chóp đỉnh bị phóng to này.
+  - **Tính tương thích:** Áp dụng hoàn hảo cho CẢ 4 MÔ HÌNH (RF, LGBM, XGBoost, LSTM) mà không cần can thiệp cấu trúc lõi. Chỉ cần Căn bậc 3 ($y^{1/3}$) kết quả dự báo để trả về tỷ lệ %.

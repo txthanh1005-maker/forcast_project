@@ -43,13 +43,21 @@ Xây dựng một hệ thống phân tích, dự báo và so sánh các mô hìn
     - [ ] Các mô hình chạy thành công và xuất ra predictions.
     - [ ] Ghi nhận log của Optuna.
 
-- [ ] **Task 4: Trích xuất Biểu đồ & Metrics**
-  - **Description:** Đánh giá các mô hình, so sánh RMSE/MAE chung và Metrics vùng Peak. Vẽ biểu đồ.
+- [x] **Task 4: Trích xuất Biểu đồ Base (Trước SMOGN)** (DONE)
+  - **Description:** Xuất tổng cộng 8 hình (7 hình riêng rẽ cho 7 ngày, mỗi ngày 24h và 1 hình tổng nối 7 ngày) cho tình trạng Base (Lag/Window + Custom Loss).
   - **Assigned:** `code_generator`
-  - **Reviewer:** `test-engineer`
-  - **Acceptance criteria:**
-    - [ ] Có bảng so sánh (CSV/Markdown).
-    - [ ] Các biểu đồ được lưu tại `workspace/report/figures/`.
+
+- [x] **Task 4.1: Áp dụng kỹ thuật SMOGN (Synthetic Data)** (DONE)
+  - **Description:** Implement SMOGN để oversample các vùng peak trên tập Train (>= 0.7). Train lại mô hình Tabular (XGBoost, LightGBM) với SMOGN + Custom Loss. Save models. Evaluated on original test set.
+  - **Assigned:** `code_generator`
+
+- [x] **Task 4.2: Trích xuất Biểu đồ Base & SMOGN và So sánh** (DONE)
+  - **Description:** Cập nhật `evaluate.py` xuất 8 hình (7 ngày liên tục và 7 ngày riêng) cho cả model Base và model SMOGN.
+  - **Assigned:** `code_generator`
+
+- [ ] **Task 4.3: Triển khai cấm thuật Target Power Transformation (TPT)** (TODO)
+  - **Description:** Lũy thừa bậc 3 target ($y^3$) trước khi train. Sửa Custom Loss threshold thành $0.7^3 = 0.343$. Căn bậc 3 ($y^{1/3}$) kết quả predict. Xuất 8 biểu đồ TPT.
+  - **Assigned:** `code_generator`
 
 ### Checkpoint: Core Features
 - [ ] Tất cả biểu đồ và số liệu đã sẵn sàng cho báo cáo.

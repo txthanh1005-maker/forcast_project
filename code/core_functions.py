@@ -10,6 +10,8 @@ import torch.optim as optim
 from sklearn.ensemble import RandomForestRegressor
 import lightgbm as lgb
 import xgboost as xgb
+from sklearn.neighbors import NearestNeighbors
+
 def load_data(filepath: str) -> pd.DataFrame:
     print_info(f"Loading data from {filepath}...")
     df = pd.read_csv(filepath)
@@ -107,7 +109,74 @@ def split_data(df: pd.DataFrame, train_ratio: float = 0.7, val_ratio: float = 0.
     return train_df, val_df, test_df
 
 
-def custom_peak_weighted_mse(y_true, y_pred, peak_threshold=0.7, penalty_weight=50.0):
+def apply_smote_for_regression(X_train, y_train, threshold=0.7):
+    print_info(f"Applying Custom SMOTE for regression with threshold {threshold}...")
+    X_train_np = np.array(X_train)
+    y_train_np = np.array(y_train)
+    
+    peak_idx = np.where(y_train_np >= threshold)[0]
+    normal_idx = np.where(y_train_np < threshold)[0]
+    peak_count = len(peak_idx)
+    
+    if peak_count < 6:
+        print_info("Not enough peak samples for SMOTE. Returning original data.")
+        return X_train, y_train
+        
+    X_peak = X_train_np[peak_idx]
+    y_peak = y_train_np[peak_idx]
+    
+    normal_count = len(normal_idx)
+    n_samples_to_generate = normal_count - peak_count
+    
+    if n_samples_to_generate <= 0:
+        return X_train, y_train
+        
+    k_neighbors = min(5, peak_count - 1)
+    nn = NearestNeighbors(n_neighbors=k_neighbors + 1)
+    nn.fit(X_peak)
+    distances, indices = nn.kneighbors(X_peak)
+    
+    synthetic_X = []
+    synthetic_y = []
+    
+    # Set random seed for reproducibility
+    np.random.seed(42)
+    
+    for _ in range(n_samples_to_generate):
+        i = np.random.randint(0, peak_count)
+        nn_idx = np.random.randint(1, k_neighbors + 1)
+        neighbor = indices[i, nn_idx]
+        
+        diff_X = X_peak[neighbor] - X_peak[i]
+        diff_y = y_peak[neighbor] - y_peak[i]
+        gap = np.random.rand()
+        
+        new_X = X_peak[i] + gap * diff_X
+        new_y = y_peak[i] + gap * diff_y
+        
+        synthetic_X.append(new_X)
+        synthetic_y.append(new_y)
+        
+    synthetic_X = np.array(synthetic_X)
+    synthetic_y = np.array(synthetic_y)
+    
+    X_smogn = np.vstack((X_train_np, synthetic_X))
+    y_smogn = np.concatenate((y_train_np, synthetic_y))
+    
+    shuffle_idx = np.random.permutation(len(y_smogn))
+    X_smogn = X_smogn[shuffle_idx]
+    y_smogn = y_smogn[shuffle_idx]
+    
+    if isinstance(X_train, pd.DataFrame):
+        X_smogn = pd.DataFrame(X_smogn, columns=X_train.columns)
+    if isinstance(y_train, pd.Series):
+        y_smogn = pd.Series(y_smogn, name=y_train.name)
+        
+    print_info(f"Original shape: {X_train.shape}, Resampled shape: {X_smogn.shape}")
+    return X_smogn, y_smogn
+
+
+def custom_peak_weighted_mse(y_true, y_pred, peak_threshold=0.343, penalty_weight=50.0):
     """
     Custom loss function (Weighted MSE) to heavily penalize errors during peak utilization.
     
@@ -157,7 +226,7 @@ def peak_weighted_objective(y_true, y_pred, *args):
     - Wrap this for LightGBM like: `lambda preds, train_data: peak_weighted_objective(train_data.get_label(), preds)`
     - Wrap this for XGBoost like: `lambda preds, dtrain: peak_weighted_objective(dtrain.get_label(), preds)`
     """
-    peak_threshold = 0.7
+    peak_threshold = 0.343
     penalty_weight = 50.0
     y_true = np.array(y_true)
     y_pred = np.array(y_pred)
@@ -206,13 +275,13 @@ def prepare_sequence_data(df: pd.DataFrame, target_col: str = 'utilization_rate'
         
     return np.array(X_seq), np.array(y_seq)
 
-def train_rf(X_train, y_train, X_val, y_val, model_dir):
+def train_rf(X_train, y_train, X_val, y_val, model_dir, model_name='rf_model.pkl'):
     print_info("Tuning and training Random Forest...")
     def objective(trial):
         n_estimators = trial.suggest_int('n_estimators', 20, 100)
         max_depth = trial.suggest_int('max_depth', 3, 10)
         
-        model = RandomForestRegressor(n_estimators=n_estimators, max_depth=max_depth, random_state=42, n_jobs=-1)
+        model = RandomForestRegressor(n_estimators=n_estimators, max_depth=max_depth, random_state=42, n_jobs=1)
         model.fit(X_train, y_train)
         preds = model.predict(X_val)
         return custom_peak_weighted_mse(y_val, preds)
@@ -220,14 +289,14 @@ def train_rf(X_train, y_train, X_val, y_val, model_dir):
     study = optuna.create_study(direction='minimize')
     study.optimize(objective, n_trials=5)
     
-    best_model = RandomForestRegressor(**study.best_params, random_state=42, n_jobs=-1)
+    best_model = RandomForestRegressor(**study.best_params, random_state=42, n_jobs=1)
     best_model.fit(X_train, y_train)
     
     os.makedirs(model_dir, exist_ok=True)
-    joblib.dump(best_model, os.path.join(model_dir, 'rf_model.pkl'))
+    joblib.dump(best_model, os.path.join(model_dir, model_name))
     return best_model
 
-def train_lgbm(X_train, y_train, X_val, y_val, model_dir):
+def train_lgbm(X_train, y_train, X_val, y_val, model_dir, model_name='lgbm_model.pkl'):
     print_info("Tuning and training LightGBM...")
     def objective(trial):
         params = {
@@ -253,10 +322,10 @@ def train_lgbm(X_train, y_train, X_val, y_val, model_dir):
     best_model.fit(X_train, y_train)
     
     os.makedirs(model_dir, exist_ok=True)
-    joblib.dump(best_model, os.path.join(model_dir, 'lgbm_model.pkl'))
+    joblib.dump(best_model, os.path.join(model_dir, model_name))
     return best_model
 
-def train_xgboost(X_train, y_train, X_val, y_val, model_dir):
+def train_xgboost(X_train, y_train, X_val, y_val, model_dir, model_name='xgb_model.pkl'):
     print_info("Tuning and training XGBoost...")
     def objective(trial):
         params = {
@@ -279,10 +348,10 @@ def train_xgboost(X_train, y_train, X_val, y_val, model_dir):
     best_model.fit(X_train, y_train)
     
     os.makedirs(model_dir, exist_ok=True)
-    joblib.dump(best_model, os.path.join(model_dir, 'xgb_model.pkl'))
+    joblib.dump(best_model, os.path.join(model_dir, model_name))
     return best_model
 
-def train_lstm(X_train_seq, y_train_seq, X_val_seq, y_val_seq, model_dir):
+def train_lstm(X_train_seq, y_train_seq, X_val_seq, y_val_seq, model_dir, model_name='lstm_model.pth'):
     print_info("Tuning and training LSTM...")
     X_tr = torch.tensor(X_train_seq, dtype=torch.float32)
     y_tr = torch.tensor(y_train_seq, dtype=torch.float32).unsqueeze(-1)
@@ -306,7 +375,7 @@ def train_lstm(X_train_seq, y_train_seq, X_val_seq, y_val_seq, model_dir):
             pred = linear(out[:, -1, :])
             
             sq_error = (pred - y_tr) ** 2
-            is_peak = (y_tr >= 0.8).float()
+            is_peak = (y_tr >= 0.343).float()
             weights = torch.ones_like(y_tr) + is_peak * (5.0 - 1.0)
             loss = torch.mean(weights * sq_error)
             
@@ -341,7 +410,7 @@ def train_lstm(X_train_seq, y_train_seq, X_val_seq, y_val_seq, model_dir):
         pred = linear(out[:, -1, :])
         
         sq_error = (pred - y_tr) ** 2
-        is_peak = (y_tr >= 0.8).float()
+        is_peak = (y_tr >= 0.343).float()
         weights = torch.ones_like(y_tr) + is_peak * (5.0 - 1.0)
         loss = torch.mean(weights * sq_error)
         
@@ -349,5 +418,5 @@ def train_lstm(X_train_seq, y_train_seq, X_val_seq, y_val_seq, model_dir):
         optimizer.step()
         
     os.makedirs(model_dir, exist_ok=True)
-    torch.save({'rnn': rnn.state_dict(), 'linear': linear.state_dict()}, os.path.join(model_dir, 'lstm_model.pth'))
+    torch.save({'rnn': rnn.state_dict(), 'linear': linear.state_dict()}, os.path.join(model_dir, model_name))
     return rnn, linear

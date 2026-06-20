@@ -6,7 +6,7 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from core_functions import (
     load_data, handle_missing_data, resample_data, split_data,
-    add_time_series_features,
+    add_time_series_features, apply_smote_for_regression,
     prepare_tabular_data, prepare_sequence_data,
     train_rf, train_lgbm, train_xgboost, train_lstm
 )
@@ -60,17 +60,25 @@ def main():
     X_train_tab, y_train_tab = prepare_tabular_data(train_df, horizon=24)
     X_val_tab, y_val_tab = prepare_tabular_data(val_df, horizon=24)
     
-    # Train Tabular Models
-    train_rf(X_train_tab, y_train_tab, X_val_tab, y_val_tab, models_dir)
-    train_lgbm(X_train_tab, y_train_tab, X_val_tab, y_val_tab, models_dir)
-    train_xgboost(X_train_tab, y_train_tab, X_val_tab, y_val_tab, models_dir)
+    # Target Power Transformation (TPT)
+    print_info("Applying Target Power Transformation (TPT) y^3...")
+    y_train_tab_tpt = y_train_tab ** 3
+    y_val_tab_tpt = y_val_tab ** 3
+    
+    # Train Tabular Models (TPT)
+    train_rf(X_train_tab, y_train_tab_tpt, X_val_tab, y_val_tab_tpt, models_dir, model_name='tpt_rf_model.pkl')
+    train_lgbm(X_train_tab, y_train_tab_tpt, X_val_tab, y_val_tab_tpt, models_dir, model_name='tpt_lgbm_model.pkl')
+    train_xgboost(X_train_tab, y_train_tab_tpt, X_val_tab, y_val_tab_tpt, models_dir, model_name='tpt_xgb_model.pkl')
     
     # Sequence Data Preparation
     X_train_seq, y_train_seq = prepare_sequence_data(train_df, horizon=24, seq_length=24)
     X_val_seq, y_val_seq = prepare_sequence_data(val_df, horizon=24, seq_length=24)
     
-    # Train Sequence Model (LSTM)
-    train_lstm(X_train_seq, y_train_seq, X_val_seq, y_val_seq, models_dir)
+    y_train_seq_tpt = y_train_seq ** 3
+    y_val_seq_tpt = y_val_seq ** 3
+    
+    # Train Sequence Model (LSTM) on TPT
+    train_lstm(X_train_seq, y_train_seq_tpt, X_val_seq, y_val_seq_tpt, models_dir, model_name='tpt_lstm_model.pth')
     
     print_info("All models trained and saved successfully!")
 
