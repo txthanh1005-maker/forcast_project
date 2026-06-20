@@ -10,27 +10,25 @@
   - **Q5:** `("load forecasting" OR "time series") AND ("model predictive control" OR "multi-horizon" OR "cascade ensemble" OR "phase lag")`
 
 ## GIAI ĐOẠN 2 & 3: TÌM KIẾM, LỌC VÀ TRÍCH XUẤT JSON (Thực thi Song song 5 Trục)
-- [ ] TODO: **Sub-theme 1 (Small Data):** Gọi `researcher` tìm kiếm bằng **Q1** (4-6 bài), thiết lập Reading Notes theo JSON.
-- [ ] TODO: **Sub-theme 2 (Peak Catching):** Gọi `researcher` tìm kiếm bằng **Q2** (4-6 bài), thiết lập Reading Notes theo JSON.
-- [ ] TODO: **Sub-theme 3 (Two-stage Rule-Based):** Gọi `researcher` tìm kiếm bằng **Q3** (4-6 bài), thiết lập Reading Notes theo JSON.
-- [ ] TODO: **Sub-theme 4 (Residual Learning):** Gọi `researcher` tìm kiếm bằng **Q4** (4-6 bài), thiết lập Reading Notes theo JSON.
-- [ ] TODO: **Sub-theme 5 (MPC & Cascade):** Gọi `researcher` tìm kiếm bằng **Q5** (4-6 bài), thiết lập Reading Notes theo JSON.
+- [x] TODO: **Sub-theme 1 (Small Data):** Gọi `researcher` tìm kiếm bằng **Q1** (4-6 bài), thiết lập Reading Notes theo JSON. (DONE)
+- [x] TODO: **Sub-theme 2 (Peak Catching):** Gọi `researcher` tìm kiếm bằng **Q2** (4-6 bài), thiết lập Reading Notes theo JSON. (DONE)
+- [x] TODO: **Sub-theme 3 (Two-stage Rule-Based):** Gọi `researcher` tìm kiếm bằng **Q3** (4-6 bài), thiết lập Reading Notes theo JSON. (DONE)
+- [x] TODO: **Sub-theme 4 (Residual Learning):** Gọi `researcher` tìm kiếm bằng **Q4** (4-6 bài), thiết lập Reading Notes theo JSON. (DONE)
+- [x] TODO: **Sub-theme 5 (MPC & Cascade):** Gọi `researcher` tìm kiếm bằng **Q5** (4-6 bài), thiết lập Reading Notes theo JSON. (DONE)
 
 ## GIAI ĐOẠN 4A: LOCAL SYNTHESIS (Viết LaTeX Cục Bộ)
-- [ ] TODO: Gọi `latex_writer` tổng hợp Sub-theme 1 thành đoạn LaTeX.
-- [ ] TODO: Gọi `latex_writer` tổng hợp Sub-theme 2 thành đoạn LaTeX.
-- [ ] TODO: Gọi `latex_writer` tổng hợp Sub-theme 3 thành đoạn LaTeX.
-- [ ] TODO: Gọi `latex_writer` tổng hợp Sub-theme 4 thành đoạn LaTeX.
-- [ ] TODO: Gọi `latex_writer` tổng hợp Sub-theme 5 thành đoạn LaTeX.
+- [x] DONE: Gọi `latex_writer` tổng hợp Sub-theme 1 thành đoạn LaTeX.
+- [x] DONE: Gọi `latex_writer` tổng hợp Sub-theme 2 thành đoạn LaTeX.
+- [x] DONE: Gọi `latex_writer` tổng hợp Sub-theme 3 thành đoạn LaTeX.
+- [x] DONE: Gọi `latex_writer` tổng hợp Sub-theme 4 thành đoạn LaTeX.
+- [x] DONE: Gọi `latex_writer` tổng hợp Sub-theme 5 thành đoạn LaTeX.
 
-## KIỂM DUYỆT CỤC BỘ (LOCAL DUAL-REVIEW)
-- [ ] TODO: Gọi song song `domain_reviewer` (Duyệt tính ăn khớp Logic học thuật) và `test-engineer` (Đối soát Fact-check, kiểm tra độ chính xác của trích dẫn BibTeX). Đảm bảo tuân thủ triết lý viết cắt nhỏ.
+## KIỂM DUYỆT CỤC BỘ & TOÀN CỤC (DUAL-REVIEW GATE)
+- [x] DONE: Gọi song song `domain_reviewer` và `test-engineer` đối soát Fact-check, kiểm tra độ chính xác BibTeX và văn phong IEEE Q1. -> Kết quả: PASS!
 
 ## GIAI ĐOẠN 4B & 5: GLOBAL INTEGRATION & GAP IDENTIFICATION
-- [ ] TODO: Meta-Agent gộp 5 đoạn Local Synthesis, viết câu chuyển ý (Transitions) để xâu chuỗi mạch truyện, và xuất file tổng `references.bib`.
-- [ ] TODO: Meta-Agent quét toàn bài để định vị Research Gap cấp độ L2 (Trọng tâm) làm bàn đạp cho triết lý MPC.
+- [x] DONE: Meta-Agent gộp 5 đoạn Local Synthesis, chuyển ý xâu chuỗi mạch truyện, xuất `sn-bibliography.bib`.
+- [x] DONE: Định vị Research Gap cấp độ L2 làm bàn đạp cho triết lý Proxy-Lag Cascade.
 
 ## GIAI ĐOẠN 6: GLOBAL DUAL-REVIEW CHỐT HẠ
-- [ ] TODO: Gọi lại hệ thống Dual-Reviewer (`domain_reviewer` + `test-engineer`) duyệt bản thảo toàn cục. 
-  - *Nếu FAIL:* Trả hồ sơ để làm lại (Chạy Loop).
-  - *Nếu PASS:* Nghiệm thu, chốt file `report.tex` và `references.bib`.
+- [x] DONE: Hệ thống Dual-Reviewer duyệt bản thảo toàn cục. -> Kết quả: PASS. Nghiệm thu hoàn tất.

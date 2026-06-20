@@ -1,0 +1,426 @@
+[
+  {
+    "Title": "A regression-based approach to short-term system load forecasting",
+    "Year": 1990,
+    "URL": "https://doi.org/10.1109/59.99410",
+    "Abstract": "A linear regression-based model for the calculation of short-term system load forecasts is described. The model's most significant aspects fall into the following areas: innovative model building, including accurate holiday modeling by using binary variables and temperature modeling by using heating and cooling degree functions; robust parameter estimation and parameter estimation under heteroskedasticity by using weighted least-squares linear regression techniques; use of 'reverse errors-in-variables' techniques to mitigate the effects on load forecasts of potential errors in the explanatory variables; and distinction between time-independent daily peak load forecasts and the maximum of the hourly load forecasts in order to prevent peak forecasts from being negatively biased. The model was tested under a wide variety of conditioning and is shown to produce excellent results.< <ETX xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">&gt;</ETX>",
+    "Citations": 824,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "Short-term hourly load forecasting using time-series modeling with peak load estimation capability",
+    "Year": 2001,
+    "URL": "https://doi.org/10.1109/59.962429",
+    "Abstract": "This paper presents a new time series modeling for short term load forecasting, which can model the valuable experiences of the expert operators. This approach can accurately forecast the hourly loads of weekdays, as well as, of weekends and public holidays. It is shown that the proposed method can provide more accurate results than the conventional techniques, such as artificial neural networks or Box-Jenkins models. In addition to hourly loads, daily peak load is an important problem for dispatching centers of a power network. Most of the common load forecasting approaches do not consider this problem. It is shown that the proposed method can exactly forecast the daily peak load of a power system. Obtained results from extensive testing on Iran's power system network confirm the validity of the developed approach.",
+    "Citations": 514,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "Reliability, economic and environmental analysis of a microgrid system in the presence of renewable energy resources",
+    "Year": 2018,
+    "URL": "https://doi.org/10.1016/j.apenergy.2018.12.050",
+    "Abstract": "",
+    "Citations": 437,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "Energy Storage Technologies for High-Power Applications",
+    "Year": 2015,
+    "URL": "https://doi.org/10.1109/tia.2015.2511096",
+    "Abstract": "Energy storage systems provide viable solutions for improving efficiency and power quality as well as reliability issues in dc/ac power systems including power grid with considerable penetrations of renewable energy. The storage systems are also essential for aircraft powertrains, shipboard power systems, electric vehicles, and hybrid electric vehicles to meet the peak load economically and improve the system's reliability and efficiency. Significant development and research efforts have recently been made in high-power storage technologies such as supercapacitors, superconducting magnetic energy storage (SMES), and flywheels. These devices have a very high-power density and fast response time and are suitable for applications with rapid charge and discharge requirements. In this paper, the latest technological developments of these devices as well as advancements in the lithium-ion battery, the most power dense commercially available battery, are presented. Also, a comparative analysis of these high-power storage technologies in terms of power, energy, cost, life, and performance is carried out. This paper also presents the applications, advantages, and limitations of these technologies in a power grid and transportation system as well as critical and pulse loads.",
+    "Citations": 414,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "Optimal load dispatch of community microgrid with deep learning based solar power and load forecasting",
+    "Year": 2019,
+    "URL": "https://doi.org/10.1016/j.energy.2019.01.075",
+    "Abstract": "",
+    "Citations": 386,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "Techno economic analysis of a wind-photovoltaic-biomass hybrid renewable energy system for rural electrification: A case study of Kallar Kahar",
+    "Year": 2018,
+    "URL": "https://doi.org/10.1016/j.energy.2018.01.133",
+    "Abstract": "",
+    "Citations": 351,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "Short-term hourly load forecasting using time-series modeling with peak load estimation capability",
+    "Year": 2001,
+    "URL": "https://doi.org/10.1109/59.932287",
+    "Abstract": "This paper presents a new time series modeling for short term load forecasting, which can model the valuable experiences of the expert operators. This approach can accurately forecast the hourly loads of weekdays, as well as, of weekends and public holidays. It is shown that the proposed method can provide more accurate results than the conventional techniques, such as artificial neural networks or Box-Jenkins models. In addition to hourly loads, daily peak load is an important problem for dispatching centers of a power network. Most of the common load forecasting approaches do not consider this problem. It is shown that the proposed method can exactly forecast the daily peak load of a power system. Obtained results from extensive testing on the Iran's power system network confirm the validity of the developed approach.",
+    "Citations": 348,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "Regression based peak load forecasting using a transformation technique",
+    "Year": 1994,
+    "URL": "https://doi.org/10.1109/59.331433",
+    "Abstract": "This paper presents a regression based daily peak load forecasting method with a transformation technique. In order to forecast the load precisely through a year, one should consider seasonal load change, annual load growth and the latest daily load change. To deal with these characteristics in the load forecasting, a transformation technique is presented. This technique consists of a transformation function with translation and reflection methods. The transformation function is estimated with the previous year's data points, in order that the function converts the data points into a set of new data points with preservation of the shape of temperature-load relationships in the previous year. Then, the function is slightly translated so that the transformed data points will fit the shape of temperature-load relationships in the year. Finally, multivariate regression analysis, with the latest daily loads and weather observations, estimates the forecasting model. Large forecasting errors caused by the weather-load nonlinear characteristic in the transitional seasons such as spring and fall are reduced. Performance of the technique which is verified with simulations on actual load data of Tokyo Electric Power Company is also described.< <ETX xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">&gt;</ETX>",
+    "Citations": 348,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "A simultaneous approach for optimal allocation of renewable energy sources and electric vehicle charging stations in smart grids based on improved GA-PSO algorithm",
+    "Year": 2017,
+    "URL": "https://doi.org/10.1016/j.scs.2017.05.007",
+    "Abstract": "",
+    "Citations": 315,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "Energy dispatch schedule optimization and cost benefit analysis for grid-connected, photovoltaic-battery storage systems",
+    "Year": 2013,
+    "URL": "https://doi.org/10.1016/j.renene.2012.12.036",
+    "Abstract": "",
+    "Citations": 311,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "A wavelet-fuzzy logic based energy management strategy for a fuel cell/battery/ultra-capacitor hybrid vehicular power system",
+    "Year": 2009,
+    "URL": "https://doi.org/10.1016/j.jpowsour.2009.04.072",
+    "Abstract": "",
+    "Citations": 311,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "ANNSTLF-Artificial Neural Network Short-Term Load Forecaster- generation three",
+    "Year": 1998,
+    "URL": "https://doi.org/10.1109/59.736285",
+    "Abstract": "This paper describes the third generation of an hourly short-term load forecasting system known as ANNSTLF (Artificial Neural Network Short-Term Load Forecaster). This forecaster has received wide acceptance by the electric utility industry and is being used by 35 utilities across the US and Canada. The third generation architecture is substantially changed from the previous generation. It includes only two ANN forecasters, one predicts the base load and the other forecasts the change in load. The final forecast is computed by adaptive combination of these two forecasts. The effect of humidity and wind speed are considered through a linear transformation of temperature. A novel weighted interpolation scheme is developed for forecasting of holiday loads, giving improved accuracy. The holiday peak load is first estimated and then the ANNSTLF forecast is re-shaped with the new peak forecast. The performance on data from ten different utilities is reported and compared to the previous generation.",
+    "Citations": 305,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "One-hour-ahead load forecasting using neural network",
+    "Year": 2002,
+    "URL": "https://doi.org/10.1109/59.982201",
+    "Abstract": "Load forecasting has always been the essential part of an efficient power system planning and operation. Several electric power companies are now forecasting load power based on conventional methods. However, since the relationship between load power and factors influencing load power is nonlinear, it is difficult to identify its nonlinearity by using conventional methods. Most of papers deal with 24-hour-ahead load forecasting or next day peak load forecasting. These methods forecast the demand power by using forecasted temperature as forecast information. But, when the temperature curves changes rapidly on the forecast day, load power changes greatly and forecast error would going to increase. In conventional methods neural networks uses all similar day's data to learn the trend of similarity. However, learning of all similar day's data is very complex, and it does not suit learning of neural network. Therefore, it is necessary to reduce the neural network structure and learning time. To overcome these problems, we propose a one-hour-ahead load forecasting method using the correction of similar day data. In the proposed prediction method, the forecasted load power is obtained by adding a correction to the selected similar day data.",
+    "Citations": 303,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "Hydrogen generation by electrolysis and storage in salt caverns: Potentials, economics and systems aspects with regard to the German energy transition",
+    "Year": 2017,
+    "URL": "https://doi.org/10.1016/j.ijhydene.2017.02.102",
+    "Abstract": "",
+    "Citations": 302,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "LSTM-EFG for wind power forecasting based on sequential correlation features",
+    "Year": 2018,
+    "URL": "https://doi.org/10.1016/j.future.2018.09.054",
+    "Abstract": "",
+    "Citations": 300,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "Using vehicle-to-grid technology for frequency regulation and peak-load reduction",
+    "Year": 2010,
+    "URL": "https://doi.org/10.1016/j.jpowsour.2010.11.010",
+    "Abstract": "",
+    "Citations": 298,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "Smart charging of electric vehicles considering photovoltaic power production and electricity consumption: A review",
+    "Year": 2020,
+    "URL": "https://doi.org/10.1016/j.etran.2020.100056",
+    "Abstract": "",
+    "Citations": 276,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "Short-term electric load forecasting using an EMD-BI-LSTM approach for smart grid energy management system",
+    "Year": 2023,
+    "URL": "https://doi.org/10.1016/j.enbuild.2023.113022",
+    "Abstract": "",
+    "Citations": 275,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "One-Hour-Ahead Load Forecasting Using Neural Networks",
+    "Year": 2002,
+    "URL": "https://doi.org/10.1109/mper.2002.4311688",
+    "Abstract": "Load forecasting has always been an essential part of an efficient power system's planning and operation. Several electric power companies are now forecasting load power based on conventional methods. However, since the relationship between load power and factors influencing load power is nonlinear, it is difficult to identify its nonlinearity by using conventional methods. Most papers deal with 24-hour-ahead load forecasting or next-day peak load forecasting. These methods forecast the demand power by using forecasted temperature as forecast information. But, when the temperature curves change rapidly on the forecast day, load power changes greatly and forecast error increases. In conventional methods, neural networks use similar-day data to learn the trend of similarity. However, learning of all similar day's data is very complex, and it does not suit learning of neural networks. Therefore, it is necessary to reduce the neural network structure and learning time. To overcome these problems, we propose a one-hour-ahead load forecasting method using the correction of similar-day data. In the proposed prediction method, the forecasted load power is obtained by adding a correction to the selected similar day data.",
+    "Citations": 274,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "Transient Stability Regions of Multimachine Power Systems",
+    "Year": 1966,
+    "URL": "https://doi.org/10.1109/tpas.1966.291554",
+    "Abstract": "Analysis of the stability of power systems following a transient disturbance involves the study of a large set of nonlinear differential equations. A new approach to the quantitative study of the transient stability of large power systems is presented, using the second method of Liapunov. A region of asymptotic stability for the postfault system is obtained through Liapunov theorems. If the initial conditions of the postfault system at the time of switching to restore normal operation lie within this region, the system will be stable. The extreme value of the time at which the conditions of the system are at the boundary of the region of asymptotic stability gives the critical switching time. A general description of a digital computer program and the results of its application to a 4-machine system are given.",
+    "Citations": 272,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "The Progressive Smart Grid System from Both Power and Communications Aspects",
+    "Year": 2011,
+    "URL": "https://doi.org/10.1109/surv.2011.072811.00089",
+    "Abstract": "The present electric power system structure has lasted for decades; it is still partially proprietary, energy-inefficient, physically and virtually (or cyber) insecure, as well as prone to power transmission congestion and consequent failures. Recent efforts in building a smart grid system have focused on addressing the problems of global warming effects, rising energy-hungry demands, and risks of peak loads. One of the major goals of the new system is to effectively regulate energy usage by utilizing the backbone of the prospectively deployed Automatic Meter Reading (AMR), Advanced Meter Infrastructure (AMI), and Demand Response (DR) programs via the advanced distribution automation and dynamic pricing models. The function of the power grid is no longer a system that only supplies energy to end users, but also allows consumers to contribute their clean energy back to the grid in the future. In the meantime, communications networks in the electric power infrastructure enact critical roles. Intelligent automation proposed in smart grid projects include the Supervisory Control And Data Acquisition/Energy Management Systems (SCADA/EMS) and Phasor Management Units (PMU) in transmission networks, as well as the AMR/AMI associated with field/neighborhood area networks (FAN/NAN) and home area networks (HAN) at the distribution and end-use levels. This article provides an overview of the essentials of the progressive smart grid paradigm and integration of different communications technologies for the legacy power system. Additionally, foreseeable issues and challenges in designing communications networks for the smart grid system are also rigorously deliberated in this paper.",
+    "Citations": 270,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "Demand Response in an Isolated System With High Wind Integration",
+    "Year": 2011,
+    "URL": "https://doi.org/10.1109/tpwrs.2011.2159252",
+    "Abstract": "Growing load factors in winter and summer peaks are a serious problem faced by the Spanish electric energy system. This has led to the extensive use of peak load plants and thus to higher costs for the whole system. Wind energy represents a strongly increasing percentage of overall electricity production, but wind normally does not follow the typical demand profile. As generation flexibility is limited due to technical restrictions, and in absence of large energy storages, the other side of the equilibrium generation-demand has to react. Demand side management measures intend to adapt the demand profile to the situation in the system. In this paper, the operation of an electric system with high wind penetration is modeled by means of a unit commitment problem. Demand shifting and peak shaving are considered in this operation problem. Demand shifting is modeled in two different ways. Firstly, the system operator controls the shift of demand; secondly, each consumer decides its reaction to prices depending on its elasticity. The model is applied to the isolated power system of Gran Canaria. The impact of an increased installed wind capacity on operation and the cost savings resulting from the introduction of responsive demand are assessed. Furthermore, results from the different implemented demand response options are compared.",
+    "Citations": 253,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "A compendium of optimization objectives, constraints, tools and algorithms for energy management in microgrids",
+    "Year": 2016,
+    "URL": "https://doi.org/10.1016/j.rser.2015.12.259",
+    "Abstract": "",
+    "Citations": 245,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "Coordinated Scheduling for Interdependent Electric Power and Natural Gas Infrastructures",
+    "Year": 2016,
+    "URL": "https://doi.org/10.1109/tpwrs.2016.2545522",
+    "Abstract": "The extensive installation of gas-fired power plants in many parts of the world has led electric systems to depend heavily on reliable gas supplies. The use of gas-fired generators for peak load and reserve provision causes high intraday variability in withdrawals from high-pressure gas transmission systems. Such variability can lead to gas price fluctuations and supply disruptions that affect electric generator dispatch, electricity prices, and threaten the security of power systems and gas pipelines. These infrastructures function on vastly different spatio-temporal scales, which prevents current practices for separate operations and market clearing from being coordinated. In this paper, we apply new techniques for control of dynamic gas flows on pipeline networks to examine day-ahead scheduling of electric generator dispatch and gas compressor operation for different levels of integration, spanning from separate forecasting, and simulation to combined optimal control. We formulate multiple coordination scenarios and develop tractable physically accurate computational implementations. These scenarios are compared using an integrated model of test networks for power and gas systems with 24 nodes and 24 pipes, respectively, which are coupled through gas-fired generators. The analysis quantifies the economic efficiency and security benefits of gas-electric coordination and dynamic gas system operation.",
+    "Citations": 235,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "Regional load forecasting in Taiwan––applications of artificial neural networks",
+    "Year": 2003,
+    "URL": "https://doi.org/10.1016/s0196-8904(02)00225-x",
+    "Abstract": "",
+    "Citations": 233,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "A Monte Carlo approach to generator portfolio planning and carbon emissions assessments of systems with large penetrations of variable renewables",
+    "Year": 2011,
+    "URL": "https://doi.org/10.1016/j.renene.2011.01.015",
+    "Abstract": "",
+    "Citations": 223,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "Energy management at the distribution grid using a Battery Energy Storage System (BESS)",
+    "Year": 2015,
+    "URL": "https://doi.org/10.1016/j.ijepes.2015.11.035",
+    "Abstract": "",
+    "Citations": 214,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "Spatial and temporal assessments of complementarity for renewable energy resources in China",
+    "Year": 2019,
+    "URL": "https://doi.org/10.1016/j.energy.2019.04.023",
+    "Abstract": "",
+    "Citations": 165,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "WAMS-Based Underfrequency Load Shedding With Short-Term Frequency Prediction",
+    "Year": 2015,
+    "URL": "https://doi.org/10.1109/tpwrd.2015.2503734",
+    "Abstract": "The importance of the wide-area monitoring system is rapidly increasing and many transmission system operators have already made several steps toward implementing wide-area monitoring, protection, and control. Underfrequency load shedding (UFLS) is undoubtedly one of areas that can be significantly improved within such an upgrade. However, in order to pursue finding a concept for practical implementation, as little measurements as possible should be used for the purpose. In this paper, an approach for obtaining a few-seconds-in-advance frequency prediction is described. It enables making decisions about the amount of load to be shed and, at the same time, being aware that inaccuracies in the procedure are inevitable. An extensive testing of the approach was performed on the 110 kV part of the Slovenian power-system model and the predictive UFLS appears to be highly superior to traditional UFLS on evoked frequency conditions as well as the total amount of disconnected loads. Consideration of practical limitations, such as all major time delays, unveiled a limitation for using the procedure at extreme values of system-wide frequency gradients. Consequently, the proposed algorithm is to be considered a “smart” supplement to already operational traditional UFLS.",
+    "Citations": 150,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "Support vector regression with asymmetric loss for optimal electric load forecasting",
+    "Year": 2021,
+    "URL": "https://doi.org/10.1016/j.energy.2021.119969",
+    "Abstract": "",
+    "Citations": 93,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "Short-term electrical load forecasting based on error correction using dynamic mode decomposition",
+    "Year": 2019,
+    "URL": "https://doi.org/10.1016/j.apenergy.2019.114368",
+    "Abstract": "",
+    "Citations": 90,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "An ensemble multi-step M-RMLSSVR model based on VMD and two-group strategy for day-ahead short-term load forecasting",
+    "Year": 2022,
+    "URL": "https://doi.org/10.1016/j.knosys.2022.109440",
+    "Abstract": "",
+    "Citations": 56,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "A Probability Model of Ice Storm Damages to Transmission Facilities",
+    "Year": 2013,
+    "URL": "https://doi.org/10.1109/tpwrd.2012.2212216",
+    "Abstract": "A model based on the extreme value theory and copula functions is proposed to assess the probability of potential damages to transmission lines and towers during ice storms. Generalized Pareto distributions of freezing precipitation and wind speed are first derived. Copula functions are then employed to derive the joint probability distribution of ice and wind loads on both transmission lines and towers. Based on the proposed model, probabilities of transmission-line damage and tower collapse can be calculated. The validity and accuracy of the proposed model are verified by comparing the numerical results given by the model with historical data of a real transmission system during two serious ice storms in China. The proposed model will be highly useful for assessing efficacy of power systems emergency controls during ice storms.",
+    "Citations": 53,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "A Hybrid Prediction Model for Damage Warning of Power Transmission Line Under Typhoon Disaster",
+    "Year": 2020,
+    "URL": "https://doi.org/10.1109/access.2020.2992528",
+    "Abstract": "To bolster the resilience of power systems against typhoon disasters, this paper develops a holistic framework of wind disaster warning for transmission lines. This paper proposes a hybrid prediction model to quantify the transmission line damage probability under typhoon disaster based on extreme value type I probability distribution, Monte Carlo method, and Random Forest. Specifically, this paper uses the extreme value type I probability distribution and the Monte Carlo method to simulate the random wind field, and predict the damage probability of transmission lines under each wind field using the Random Forest method. This paper takes typhoon “Mangkhut” in 2018 as a case study, and compare the performance of the hybrid model based on random wind field with the Random Forest method under predicted and measured wind field. The results demonstrate that the hybrid model can effectively utilize wind speed data to obtain a more reliable prediction and achieves the best synthetic similarity to the actual damage situations.",
+    "Citations": 44,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "Statistical Characterization of Wind Power Ramps Via Extreme Value Analysis",
+    "Year": 2014,
+    "URL": "https://doi.org/10.1109/tpwrs.2014.2315491",
+    "Abstract": "Extreme power fluctuations in wind farms are rare but high-impact events, so proper characterization of these extreme fluctuations would assist with power systems operations planning in a power system with a high penetration of wind power. This work applies extreme value analysis methods to the statistical characterization of wind power ramps with 10-min resolution. The annual maxima series (AMS) method and peaks over threshold (POT) method are used to determine the probability of extreme wind power ramp events in a wind farm.",
+    "Citations": 43,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "Impact of Probabilistic Modelling of Wind Speed on Power System Voltage Profile and Voltage Stability Analysis",
+    "Year": 2022,
+    "URL": "https://doi.org/10.1016/j.epsr.2022.107807",
+    "Abstract": "",
+    "Citations": 37,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "Priority Chronological Time-Period Clustering for Generation and Transmission Expansion Planning Problems With Long-Term Dynamics",
+    "Year": 2022,
+    "URL": "https://doi.org/10.1109/tpwrs.2022.3151062",
+    "Abstract": "The increasing incorporation of renewable generating units into power systems has made it imperative to model variabilities during the resolution of generation and transmission expansion planning problems. This is commonly carried out by considering representative time periods, which are attained using clustering techniques, since the use of all historical data may involve computationally intractable problems. The chronological information concerning the input data should be maintained when representative time periods are used to model inter-temporal constraints. This is the case of long-term storage, which may be critical as regards mitigating the fluctuations related to renewable production. Recent clustering techniques have resolved this drawback at the cost of not ensuring the feasibility of the problem or underestimating extreme values of input data, which may influence investment decisions. This paper proposes a new clustering method that is based on previous techniques, maintains the chronological information regarding the input data throughout the entire time horizon and assigns more priority to the representation of extreme values. Numerical results show that the use of the proposed clustering method involves a reduction in the computational burden, since investment plans closer to the optimal solution are attained while considering less representative time periods than occurs with other methods.",
+    "Citations": 37,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "On the long-term density prediction of peak electricity load with demand side management in buildings",
+    "Year": 2020,
+    "URL": "https://doi.org/10.1016/j.enbuild.2020.110450",
+    "Abstract": "",
+    "Citations": 35,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "A hybrid deep meta-ensemble networks with application in electric utility industry load forecasting",
+    "Year": 2020,
+    "URL": "https://doi.org/10.1016/j.ins.2020.07.054",
+    "Abstract": "",
+    "Citations": 33,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "On the impact of load profile data on the optimization results of off-grid energy systems",
+    "Year": 2022,
+    "URL": "https://doi.org/10.1016/j.rser.2022.112199",
+    "Abstract": "",
+    "Citations": 29,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "Forecasting conditional extreme quantiles for wind energy",
+    "Year": 2020,
+    "URL": "https://doi.org/10.1016/j.epsr.2020.106636",
+    "Abstract": "",
+    "Citations": 27,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "Tackling the duck curve in renewable power system: A multi-task learning model with iTransformer for net-load forecasting",
+    "Year": 2025,
+    "URL": "https://doi.org/10.1016/j.enconman.2024.119442",
+    "Abstract": "",
+    "Citations": 26,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "Short-term load forecasting based on temporal importance analysis and feature extraction",
+    "Year": 2025,
+    "URL": "https://doi.org/10.1016/j.epsr.2025.111551",
+    "Abstract": "",
+    "Citations": 25,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "Optimizing decision-making in electric power system selection: A generalized approach based on Hamacher aggregation operators for q-rung orthopair fuzzy soft sets",
+    "Year": 2024,
+    "URL": "https://doi.org/10.1016/j.apenergy.2024.123405",
+    "Abstract": "",
+    "Citations": 22,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "A graph and diffusion theory-based approach for localization and recovery of false data injection attacks in power systems",
+    "Year": 2024,
+    "URL": "https://doi.org/10.1016/j.epsr.2024.111184",
+    "Abstract": "",
+    "Citations": 12,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "EDformer family: End-to-end multi-task load forecasting frameworks for day-ahead economic dispatch",
+    "Year": 2025,
+    "URL": "https://doi.org/10.1016/j.apenergy.2025.125319",
+    "Abstract": "",
+    "Citations": 7,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "Multivariate physics-informed convolutional autoencoder for anomaly detection in power distribution systems with widespread deployment of distributed energy resources",
+    "Year": 2025,
+    "URL": "https://doi.org/10.1016/j.segan.2025.102022",
+    "Abstract": "",
+    "Citations": 3,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "CLEAR-E: Concept-aware lightweight energy adaptation for smart grid load forecasting",
+    "Year": 2025,
+    "URL": "https://doi.org/10.1016/j.neucom.2025.131667",
+    "Abstract": "Accurate load forecasting is essential for smart grid operations, enabling optimal generation scheduling, demand response, and grid stability. However, existing forecasting methods struggle with the dynamic nature of energy consumption patterns, which exhibit concept drift due to weather variations, behavioral changes, and seasonal effects. We propose CLEAR-E (Concept-aware Lightweight Energy Adaptation), a novel framework that addresses these challenges through parameter-efficient adaptation specifically designed for smart grid applications. CLEAR-E integrates meteorological and calendar metadata with temporal load patterns through an energy-specific concept encoder, employs lightweight adaptation that updates only critical model components, and incorporates an energy-aware loss function that reflects the asymmetric costs of forecasting errors in power systems. Extensive experimental results on eight diverse energy datasets and a comprehensive set of recent adaptive baselines demonstrate that CLEAR-E achieves superior forecasting accuracy on critical load forecasting datasets while significantly reducing computational overhead. The framework also provides interpretable insights into load patterns and real-time adaptation capabilities, making it suitable for deployment in operational smart grid systems. CLEAR-E advances practical load forecasting by combining domain expertise with efficient machine learning techniques. • Concept-aware PEFT for smart grid load forecasting. • Achieves superior accuracy and 28 % lower compute overhead. • Integrates domain knowledge: metadata encoder, asymmetric loss. • Provides interpretable insights and fast drift adaptation.",
+    "Citations": 2,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "Deterministic and Probabilistic Forecasting of Wind Power Generation and Ramp Rate With Expectation-Implemented Deep Learning",
+    "Year": 2025,
+    "URL": "https://doi.org/10.1109/tste.2025.3585404",
+    "Abstract": "Accurate day-ahead forecasting of wind power generation, both deterministically and probabilistically, is crucial for reliable and efficient power system operations, and its significance will increase in renewable energy-dominant power systems. Furthermore, inherent variability of wind farms necessitates day-ahead ramp rate forecasting to ensure stable energy balancing. To address these needs, we propose an hourly day-ahead forecasting framework that concurrently predicts the wind power generation and ramp rate. This framework leverages expectation-implemented deep learning models trained by the custom loss functions tailored to the different signal attributes and our distinct expectations. Additional strategies, such as feature generation and a feedforward error learning model, are implemented to enhance forecasting performance while maintaining a balance between tasks. Finally, our framework integrates heterogeneous generation and ramp rate forecasting results, incorporating probabilistic ramp rate forecasting derived from the synthesized output. We validate our approach using real wind power data and assess the impact of each proposed method individually. The results demonstrate that the proposed framework can significantly contribute to identifying the intrinsic volatility of wind power, thereby fully exploiting its potential benefits.",
+    "Citations": 2,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "Constraint-aware wind power forecasting with an optimized hybrid machine learning model",
+    "Year": 2025,
+    "URL": "https://doi.org/10.1016/j.ecmx.2025.101026",
+    "Abstract": "Accurate prediction of wind power generation (WPG) under real-world scenarios is imperative for achieving optimal costing, ensuring reliable operation, and fortifying the security of power systems. While existing research has proposed numerous single, ensemble and hybrid AI model to enhance prediction accuracy, these architecture often overlook operational constraints. In response, this paper introduces a novel constraint aware forecasting framework formed by a convolutional neural network (CNN) integrated with a double layer of gated recurrent unit (GRU) and fully connected layers. A customized loss function enforces ramping and capacity limits through penalty coefficients, which are optimized using a genetic-adaptive-moment-optimizer (GAMO). On top of that, the performance of the proposed scheme was assessed under diverse ramping threshold settings, ranging from the most stringent worst-case scenarios to relaxed operational conditions. Extensive evaluations on WPG dataset reveal that under the most stringent 10% ramping threshold, the proposed model achieves a MAPE of 3.65%, surpassing Bi-LSTM and CNN models by 7.89% in forecasting accuracy. Additionally, the proposed optimization techniques were bench-marked against the Bayesian optimization process (BOP) with a tree prazen sampler and particle swarm optimization (PSO). The proposed GAMO outperformed these methods in computational efficiency, reducing computation time by 74.20% compared to BOP and 90.91% compared to PSO. Furthermore, the results indicate that the GAMO optimization framework facilitated smoother convergence in the model learning process.",
+    "Citations": 1,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "Cycle-Aware Adaptive Mixture-of-Experts with High-Demand-Sensitive Asymmetric Loss for Effective Electrical Load Forecasting",
+    "Year": 2026,
+    "URL": "https://doi.org/10.1109/tpwrs.2026.3703864",
+    "Abstract": "Accurate load forecasting is critical for reliable and economical power system operation, particularly during high-demand periods. However, increasing demand volatility and distributed energy integration pose substantial challenges to forecasting rare but impactful high-demand periods. While deep learning has improved general forecasting capabilities, existing models often struggle to accurately predict rapid load surges during high-demand scenarios. To address this issue, we propose an Cycle-Aware Adaptive Mixture-of-Experts (CAMoE) model that simultaneously enhances overall forecasting accuracy and sensitivity to high-demand scenarios. CAMoE consists of three modules: the Cycle-Aware Residual Learning Module (CaRLM) explicitly decouples load sequences into periodic, trend, and fluctuation components; the Context-Adaptive Mixture-of-Experts (ConMoE) employs dynamic routing to activate specialized experts based on demand characteristics; and the Hierarchical Temporal Fusion Module (HTFM) integrates feature representations across different temporal components to generate the final predictions. To further improve performance under high-demand conditions, CAMoE is trained with a High-Demand-Sensitive Asymmetric (DeSA) loss, which penalizes underestimation during peak periods while maintaining training stability. Extensive experiments on real-world datasets demonstrate that CAMoE reduces MAE and RMSE by a maximum of 10.64% and 10.00% compared to the second-best baseline under high-demand scenarios. Additionally, DeSA exhibits strong generalizability across various forecasting models, demonstrating its practical value in modern power systems.",
+    "Citations": 0,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "A Methodology for Calculating Representative Solar Curves Based on Multi-year Weighted Library and Optimism Frequency Control",
+    "Year": 2026,
+    "URL": "https://doi.org/10.5370/kiee.2026.75.6.1246",
+    "Abstract": "As renewable energy expands, selecting representative solar profiles is crucial for power system planning. However, conventional methods based on central tendencies often smooth out intermittency, leading to an optimism bias that overestimates generation availability. To address this, this paper proposes a conservative profile generation method utilizing a multi-year weighted library and asymmetric loss functions. The proposed algorithm explicitly penalizes the frequency of over-estimation errors to mitigate the risk of phantom energy estimation. Case studies using 2017–2022 data from Korean sites verify that the proposed method reduces optimistic errors and maintains characteristic profile shapes compared with conventional mean-based and clustering-based baselines. By effectively capturing the lower bound of generation under high-variability conditions, such as spring intermittency and summer monsoons, the proposed approach provides a robust baseline for securing grid reliability.",
+    "Citations": 0,
+    "Alignment with our project": ""
+  },
+  {
+    "Title": "Transfer Learnable Physics-Informed Neural Network Surrogating Grid-Tied Inverters for Renewable Power System Simulation",
+    "Year": 2025,
+    "URL": "https://doi.org/10.1109/tie.2025.3613652",
+    "Abstract": "The development of accurate and reliable dynamic models of grid-tied inverters is crucial for system-level simulation and the investigation of renewable power systems under multioperating-point (MOP) conditions. However, the limited information available on commercial inverters, due to privacy issues, often renders physics-based modelling methods ineffective. Existing data-driven approaches lack excellent performance when large transients under extreme disturbances are involved, and cannot provide acceptable out-of-domain generalization performance and unified applicability across diverse scenarios. To address the challenges, this article proposes a novel modeling approach, which is driven by a physics-informed neural network (PINN) embedded with differential algebraic equations (DAEs) structure and the customized loss function. This approach enables the creation of high-precision, physically consistent models for inverters without access to internal information. The obtained models can be further encapsulated as surrogate models, which can be seamlessly integrated into a simulation platform as plug-and-play dynamic components, while demonstrating unified applicability across diverse scenarios. Furthermore, cross-extrapolation of surrogate models about different inverters is implemented via transfer learning, maintaining accuracy while significantly conserving computational resources and operational data consumption, which is well-suited for inverters with scarce operational data. The effectiveness and superiority of the proposed approach are validated through various case studies, offering promising solutions for the simulation analysis of a renewable power system incorporating black-box inverters.",
+    "Citations": 0,
+    "Alignment with our project": ""
+  }
+]

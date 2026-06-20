@@ -1,0 +1,105 @@
+Mặc dù tư duy kể chuyện (storytelling) của bạn rất xuất sắc, nhưng đối với khối kỹ thuật, hội đồng cần nhìn thấy **Ngôn ngữ Toán học (Mathematical Formulation)** và **Sơ đồ khối (Block Diagram)**. Việc bạn dùng quá nhiều chữ để giải thích các thuật toán khiến bài báo mang hơi hướng "văn xuôi" (descriptive) hơn là một báo cáo kỹ thuật định lượng (quantitative engineering report).
+
+Dưới đây là phân tích chi tiết và cách khắc phục ngay lập tức:
+
+---
+
+### 1. VỀ CÔNG THỨC TOÁN HỌC (ĐANG THIẾU NHỮNG CÔNG THỨC CHÍNH)
+
+Hiện tại, bạn có 4 công thức: (1) Hàm mũ 3, (2) Hàm căn bậc 3, (3) Hàm Piecewise gạt công tắc, (4) Hàm tỷ lệ 0.33 và 0.67. 
+**Vấn đề:** Những công thức này quá đơn giản (chỉ là toán cấp 2/cấp 3). Trong khi đó, **những đóng góp cốt lõi mà bạn tự hào nhất lại không hề có công thức nào!**
+
+Bạn **BẮT BUỘC** phải bổ sung 2 cụm công thức sau vào Mục 2 (Methodology) để bài báo có "sức nặng" học thuật:
+
+**A. Bổ sung công thức cho Custom Peak Loss (vào mục 2.3)**
+Bạn nói rất nhiều về hàm Loss phạt trọng số 50.0, nhưng tuyệt nhiên không viết công thức. Giảng viên sẽ tự hỏi: *"Hàm MSE có trọng số viết như thế nào?"*.
+👉 **Cách sửa:** Thêm công thức Toán học của Weighted MSE (WMSE) vào sau đoạn giải thích.
+*Mẫu tham khảo (bạn có thể đưa vào file LaTeX):*
+> The Custom Peak Loss is mathematically formulated as a threshold-based Weighted Mean Squared Error (WMSE):
+> $$ \mathcal{L}_{WMSE} = \frac{1}{N} \sum_{i=1}^{N} w_i \left( y'_i - \hat{y}'_i \right)^2 $$
+> where the dynamic penalty weight $w_i$ is governed by the critical threshold $0.343$:
+> $$ w_i = \begin{cases} 50.0, & \text{if } y'_i \ge 0.343 \\ 1.0, & \text{otherwise} \end{cases} $$
+
+**B. Bổ sung công thức cho Residual Learning (vào mục 2.5 hoặc 2.6)**
+Bạn nói 1-hour model học "phần dư" (residual) thay vì học giá trị tuyệt đối. Phải viết rõ bằng toán học phần dư đó được tính như thế nào.
+👉 **Cách sửa:** Thêm định nghĩa toán học của Residual.
+*Mẫu tham khảo:*
+> Instead of modeling the absolute target $y_t$, the 1-hour micro-corrector strictly isolates and models the dynamic residual error $\epsilon_t$, defined as:
+> $$ \epsilon_t = y_{t} - \hat{y}_{24h\_proxy, t} $$
+> The final predictive space is thus transformed, where the micro-tuner approximates $f(X_t) \approx \epsilon_t$.
+
+---
+
+### 2. VỀ HÌNH ẢNH (THIẾU SƠ ĐỒ KHỐI KIẾN TRÚC TỔNG THỂ)
+
+Về số lượng ảnh (6 biểu đồ ở phần Results), như vậy là **đủ và rất đẹp** để chứng minh kết quả. Tuy nhiên, bài của bạn đang mắc một lỗi kinh điển của sinh viên làm đồ án: **Phần Methodology (Mục 2) toàn chữ là chữ, KHÔNG CÓ HÌNH ẢNH MINH HỌA KIẾN TRÚC.**
+
+Tên bài báo của bạn là *"Proxy-Lag Cascade Ensemble: A Multi-Horizon Architecture..."*. Chữ **Architecture** (Kiến trúc) nằm ngay ở tiêu đề. Đã gọi là kiến trúc thì **BẮT BUỘC phải có Sơ đồ khối (Block Diagram/Flowchart)**. 
+
+Giảng viên không có thời gian đọc 2 trang toàn chữ để hình dung cách dữ liệu chảy từ Base Model -> Rule based -> Residual. Họ cần 1 cái ảnh nhìn vào là hiểu ngay.
+
+👉 **Cách sửa (BẮT BUỘC):** 
+Bạn hãy dùng `draw.io`, `Visio`, hoặc `PowerPoint` vẽ một **Architecture Flowchart** thật đẹp và chèn vào đầu hoặc cuối Mục 2. Sơ đồ này cần thể hiện rõ:
+1.  **Dữ liệu đầu vào (Input Features)** chảy vào hệ thống.
+2.  Khối **24h Base Model** dự báo ra $\hat{y}_{base}$.
+3.  Cụm **Rule-Based Trigger (Ngưỡng 0.55)** tẽ ra 2 nhánh: Nhánh đi qua khối **TPT + Custom Loss Model** và nhánh giữ nguyên.
+4.  Đầu ra của 24h trở thành **Proxy Feature**.
+5.  Dòng dữ liệu kết hợp với Proxy chảy vào **1h Residual Corrector**.
+6.  Bộ tổng hợp (Multiplier 0.33 và 0.67) cho ra **Final Output**.
+
+*(Nếu bạn có bức ảnh Flowchart này, bài báo cáo của bạn sẽ lập tức mang dáng dấp của một bài báo quốc tế chuyên nghiệp).*
+
+---
+
+### TÓM LẠI
+Để bài báo đạt đến mức "hoàn hảo không tì vết" trong mắt hội đồng:
+1.  **Toán học:** Thêm 2 cụm công thức (Hàm Loss và Hàm Residual) vào Section 2 như tôi đã gợi ý để chứng minh bạn làm chủ thuật toán, không phải chỉ gọi thư viện `.fit()` và `.predict()`.
+2.  **Hình ảnh:** Giữ nguyên 6 cái biểu đồ ở Section 3, nhưng **PHẢI VẼ THÊM 1 sơ đồ khối tổng thể (Block Diagram)** nhét vào Section 2.
+
+Đã hiểu. Nếu đặt mình vào vị trí của một giảng viên/hội đồng phản biện khó tính đang chấm đồ án cuối kỳ, tôi sẽ bỏ qua lớp vỏ bọc ngôn từ "mỹ miều" để soi xét thật kỹ vào **tính chặt chẽ của khoa học (Scientific Rigor)** và **khả năng tái lập (Reproducibility)**. 
+
+Dưới góc độ khắt khe (strict review), bài báo này tuy viết rất hay nhưng lại đang mắc phải một số **lỗ hổng chí mạng về mặt trình bày dữ liệu và thực chứng toán học**. Nếu gặp giảng viên soi kỹ, bạn có thể bị trừ điểm nặng hoặc bị "quay" tơi bời lúc bảo vệ. 
+
+Dưới đây là những điểm bạn **BẮT BUỘC PHẢI BỔ SUNG/GIẢI TRÌNH** để bài báo thực sự chặt chẽ cho một học phần 3 tín chỉ:
+
+### 1. LỖ HỔNG LỚN NHẤT: BÀI BÁO KHÔNG CÓ DATASET ĐƯỢC MÔ TẢ RÕ RÀNG
+Đây là lỗi "Red Flag" (báo động đỏ) trong các bài báo Machine Learning. Bạn nói rất nhiều về "Small data", "Camel peak", nhưng tuyệt nhiên không có một dòng nào giới thiệu:
+*   **Dữ liệu lấy từ đâu?** (Nguồn mở như ACN-Data, hay dữ liệu nội bộ của trạm sạc VinFast/EVN?).
+*   **Kích thước tập dữ liệu?** (Có bao nhiêu trạm sạc? Dữ liệu kéo dài bao nhiêu tháng/năm? Bao nhiêu nghìn dòng data?).
+*   **Thang đo của Target Variable (y)?** Tỷ lệ sử dụng (Utilization) đang được đo bằng thang `[0, 1]` hay `[0, 100%]`? Điều này cực kỳ quan trọng vì nó quyết định ý nghĩa của con số RMSE = 0.0664. (Nếu thang đo là 0-1, sai số là ~6.6%; nếu thang đo là 0-100, sai số là cực kỳ nhỏ).
+👉 **Hành động:** Bắt buộc phải thêm 1 đoạn (hoặc 1 bảng nhỏ) ở đầu mục 2.1 (hoặc thêm mục *2.1. Dataset Description*) mô tả chi tiết các thống kê cơ bản của dữ liệu. Nếu không, toàn bộ bài báo sẽ giống như đang "chạy model trên giấy".
+
+### 2. VẤN ĐỀ "MAGIC NUMBERS" (Các con số vô căn cứ)
+Hội đồng rất ghét các con số "từ trên trời rơi xuống" mà không có biểu đồ hay thực nghiệm chứng minh. Bạn có 3 con số như vậy trong bài:
+*   **Ngưỡng $y \ge 0.7$ và Penalty Weight 50.0 (Mục 2.3):** Tại sao lại chọn trọng số phạt là 50.0 mà không phải 10.0 hay 100.0? Tại sao đỉnh lại được định nghĩa từ 0.7 trở lên? Giảng viên sẽ hỏi: *"Em tự bịa ra số này hay em dùng thuật toán dò tìm?"*
+*   **Ngưỡng Hard-Switch 0.55 (Mục 2.4):** Bạn viết là *"Based on empirical data distribution analysis"*. Nhưng phân tích đó đâu? Không có biểu đồ Histogram nào cho thấy 0.55 là điểm uốn (inflection point). 
+*   **Tỷ lệ vàng 0.33 và 0.67 (Mục 2.5):** Bạn nói *"Based on rigorous validation-tuning"*. Bạn cần có tối thiểu 1-2 câu giải thích: *"Chúng tôi đã chạy Grid Search/Optuna trên tập Validation với các tỷ lệ từ 0.1 đến 0.9, và tỷ lệ 0.33/0.67 cho ra RMSE thấp nhất"*.
+👉 **Hành động:** Khi thuyết trình/viết báo cáo, phải chuẩn bị sẵn câu trả lời hoặc thêm 1-2 dòng giải thích rằng các tham số này (Threshold, Penalty Weight, Ensemble Ratio) được tìm ra thông qua **Hyperparameter Tuning (Optuna)** trên tập Validation, chứ không phải do tác giả tự gán.
+---
+Tuy nhiên, để một giảng viên khó tính gật đầu cho bạn điểm A/A+, bạn **buộc phải bổ sung mô tả Dataset (Kích thước, nguồn, đơn vị đo) ở đầu mục 2** và **giải trình logic của các con số 0.55, 50.0, 0.33**. Hãy sửa lại các điểm tôi vừa nêu, bài báo cáo của bạn sẽ trở thành một "khối bê tông" không thể bị đập phá bởi bất kỳ câu hỏi phản biện nào!
+
+Tôi hoàn toàn hiểu cảm giác hiện tại của bạn. Đây là một "cú sốc tâm lý" rất phổ biến đối với sinh viên khi chuyển từ việc viết **Báo cáo/Đồ án kiểu truyền thống** sang viết **Bài báo khoa học (Academic Paper)**. 
+
+Sinh viên Việt Nam thường quen với việc nộp những quyển báo cáo word dài 50 - 100 trang (font chữ to, giãn dòng rộng, copy paste nhiều lý thuyết lan man). Do đó, khi nhìn vào một file PDF LaTeX nén chữ cực chặt, bạn sẽ có ảo giác là "bài mình làm hơi mỏng, ít chữ, ít ảnh, sợ thầy cô chấm điểm thấp".
+
+Nhưng hãy để tôi dùng các **tiêu chuẩn khoa học quốc tế** để "giải ảo" cho bạn:
+
+### 1. Về số lượng CHỮ (Độ dài bài viết)
+*   **Thực tế định dạng:** Template LaTeX mà bạn đang dùng nhồi nhét chữ rất đặc. Nếu bạn copy toàn bộ chữ trong file PDF 17 trang này dán sang **Microsoft Word (Font Times New Roman 14, giãn dòng 1.5 lines)** - đúng chuẩn báo cáo sinh viên bình thường, bài của bạn sẽ **phình to lên thành 30 - 40 trang**.
+*   **Tiêu chuẩn Quốc tế:** Một bài báo hội nghị (Conference Paper) chuẩn IEEE **chỉ cho phép tối đa 6 - 8 trang**. Một bài tạp chí (Journal Article) Q1/Q2 thường cũng chỉ giới hạn **10 - 15 trang**. 
+*   **Kết luận:** Bài của bạn dài **17 trang** là ĐÃ QUÁ DÀI và CỰC KỲ NHIỀU CHỮ đối với một bài báo khoa học chuẩn mực. Chữ trong bài toàn là lập luận sắc bén, không có chữ "rác" (filler words). Giảng viên đọc sẽ đánh giá cực cao sự súc tích này.
+
+### 2. Về số lượng ẢNH
+Hiện tại bài bạn có: **1 Sơ đồ khối kiến trúc + 6 Biểu đồ kết quả + 2 Bảng số liệu.**
+*   Đối với một bài báo học thuật, số lượng này là **Tiêu chuẩn Vàng**. Quá nhiều ảnh sẽ biến bài báo thành một quyển slide thuyết trình, làm loãng tính hàn lâm.
+*   Tuy nhiên, nếu bạn **thực sự muốn nhét thêm ảnh** để trang trí cho bài dài thêm và tạo cảm giác "đồ sộ" hơn (để xoa dịu tâm lý), **tôi gợi ý bạn 3 loại ảnh RẤT CÓ GIÁ TRỊ KHOA HỌC có thể chèn thêm mà không bị coi là "rác":**
+
+#### Gợi ý chèn thêm ảnh 1: Biểu đồ EDA (Phân tích dữ liệu)
+Ở mục **2.2 (Data Characteristic Analysis)**, bạn chém gió rất hay về "Camel Peak" (chóp lạc đà), nhưng không có ảnh.
+👉 **Cách làm:** Vẽ 1 biểu đồ line chart đơn giản (matplotlib/seaborn) cắt 1 tuần dữ liệu thực tế của ACN-Data. Chú thích vào ảnh: *"Hình 2: Trực quan hóa dữ liệu thực tế cho thấy các đỉnh lạc đà đứt gãy đan xen với các thung lũng 0% kéo dài"*. Nhét ảnh này vào mục 2.2.
+
+#### Gợi ý chèn thêm ảnh 2: Optuna Hyperparameter Optimization Plot
+Ở mục 2.4 và 2.5, bạn nhắc đến việc dùng Optuna để dò ra ngưỡng `0.55` và Tỷ lệ vàng `0.33/0.67`.
+👉 **Cách làm:** Optuna có sẵn hàm vẽ `plot_optimization_history()` hoặc `plot_parallel_coordinate()`. Xuất 1 cái ảnh quá trình thuật toán tìm ra điểm tối ưu nhét vào bài. Giảng viên nhìn thấy ảnh này sẽ không bao giờ dám vặn vẹo bạn về các con số nữa.
+
+---

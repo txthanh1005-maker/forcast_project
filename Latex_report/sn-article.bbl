@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{0}
+\begin{thebibliography}{16}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -42,5 +42,242 @@
 \ifx \bconflocation  \undefined \def \bconflocation#1{#1}\fi
 \ifx \arxivurl  \undefined \def \arxivurl#1{\textsf{#1}}\fi
 \csname PreBibitemsHook\endcsname
+
+%%% 1
+\bibitem[\protect\citeauthoryear{Eren and K{\"u}{\c{c}}{\"u}kdemiral}{2024}]{eren2024comprehensive}
+\begin{barticle}
+\bauthor{\bsnm{Eren}, \binits{Y.}},
+\bauthor{\bsnm{K{\"u}{\c{c}}{\"u}kdemiral}, \binits{{\. I}.}}:
+\batitle{A comprehensive review on deep learning approaches for short-term load forecasting}.
+\bjtitle{Renewable and Sustainable Energy Reviews}
+\bvolume{189},
+\bfpage{114031}
+(\byear{2024})
+\end{barticle}
+\endbibitem
+
+%%% 2
+\bibitem[\protect\citeauthoryear{Zhu et~al.}{2019}]{zhu2019electric}
+\begin{barticle}
+\bauthor{\bsnm{Zhu}, \binits{J.}},
+\bauthor{\bsnm{Yang}, \binits{Z.}},
+\bauthor{\bsnm{Mourshed}, \binits{M.}}, \betal:
+\batitle{Electric vehicle charging load forecasting: A comparative study of deep learning approaches}.
+\bjtitle{Energies}
+\bvolume{12}(\bissue{14}),
+\bfpage{2692}
+(\byear{2019})
+\end{barticle}
+\endbibitem
+
+%%% 3
+\bibitem[\protect\citeauthoryear{Lu and Hong}{2021}]{lu2021comparative}
+\begin{barticle}
+\bauthor{\bsnm{Lu}, \binits{R.}},
+\bauthor{\bsnm{Hong}, \binits{S.H.}}:
+\batitle{Comparative analysis of machine learning and deep learning models for short-term load forecasting in smart grids}.
+\bjtitle{IEEE Access}
+\bvolume{9},
+\bfpage{12456}--\blpage{12468}
+(\byear{2021})
+\end{barticle}
+\endbibitem
+
+%%% 4
+\bibitem[\protect\citeauthoryear{Wang and Chen}{2020}]{wang2020ensemble}
+\begin{barticle}
+\bauthor{\bsnm{Wang}, \binits{Y.}},
+\bauthor{\bsnm{Chen}, \binits{X.}}:
+\batitle{Ensemble learning and deep learning for short-term load forecasting: A comparative study on small datasets}.
+\bjtitle{Applied Energy}
+\bvolume{264},
+\bfpage{114705}
+(\byear{2020})
+\end{barticle}
+\endbibitem
+
+%%% 5
+\bibitem[\protect\citeauthoryear{Shahriar et~al.}{2020}]{shahriar2020machine}
+\begin{barticle}
+\bauthor{\bsnm{Shahriar}, \binits{S.}},
+\bauthor{\bsnm{Al-Ali}, \binits{A.}},
+\bauthor{\bsnm{Osman}, \binits{A.}},
+\bauthor{\bsnm{Dhou}, \binits{S.}},
+\bauthor{\bsnm{Nijim}, \binits{M.}}:
+\batitle{Machine learning approaches for ev charging behavior: A review}.
+\bjtitle{IEEE Access}
+\bvolume{8},
+\bfpage{168980}--\blpage{168993}
+(\byear{2020})
+\end{barticle}
+\endbibitem
+
+%%% 6
+\bibitem[\protect\citeauthoryear{Wu et~al.}{2021}]{wu2021support}
+\begin{barticle}
+\bauthor{\bsnm{Wu}, \binits{J.}},
+\bauthor{\bsnm{Wang}, \binits{Y.-G.}},
+\bauthor{\bsnm{Tian}, \binits{Y.-C.}},
+\bauthor{\bsnm{Burrage}, \binits{K.}},
+\bauthor{\bsnm{Cao}, \binits{T.}}:
+\batitle{Support vector regression with asymmetric loss for optimal electric load forecasting}.
+\bjtitle{Energy}
+\bvolume{223},
+\bfpage{119969}
+(\byear{2021})
+\end{barticle}
+\endbibitem
+
+%%% 7
+\bibitem[\protect\citeauthoryear{Ko et~al.}{2025}]{ko2025deterministic}
+\begin{botherref}
+\oauthor{\bsnm{Ko}, \binits{M.-S.}},
+\oauthor{\bsnm{Zhu}, \binits{H.}},
+\oauthor{\bsnm{Hur}, \binits{K.}}:
+Deterministic and probabilistic forecasting of wind power generation and ramp rate with expectation-implemented deep learning.
+IEEE Transactions on Sustainable Energy
+(2025)
+\end{botherref}
+\endbibitem
+
+%%% 8
+\bibitem[\protect\citeauthoryear{Kim}{2026}]{kim2026methodology}
+\begin{barticle}
+\bauthor{\bsnm{Kim}, \binits{J.-H.}}:
+\batitle{A methodology for calculating representative solar curves based on multi-year weighted library and optimism frequency control}.
+\bjtitle{The Transactions of the Korean Institute of Electrical Engineers}
+\bvolume{75}(\bissue{6}),
+\bfpage{1246}--\blpage{1253}
+(\byear{2026})
+\end{barticle}
+\endbibitem
+
+%%% 9
+\bibitem[\protect\citeauthoryear{Laouafi et~al.}{2016}]{laouafi2016daily}
+\begin{barticle}
+\bauthor{\bsnm{Laouafi}, \binits{A.}},
+\bauthor{\bsnm{Mordjaoui}, \binits{M.}},
+\bauthor{\bsnm{Laouafi}, \binits{F.}},
+\bauthor{\bsnm{Boukelia}, \binits{T.E.}}:
+\batitle{Daily peak electricity demand forecasting based on an adaptive hybrid two-stage methodology}.
+\bjtitle{International Journal of Electrical Power \& Energy Systems}
+\bvolume{77},
+\bfpage{136}--\blpage{144}
+(\byear{2016})
+\end{barticle}
+\endbibitem
+
+%%% 10
+\bibitem[\protect\citeauthoryear{Hsu et~al.}{2018}]{hsu2018two}
+\begin{barticle}
+\bauthor{\bsnm{Hsu}, \binits{Y.-Y.}},
+\bauthor{\bsnm{Tung}, \binits{T.-T.}},
+\bauthor{\bsnm{Yeh}, \binits{H.-C.}},
+\bauthor{\bsnm{Lu}, \binits{C.-N.}}:
+\batitle{Two-stage artificial neural network model for short-term load forecasting}.
+\bjtitle{IFAC-PapersOnLine}
+\bvolume{51}(\bissue{28}),
+\bfpage{424}--\blpage{429}
+(\byear{2018})
+\end{barticle}
+\endbibitem
+
+%%% 11
+\bibitem[\protect\citeauthoryear{Chen et~al.}{2019}]{chen2019short}
+\begin{barticle}
+\bauthor{\bsnm{Chen}, \binits{K.}},
+\bauthor{\bsnm{Chen}, \binits{K.}},
+\bauthor{\bsnm{Wang}, \binits{Q.}},
+\bauthor{\bsnm{He}, \binits{Z.}},
+\bauthor{\bsnm{Hu}, \binits{J.}},
+\bauthor{\bsnm{He}, \binits{J.}}:
+\batitle{Short-term load forecasting with deep residual networks}.
+\bjtitle{IEEE Transactions on Smart Grid}
+\bvolume{10}(\bissue{4}),
+\bfpage{3943}--\blpage{3952}
+(\byear{2019})
+\end{barticle}
+\endbibitem
+
+%%% 12
+\bibitem[\protect\citeauthoryear{Rubasinghe et~al.}{2023}]{rubasinghe2023highly}
+\begin{barticle}
+\bauthor{\bsnm{Rubasinghe}, \binits{O.}},
+\bauthor{\bsnm{Zhang}, \binits{T.}},
+\bauthor{\bsnm{Zhang}, \binits{X.}},
+\bauthor{\bsnm{Choi}, \binits{S.S.}},
+\bauthor{\bsnm{Chau}, \binits{T.K.}},
+\bauthor{\bsnm{Chow}, \binits{Y.}},
+\bauthor{\bsnm{Fernando}, \binits{T.}},
+\bauthor{\bsnm{Iu}, \binits{H.H.-C.}}:
+\batitle{Highly accurate peak and valley prediction short-term net load forecasting approach based on decomposition for power systems with high pv penetration}.
+\bjtitle{Applied Energy}
+\bvolume{338},
+\bfpage{120641}
+(\byear{2023})
+\end{barticle}
+\endbibitem
+
+%%% 13
+\bibitem[\protect\citeauthoryear{Papadakis et~al.}{1998}]{papadakis1998novel}
+\begin{barticle}
+\bauthor{\bsnm{Papadakis}, \binits{S.}},
+\bauthor{\bsnm{Theocharis}, \binits{J.}},
+\bauthor{\bsnm{Kiartzis}, \binits{S.}},
+\bauthor{\bsnm{Bakirtzis}, \binits{A.}}:
+\batitle{A novel approach to short-term load forecasting using fuzzy neural networks}.
+\bjtitle{IEEE Transactions on Power Systems}
+\bvolume{13}(\bissue{2}),
+\bfpage{480}--\blpage{492}
+(\byear{1998})
+\end{barticle}
+\endbibitem
+
+%%% 14
+\bibitem[\protect\citeauthoryear{Kong et~al.}{2020}]{kong2020short}
+\begin{barticle}
+\bauthor{\bsnm{Kong}, \binits{X.}},
+\bauthor{\bsnm{Li}, \binits{C.}},
+\bauthor{\bsnm{Wang}, \binits{C.}},
+\bauthor{\bsnm{Zhang}, \binits{Y.}},
+\bauthor{\bsnm{Zhang}, \binits{J.}}:
+\batitle{Short-term electrical load forecasting based on error correction using dynamic mode decomposition}.
+\bjtitle{Applied Energy}
+\bvolume{261},
+\bfpage{114368}
+(\byear{2020})
+\end{barticle}
+\endbibitem
+
+%%% 15
+\bibitem[\protect\citeauthoryear{Shen et~al.}{2020}]{shen2020novel}
+\begin{barticle}
+\bauthor{\bsnm{Shen}, \binits{Z.}},
+\bauthor{\bsnm{Zhang}, \binits{Y.}},
+\bauthor{\bsnm{Lu}, \binits{J.}},
+\bauthor{\bsnm{Xu}, \binits{J.}},
+\bauthor{\bsnm{Xiao}, \binits{G.}}:
+\batitle{A novel time series forecasting model with deep learning}.
+\bjtitle{Neurocomputing}
+\bvolume{396},
+\bfpage{302}--\blpage{313}
+(\byear{2020})
+\end{barticle}
+\endbibitem
+
+%%% 16
+\bibitem[\protect\citeauthoryear{Zhang et~al.}{2021}]{zhang2021novel}
+\begin{barticle}
+\bauthor{\bsnm{Zhang}, \binits{S.}},
+\bauthor{\bsnm{Chen}, \binits{Y.}},
+\bauthor{\bsnm{Zhang}, \binits{W.}},
+\bauthor{\bsnm{Feng}, \binits{R.}}:
+\batitle{A novel ensemble deep learning model with dynamic error correction and multi-objective ensemble pruning for time series forecasting}.
+\bjtitle{Information Sciences}
+\bvolume{544},
+\bfpage{427}--\blpage{445}
+(\byear{2021})
+\end{barticle}
+\endbibitem
 
 \end{thebibliography}

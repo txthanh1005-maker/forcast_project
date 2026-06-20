@@ -1,0 +1,2203 @@
+[
+  {
+    "id": "https://openalex.org/W2997320470",
+    "doi": "https://doi.org/10.1016/j.apenergy.2019.114368",
+    "title": "Short-term electrical load forecasting based on error correction using dynamic mode decomposition",
+    "display_name": "Short-term electrical load forecasting based on error correction using dynamic mode decomposition",
+    "publication_year": 2019,
+    "publication_date": "2019-12-30",
+    "ids": {
+      "openalex": "https://openalex.org/W2997320470",
+      "doi": "https://doi.org/10.1016/j.apenergy.2019.114368",
+      "mag": "2997320470"
+    },
+    "language": "en",
+    "primary_location": {
+      "id": "doi:10.1016/j.apenergy.2019.114368",
+      "is_oa": false,
+      "landing_page_url": "https://doi.org/10.1016/j.apenergy.2019.114368",
+      "pdf_url": null,
+      "source": {
+        "id": "https://openalex.org/S109565702",
+        "display_name": "Applied Energy",
+        "issn_l": "0306-2619",
+        "issn": [
+          "0306-2619",
+          "1872-9118"
+        ],
+        "is_oa": false,
+        "is_in_doaj": false,
+        "is_core": true,
+        "host_organization": "https://openalex.org/P4310320990",
+        "host_organization_name": "Elsevier BV",
+        "host_organization_lineage": [
+          "https://openalex.org/P4310320990"
+        ],
+        "host_organization_lineage_names": [
+          "Elsevier BV"
+        ],
+        "type": "journal"
+      },
+      "license": null,
+      "license_id": null,
+      "version": "publishedVersion",
+      "is_accepted": true,
+      "is_published": true,
+      "raw_source_name": "Applied Energy",
+      "raw_type": "journal-article"
+    },
+    "type": "article",
+    "indexed_in": [
+      "crossref"
+    ],
+    "open_access": {
+      "is_oa": false,
+      "oa_status": "closed",
+      "oa_url": null,
+      "any_repository_has_fulltext": false
+    },
+    "authorships": [
+      {
+        "author_position": "first",
+        "author": {
+          "id": "https://openalex.org/A5026945887",
+          "display_name": "Xiangyu Kong",
+          "orcid": "https://orcid.org/0000-0002-7765-2643"
+        },
+        "institutions": [
+          {
+            "id": "https://openalex.org/I162868743",
+            "display_name": "Tianjin University",
+            "ror": "https://ror.org/012tb2g32",
+            "country_code": "CN",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I162868743"
+            ]
+          }
+        ],
+        "countries": [
+          "CN"
+        ],
+        "is_corresponding": true,
+        "raw_author_name": "Xiangyu Kong",
+        "raw_affiliation_strings": [
+          "Key Laboratory of Smart Grid of Ministry of Education (Tianjin University), Nankai District, Tianjin 300072, China"
+        ],
+        "raw_orcid": "https://orcid.org/0000-0002-7765-2643",
+        "affiliations": [
+          {
+            "raw_affiliation_string": "Key Laboratory of Smart Grid of Ministry of Education (Tianjin University), Nankai District, Tianjin 300072, China",
+            "institution_ids": [
+              "https://openalex.org/I162868743"
+            ]
+          }
+        ]
+      },
+      {
+        "author_position": "middle",
+        "author": {
+          "id": "https://openalex.org/A5100386715",
+          "display_name": "Chuang Li",
+          "orcid": "https://orcid.org/0000-0003-1890-2064"
+        },
+        "institutions": [
+          {
+            "id": "https://openalex.org/I162868743",
+            "display_name": "Tianjin University",
+            "ror": "https://ror.org/012tb2g32",
+            "country_code": "CN",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I162868743"
+            ]
+          }
+        ],
+        "countries": [
+          "CN"
+        ],
+        "is_corresponding": true,
+        "raw_author_name": "Chuang Li",
+        "raw_affiliation_strings": [
+          "Key Laboratory of Smart Grid of Ministry of Education (Tianjin University), Nankai District, Tianjin 300072, China"
+        ],
+        "raw_orcid": null,
+        "affiliations": [
+          {
+            "raw_affiliation_string": "Key Laboratory of Smart Grid of Ministry of Education (Tianjin University), Nankai District, Tianjin 300072, China",
+            "institution_ids": [
+              "https://openalex.org/I162868743"
+            ]
+          }
+        ]
+      },
+      {
+        "author_position": "middle",
+        "author": {
+          "id": "https://openalex.org/A5101409236",
+          "display_name": "Chengshan Wang",
+          "orcid": "https://orcid.org/0000-0003-1278-2903"
+        },
+        "institutions": [
+          {
+            "id": "https://openalex.org/I162868743",
+            "display_name": "Tianjin University",
+            "ror": "https://ror.org/012tb2g32",
+            "country_code": "CN",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I162868743"
+            ]
+          }
+        ],
+        "countries": [
+          "CN"
+        ],
+        "is_corresponding": false,
+        "raw_author_name": "Chengshan Wang",
+        "raw_affiliation_strings": [
+          "Key Laboratory of Smart Grid of Ministry of Education (Tianjin University), Nankai District, Tianjin 300072, China"
+        ],
+        "raw_orcid": null,
+        "affiliations": [
+          {
+            "raw_affiliation_string": "Key Laboratory of Smart Grid of Ministry of Education (Tianjin University), Nankai District, Tianjin 300072, China",
+            "institution_ids": [
+              "https://openalex.org/I162868743"
+            ]
+          }
+        ]
+      },
+      {
+        "author_position": "middle",
+        "author": {
+          "id": "https://openalex.org/A5103169531",
+          "display_name": "Yusen Zhang",
+          "orcid": "https://orcid.org/0000-0002-0587-612X"
+        },
+        "institutions": [
+          {
+            "id": "https://openalex.org/I17442442",
+            "display_name": "State Grid Corporation of China (China)",
+            "ror": "https://ror.org/05twwhs70",
+            "country_code": "CN",
+            "type": "company",
+            "lineage": [
+              "https://openalex.org/I17442442"
+            ]
+          }
+        ],
+        "countries": [
+          "CN"
+        ],
+        "is_corresponding": false,
+        "raw_author_name": "Yusen Zhang",
+        "raw_affiliation_strings": [
+          "Xiong\u2019an New Area Branch of State Grid Hebei Electric Power Co., Ltd., Baoding 071600, Hebei Province, China",
+          "Xiong'an New Area Branch of State Grid Hebei Electric Power Co., Ltd., Baoding 071600, Hebei Province, China"
+        ],
+        "raw_orcid": null,
+        "affiliations": [
+          {
+            "raw_affiliation_string": "Xiong\u2019an New Area Branch of State Grid Hebei Electric Power Co., Ltd., Baoding 071600, Hebei Province, China",
+            "institution_ids": []
+          },
+          {
+            "raw_affiliation_string": "Xiong'an New Area Branch of State Grid Hebei Electric Power Co., Ltd., Baoding 071600, Hebei Province, China",
+            "institution_ids": [
+              "https://openalex.org/I17442442"
+            ]
+          }
+        ]
+      },
+      {
+        "author_position": "last",
+        "author": {
+          "id": "https://openalex.org/A5100410082",
+          "display_name": "Jian Zhang",
+          "orcid": "https://orcid.org/0000-0003-3373-9621"
+        },
+        "institutions": [
+          {
+            "id": "https://openalex.org/I4210097143",
+            "display_name": "Tianjin Research Institute of Electric Science (China)",
+            "ror": "https://ror.org/010ryc044",
+            "country_code": "CN",
+            "type": "company",
+            "lineage": [
+              "https://openalex.org/I4210097143"
+            ]
+          }
+        ],
+        "countries": [
+          "CN"
+        ],
+        "is_corresponding": false,
+        "raw_author_name": "Jian Zhang",
+        "raw_affiliation_strings": [
+          "State Grid Tianjin Electric Power Company, Tianjin 300010, China"
+        ],
+        "raw_orcid": null,
+        "affiliations": [
+          {
+            "raw_affiliation_string": "State Grid Tianjin Electric Power Company, Tianjin 300010, China",
+            "institution_ids": [
+              "https://openalex.org/I4210097143"
+            ]
+          }
+        ]
+      }
+    ],
+    "institutions": [],
+    "countries_distinct_count": 1,
+    "institutions_distinct_count": 5,
+    "corresponding_author_ids": [
+      "https://openalex.org/A5026945887",
+      "https://openalex.org/A5100386715"
+    ],
+    "corresponding_institution_ids": [
+      "https://openalex.org/I162868743"
+    ],
+    "apc_list": {
+      "value": 4140,
+      "currency": "USD",
+      "value_usd": 4140
+    },
+    "apc_paid": null,
+    "fwci": 5.328,
+    "has_fulltext": false,
+    "cited_by_count": 90,
+    "citation_normalized_percentile": {
+      "value": 0.9633031,
+      "is_in_top_1_percent": false,
+      "is_in_top_10_percent": true
+    },
+    "cited_by_percentile_year": {
+      "min": 98,
+      "max": 100
+    },
+    "biblio": {
+      "volume": "261",
+      "issue": null,
+      "first_page": "114368",
+      "last_page": "114368"
+    },
+    "is_retracted": false,
+    "is_paratext": false,
+    "is_xpac": false,
+    "primary_topic": {
+      "id": "https://openalex.org/T11052",
+      "display_name": "Energy Load and Power Forecasting",
+      "score": 0.9998999834060669,
+      "subfield": {
+        "id": "https://openalex.org/subfields/2208",
+        "display_name": "Electrical and Electronic Engineering"
+      },
+      "field": {
+        "id": "https://openalex.org/fields/22",
+        "display_name": "Engineering"
+      },
+      "domain": {
+        "id": "https://openalex.org/domains/3",
+        "display_name": "Physical Sciences"
+      }
+    },
+    "topics": [
+      {
+        "id": "https://openalex.org/T11052",
+        "display_name": "Energy Load and Power Forecasting",
+        "score": 0.9998999834060669,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2208",
+          "display_name": "Electrical and Electronic Engineering"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/22",
+          "display_name": "Engineering"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T10688",
+        "display_name": "Image and Signal Denoising Methods",
+        "score": 0.9955999851226807,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1707",
+          "display_name": "Computer Vision and Pattern Recognition"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/17",
+          "display_name": "Computer Science"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T12368",
+        "display_name": "Grey System Theory Applications",
+        "score": 0.989799976348877,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1803",
+          "display_name": "Management Science and Operations Research"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/18",
+          "display_name": "Decision Sciences"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/2",
+          "display_name": "Social Sciences"
+        }
+      }
+    ],
+    "keywords": [
+      {
+        "id": "https://openalex.org/keywords/mean-absolute-percentage-error",
+        "display_name": "Mean absolute percentage error",
+        "score": 0.6183558106422424
+      },
+      {
+        "id": "https://openalex.org/keywords/computer-science",
+        "display_name": "Computer science",
+        "score": 0.5873759984970093
+      },
+      {
+        "id": "https://openalex.org/keywords/term",
+        "display_name": "Term (time)",
+        "score": 0.5447320938110352
+      },
+      {
+        "id": "https://openalex.org/keywords/stability",
+        "display_name": "Stability (learning theory)",
+        "score": 0.48951399326324463
+      },
+      {
+        "id": "https://openalex.org/keywords/mean-squared-error",
+        "display_name": "Mean squared error",
+        "score": 0.4802246689796448
+      },
+      {
+        "id": "https://openalex.org/keywords/mode",
+        "display_name": "Mode (computer interface)",
+        "score": 0.44637051224708557
+      },
+      {
+        "id": "https://openalex.org/keywords/time-series",
+        "display_name": "Time series",
+        "score": 0.4348428249359131
+      },
+      {
+        "id": "https://openalex.org/keywords/electric-power-system",
+        "display_name": "Electric power system",
+        "score": 0.4313116669654846
+      },
+      {
+        "id": "https://openalex.org/keywords/series",
+        "display_name": "Series (stratigraphy)",
+        "score": 0.4221319258213043
+      },
+      {
+        "id": "https://openalex.org/keywords/data-mining",
+        "display_name": "Data mining",
+        "score": 0.3548091650009155
+      },
+      {
+        "id": "https://openalex.org/keywords/algorithm",
+        "display_name": "Algorithm",
+        "score": 0.34671905636787415
+      },
+      {
+        "id": "https://openalex.org/keywords/power",
+        "display_name": "Power (physics)",
+        "score": 0.31409597396850586
+      },
+      {
+        "id": "https://openalex.org/keywords/statistics",
+        "display_name": "Statistics",
+        "score": 0.28210753202438354
+      },
+      {
+        "id": "https://openalex.org/keywords/mathematics",
+        "display_name": "Mathematics",
+        "score": 0.1783372461795807
+      },
+      {
+        "id": "https://openalex.org/keywords/machine-learning",
+        "display_name": "Machine learning",
+        "score": 0.1397877335548401
+      }
+    ],
+    "concepts": [
+      {
+        "id": "https://openalex.org/C150217764",
+        "wikidata": "https://www.wikidata.org/wiki/Q6803607",
+        "display_name": "Mean absolute percentage error",
+        "level": 3,
+        "score": 0.6183558106422424
+      },
+      {
+        "id": "https://openalex.org/C41008148",
+        "wikidata": "https://www.wikidata.org/wiki/Q21198",
+        "display_name": "Computer science",
+        "level": 0,
+        "score": 0.5873759984970093
+      },
+      {
+        "id": "https://openalex.org/C61797465",
+        "wikidata": "https://www.wikidata.org/wiki/Q1188986",
+        "display_name": "Term (time)",
+        "level": 2,
+        "score": 0.5447320938110352
+      },
+      {
+        "id": "https://openalex.org/C112972136",
+        "wikidata": "https://www.wikidata.org/wiki/Q7595718",
+        "display_name": "Stability (learning theory)",
+        "level": 2,
+        "score": 0.48951399326324463
+      },
+      {
+        "id": "https://openalex.org/C139945424",
+        "wikidata": "https://www.wikidata.org/wiki/Q1940696",
+        "display_name": "Mean squared error",
+        "level": 2,
+        "score": 0.4802246689796448
+      },
+      {
+        "id": "https://openalex.org/C48677424",
+        "wikidata": "https://www.wikidata.org/wiki/Q6888088",
+        "display_name": "Mode (computer interface)",
+        "level": 2,
+        "score": 0.44637051224708557
+      },
+      {
+        "id": "https://openalex.org/C151406439",
+        "wikidata": "https://www.wikidata.org/wiki/Q186588",
+        "display_name": "Time series",
+        "level": 2,
+        "score": 0.4348428249359131
+      },
+      {
+        "id": "https://openalex.org/C89227174",
+        "wikidata": "https://www.wikidata.org/wiki/Q2388981",
+        "display_name": "Electric power system",
+        "level": 3,
+        "score": 0.4313116669654846
+      },
+      {
+        "id": "https://openalex.org/C143724316",
+        "wikidata": "https://www.wikidata.org/wiki/Q312468",
+        "display_name": "Series (stratigraphy)",
+        "level": 2,
+        "score": 0.4221319258213043
+      },
+      {
+        "id": "https://openalex.org/C124101348",
+        "wikidata": "https://www.wikidata.org/wiki/Q172491",
+        "display_name": "Data mining",
+        "level": 1,
+        "score": 0.3548091650009155
+      },
+      {
+        "id": "https://openalex.org/C11413529",
+        "wikidata": "https://www.wikidata.org/wiki/Q8366",
+        "display_name": "Algorithm",
+        "level": 1,
+        "score": 0.34671905636787415
+      },
+      {
+        "id": "https://openalex.org/C163258240",
+        "wikidata": "https://www.wikidata.org/wiki/Q25342",
+        "display_name": "Power (physics)",
+        "level": 2,
+        "score": 0.31409597396850586
+      },
+      {
+        "id": "https://openalex.org/C105795698",
+        "wikidata": "https://www.wikidata.org/wiki/Q12483",
+        "display_name": "Statistics",
+        "level": 1,
+        "score": 0.28210753202438354
+      },
+      {
+        "id": "https://openalex.org/C33923547",
+        "wikidata": "https://www.wikidata.org/wiki/Q395",
+        "display_name": "Mathematics",
+        "level": 0,
+        "score": 0.1783372461795807
+      },
+      {
+        "id": "https://openalex.org/C119857082",
+        "wikidata": "https://www.wikidata.org/wiki/Q2539",
+        "display_name": "Machine learning",
+        "level": 1,
+        "score": 0.1397877335548401
+      },
+      {
+        "id": "https://openalex.org/C62520636",
+        "wikidata": "https://www.wikidata.org/wiki/Q944",
+        "display_name": "Quantum mechanics",
+        "level": 1,
+        "score": 0.0
+      },
+      {
+        "id": "https://openalex.org/C86803240",
+        "wikidata": "https://www.wikidata.org/wiki/Q420",
+        "display_name": "Biology",
+        "level": 0,
+        "score": 0.0
+      },
+      {
+        "id": "https://openalex.org/C111919701",
+        "wikidata": "https://www.wikidata.org/wiki/Q9135",
+        "display_name": "Operating system",
+        "level": 1,
+        "score": 0.0
+      },
+      {
+        "id": "https://openalex.org/C121332964",
+        "wikidata": "https://www.wikidata.org/wiki/Q413",
+        "display_name": "Physics",
+        "level": 0,
+        "score": 0.0
+      },
+      {
+        "id": "https://openalex.org/C151730666",
+        "wikidata": "https://www.wikidata.org/wiki/Q7205",
+        "display_name": "Paleontology",
+        "level": 1,
+        "score": 0.0
+      }
+    ],
+    "mesh": [],
+    "locations_count": 2,
+    "locations": [
+      {
+        "id": "doi:10.1016/j.apenergy.2019.114368",
+        "is_oa": false,
+        "landing_page_url": "https://doi.org/10.1016/j.apenergy.2019.114368",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S109565702",
+          "display_name": "Applied Energy",
+          "issn_l": "0306-2619",
+          "issn": [
+            "0306-2619",
+            "1872-9118"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "host_organization": "https://openalex.org/P4310320990",
+          "host_organization_name": "Elsevier BV",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310320990"
+          ],
+          "host_organization_lineage_names": [
+            "Elsevier BV"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Applied Energy",
+        "raw_type": "journal-article"
+      },
+      {
+        "id": "pmh:oai:RePEc:eee:appene:v:261:y:2020:i:c:s0306261919320550",
+        "is_oa": false,
+        "landing_page_url": "http://www.sciencedirect.com/science/article/pii/S0306261919320550",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S4306401271",
+          "display_name": "RePEc: Research Papers in Economics",
+          "issn_l": null,
+          "issn": null,
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": false,
+          "host_organization": "https://openalex.org/I77793887",
+          "host_organization_name": "Federal Reserve Bank of St. Louis",
+          "host_organization_lineage": [
+            "https://openalex.org/I77793887"
+          ],
+          "host_organization_lineage_names": [],
+          "type": "repository"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "submittedVersion",
+        "is_accepted": false,
+        "is_published": false,
+        "raw_source_name": null,
+        "raw_type": "article"
+      }
+    ],
+    "best_oa_location": null,
+    "sustainable_development_goals": [],
+    "awards": [
+      {
+        "id": "https://openalex.org/G1250046947",
+        "display_name": null,
+        "funder_award_id": "51877145",
+        "funder_id": "https://openalex.org/F4320321001",
+        "funder_display_name": "National Natural Science Foundation of China"
+      }
+    ],
+    "funders": [
+      {
+        "id": "https://openalex.org/F4320321001",
+        "display_name": "National Natural Science Foundation of China",
+        "ror": "https://ror.org/01h0zpd94"
+      }
+    ],
+    "has_content": {
+      "pdf": false,
+      "grobid_xml": false
+    },
+    "content_urls": null,
+    "referenced_works_count": 58,
+    "referenced_works": [
+      "https://openalex.org/W1495476169",
+      "https://openalex.org/W1793209788",
+      "https://openalex.org/W1860813126",
+      "https://openalex.org/W1963682480",
+      "https://openalex.org/W1965995547",
+      "https://openalex.org/W1983865796",
+      "https://openalex.org/W1991414280",
+      "https://openalex.org/W1992110068",
+      "https://openalex.org/W1995140642",
+      "https://openalex.org/W2008750647",
+      "https://openalex.org/W2019198141",
+      "https://openalex.org/W2019282798",
+      "https://openalex.org/W2071555926",
+      "https://openalex.org/W2081770709",
+      "https://openalex.org/W2092928868",
+      "https://openalex.org/W2093564481",
+      "https://openalex.org/W2094306384",
+      "https://openalex.org/W2099322376",
+      "https://openalex.org/W2116174583",
+      "https://openalex.org/W2146588145",
+      "https://openalex.org/W2168185444",
+      "https://openalex.org/W2240834778",
+      "https://openalex.org/W2247296313",
+      "https://openalex.org/W2292268020",
+      "https://openalex.org/W2296521892",
+      "https://openalex.org/W2345862676",
+      "https://openalex.org/W2351354891",
+      "https://openalex.org/W2460410989",
+      "https://openalex.org/W2485034718",
+      "https://openalex.org/W2512474546",
+      "https://openalex.org/W2549468784",
+      "https://openalex.org/W2570991997",
+      "https://openalex.org/W2573526403",
+      "https://openalex.org/W2772647675",
+      "https://openalex.org/W2781582701",
+      "https://openalex.org/W2781966561",
+      "https://openalex.org/W2788388592",
+      "https://openalex.org/W2790428302",
+      "https://openalex.org/W2792244305",
+      "https://openalex.org/W2807482862",
+      "https://openalex.org/W2807831972",
+      "https://openalex.org/W2891967931",
+      "https://openalex.org/W2895418405",
+      "https://openalex.org/W2895861596",
+      "https://openalex.org/W2897658618",
+      "https://openalex.org/W2900946119",
+      "https://openalex.org/W2911092109",
+      "https://openalex.org/W2913771521",
+      "https://openalex.org/W2914856364",
+      "https://openalex.org/W2924971168",
+      "https://openalex.org/W3126081667",
+      "https://openalex.org/W4255055056",
+      "https://openalex.org/W4256433466",
+      "https://openalex.org/W4297929018",
+      "https://openalex.org/W6641735511",
+      "https://openalex.org/W6690343024",
+      "https://openalex.org/W6691191292",
+      "https://openalex.org/W6722364946"
+    ],
+    "related_works": [
+      "https://openalex.org/W4318676890",
+      "https://openalex.org/W4385195237",
+      "https://openalex.org/W2039947585",
+      "https://openalex.org/W3178576217",
+      "https://openalex.org/W4285102093",
+      "https://openalex.org/W4210644201",
+      "https://openalex.org/W3111532652",
+      "https://openalex.org/W2510451507",
+      "https://openalex.org/W4283367183",
+      "https://openalex.org/W4381189085"
+    ],
+    "abstract_inverted_index": null,
+    "counts_by_year": [
+      {
+        "year": 2026,
+        "cited_by_count": 2
+      },
+      {
+        "year": 2025,
+        "cited_by_count": 15
+      },
+      {
+        "year": 2024,
+        "cited_by_count": 12
+      },
+      {
+        "year": 2023,
+        "cited_by_count": 17
+      },
+      {
+        "year": 2022,
+        "cited_by_count": 15
+      },
+      {
+        "year": 2021,
+        "cited_by_count": 17
+      },
+      {
+        "year": 2020,
+        "cited_by_count": 12
+      }
+    ],
+    "updated_date": "2026-06-12T08:23:45.883708",
+    "created_date": "2025-10-10T00:00:00",
+    "abstract": ""
+  },
+  {
+    "id": "https://openalex.org/W3087213302",
+    "doi": "https://doi.org/10.1016/j.ins.2020.08.053",
+    "title": "A novel ensemble deep learning model with dynamic error correction and multi-objective ensemble pruning for time series forecasting",
+    "display_name": "A novel ensemble deep learning model with dynamic error correction and multi-objective ensemble pruning for time series forecasting",
+    "publication_year": 2020,
+    "publication_date": "2020-09-18",
+    "ids": {
+      "openalex": "https://openalex.org/W3087213302",
+      "doi": "https://doi.org/10.1016/j.ins.2020.08.053",
+      "mag": "3087213302"
+    },
+    "language": "en",
+    "primary_location": {
+      "id": "doi:10.1016/j.ins.2020.08.053",
+      "is_oa": false,
+      "landing_page_url": "https://doi.org/10.1016/j.ins.2020.08.053",
+      "pdf_url": null,
+      "source": {
+        "id": "https://openalex.org/S192650101",
+        "display_name": "Information Sciences",
+        "issn_l": "0020-0255",
+        "issn": [
+          "0020-0255",
+          "1872-6291"
+        ],
+        "is_oa": false,
+        "is_in_doaj": false,
+        "is_core": true,
+        "host_organization": "https://openalex.org/P4310320990",
+        "host_organization_name": "Elsevier BV",
+        "host_organization_lineage": [
+          "https://openalex.org/P4310320990"
+        ],
+        "host_organization_lineage_names": [
+          "Elsevier BV"
+        ],
+        "type": "journal"
+      },
+      "license": null,
+      "license_id": null,
+      "version": "publishedVersion",
+      "is_accepted": true,
+      "is_published": true,
+      "raw_source_name": "Information Sciences",
+      "raw_type": "journal-article"
+    },
+    "type": "article",
+    "indexed_in": [
+      "crossref"
+    ],
+    "open_access": {
+      "is_oa": false,
+      "oa_status": "closed",
+      "oa_url": null,
+      "any_repository_has_fulltext": false
+    },
+    "authorships": [
+      {
+        "author_position": "first",
+        "author": {
+          "id": "https://openalex.org/A5100328895",
+          "display_name": "Shuai Zhang",
+          "orcid": "https://orcid.org/0000-0002-6405-584X"
+        },
+        "institutions": [
+          {
+            "id": "https://openalex.org/I90727586",
+            "display_name": "Zhejiang University of Finance and Economics",
+            "ror": "https://ror.org/055vj5234",
+            "country_code": "CN",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I90727586"
+            ]
+          }
+        ],
+        "countries": [
+          "CN"
+        ],
+        "is_corresponding": false,
+        "raw_author_name": "Shuai Zhang",
+        "raw_affiliation_strings": [
+          "School of Information Management and Artificial Intelligence, Zhejiang University of Finance and Economics, Hangzhou 310018, China"
+        ],
+        "raw_orcid": "https://orcid.org/0000-0002-6405-584X",
+        "affiliations": [
+          {
+            "raw_affiliation_string": "School of Information Management and Artificial Intelligence, Zhejiang University of Finance and Economics, Hangzhou 310018, China",
+            "institution_ids": [
+              "https://openalex.org/I90727586"
+            ]
+          }
+        ]
+      },
+      {
+        "author_position": "middle",
+        "author": {
+          "id": "https://openalex.org/A5082732692",
+          "display_name": "Yong Chen",
+          "orcid": "https://orcid.org/0000-0003-4580-8655"
+        },
+        "institutions": [
+          {
+            "id": "https://openalex.org/I90727586",
+            "display_name": "Zhejiang University of Finance and Economics",
+            "ror": "https://ror.org/055vj5234",
+            "country_code": "CN",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I90727586"
+            ]
+          }
+        ],
+        "countries": [
+          "CN"
+        ],
+        "is_corresponding": false,
+        "raw_author_name": "Yong Chen",
+        "raw_affiliation_strings": [
+          "School of Information Management and Artificial Intelligence, Zhejiang University of Finance and Economics, Hangzhou 310018, China"
+        ],
+        "raw_orcid": null,
+        "affiliations": [
+          {
+            "raw_affiliation_string": "School of Information Management and Artificial Intelligence, Zhejiang University of Finance and Economics, Hangzhou 310018, China",
+            "institution_ids": [
+              "https://openalex.org/I90727586"
+            ]
+          }
+        ]
+      },
+      {
+        "author_position": "middle",
+        "author": {
+          "id": "https://openalex.org/A5004517421",
+          "display_name": "Wenyu Zhang",
+          "orcid": "https://orcid.org/0000-0002-8906-5411"
+        },
+        "institutions": [
+          {
+            "id": "https://openalex.org/I90727586",
+            "display_name": "Zhejiang University of Finance and Economics",
+            "ror": "https://ror.org/055vj5234",
+            "country_code": "CN",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I90727586"
+            ]
+          }
+        ],
+        "countries": [
+          "CN"
+        ],
+        "is_corresponding": true,
+        "raw_author_name": "Wenyu Zhang",
+        "raw_affiliation_strings": [
+          "School of Information Management and Artificial Intelligence, Zhejiang University of Finance and Economics, Hangzhou 310018, China"
+        ],
+        "raw_orcid": "https://orcid.org/0000-0002-8906-5411",
+        "affiliations": [
+          {
+            "raw_affiliation_string": "School of Information Management and Artificial Intelligence, Zhejiang University of Finance and Economics, Hangzhou 310018, China",
+            "institution_ids": [
+              "https://openalex.org/I90727586"
+            ]
+          }
+        ]
+      },
+      {
+        "author_position": "last",
+        "author": {
+          "id": "https://openalex.org/A5037957661",
+          "display_name": "Ruijun Feng",
+          "orcid": "https://orcid.org/0000-0003-2167-2968"
+        },
+        "institutions": [
+          {
+            "id": "https://openalex.org/I90727586",
+            "display_name": "Zhejiang University of Finance and Economics",
+            "ror": "https://ror.org/055vj5234",
+            "country_code": "CN",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I90727586"
+            ]
+          }
+        ],
+        "countries": [
+          "CN"
+        ],
+        "is_corresponding": false,
+        "raw_author_name": "Ruijun Feng",
+        "raw_affiliation_strings": [
+          "School of Information Management and Artificial Intelligence, Zhejiang University of Finance and Economics, Hangzhou 310018, China"
+        ],
+        "raw_orcid": null,
+        "affiliations": [
+          {
+            "raw_affiliation_string": "School of Information Management and Artificial Intelligence, Zhejiang University of Finance and Economics, Hangzhou 310018, China",
+            "institution_ids": [
+              "https://openalex.org/I90727586"
+            ]
+          }
+        ]
+      }
+    ],
+    "institutions": [],
+    "countries_distinct_count": 1,
+    "institutions_distinct_count": 4,
+    "corresponding_author_ids": [
+      "https://openalex.org/A5004517421"
+    ],
+    "corresponding_institution_ids": [
+      "https://openalex.org/I90727586"
+    ],
+    "apc_list": {
+      "value": 3330,
+      "currency": "USD",
+      "value_usd": 3330
+    },
+    "apc_paid": null,
+    "fwci": 8.4254,
+    "has_fulltext": false,
+    "cited_by_count": 125,
+    "citation_normalized_percentile": {
+      "value": 0.98322071,
+      "is_in_top_1_percent": false,
+      "is_in_top_10_percent": true
+    },
+    "cited_by_percentile_year": {
+      "min": 94,
+      "max": 100
+    },
+    "biblio": {
+      "volume": "544",
+      "issue": null,
+      "first_page": "427",
+      "last_page": "445"
+    },
+    "is_retracted": false,
+    "is_paratext": false,
+    "is_xpac": false,
+    "primary_topic": {
+      "id": "https://openalex.org/T11052",
+      "display_name": "Energy Load and Power Forecasting",
+      "score": 0.9995999932289124,
+      "subfield": {
+        "id": "https://openalex.org/subfields/2208",
+        "display_name": "Electrical and Electronic Engineering"
+      },
+      "field": {
+        "id": "https://openalex.org/fields/22",
+        "display_name": "Engineering"
+      },
+      "domain": {
+        "id": "https://openalex.org/domains/3",
+        "display_name": "Physical Sciences"
+      }
+    },
+    "topics": [
+      {
+        "id": "https://openalex.org/T11052",
+        "display_name": "Energy Load and Power Forecasting",
+        "score": 0.9995999932289124,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2208",
+          "display_name": "Electrical and Electronic Engineering"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/22",
+          "display_name": "Engineering"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T11326",
+        "display_name": "Stock Market Forecasting Methods",
+        "score": 0.9988999962806702,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1803",
+          "display_name": "Management Science and Operations Research"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/18",
+          "display_name": "Decision Sciences"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/2",
+          "display_name": "Social Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T12120",
+        "display_name": "Air Quality Monitoring and Forecasting",
+        "score": 0.9958000183105469,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2305",
+          "display_name": "Environmental Engineering"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/23",
+          "display_name": "Environmental Science"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      }
+    ],
+    "keywords": [
+      {
+        "id": "https://openalex.org/keywords/computer-science",
+        "display_name": "Computer science",
+        "score": 0.6964625716209412
+      },
+      {
+        "id": "https://openalex.org/keywords/ensemble-learning",
+        "display_name": "Ensemble learning",
+        "score": 0.6394115686416626
+      },
+      {
+        "id": "https://openalex.org/keywords/adaboost",
+        "display_name": "AdaBoost",
+        "score": 0.6145555377006531
+      },
+      {
+        "id": "https://openalex.org/keywords/machine-learning",
+        "display_name": "Machine learning",
+        "score": 0.6053874492645264
+      },
+      {
+        "id": "https://openalex.org/keywords/artificial-intelligence",
+        "display_name": "Artificial intelligence",
+        "score": 0.5923442244529724
+      },
+      {
+        "id": "https://openalex.org/keywords/time-series",
+        "display_name": "Time series",
+        "score": 0.5106878876686096
+      },
+      {
+        "id": "https://openalex.org/keywords/pruning",
+        "display_name": "Pruning",
+        "score": 0.5018408298492432
+      },
+      {
+        "id": "https://openalex.org/keywords/boosting",
+        "display_name": "Boosting (machine learning)",
+        "score": 0.45984283089637756
+      },
+      {
+        "id": "https://openalex.org/keywords/deep-learning",
+        "display_name": "Deep learning",
+        "score": 0.4421789348125458
+      },
+      {
+        "id": "https://openalex.org/keywords/ensemble-forecasting",
+        "display_name": "Ensemble forecasting",
+        "score": 0.43156197667121887
+      },
+      {
+        "id": "https://openalex.org/keywords/series",
+        "display_name": "Series (stratigraphy)",
+        "score": 0.42307576537132263
+      },
+      {
+        "id": "https://openalex.org/keywords/population",
+        "display_name": "Population",
+        "score": 0.4209068715572357
+      },
+      {
+        "id": "https://openalex.org/keywords/support-vector-machine",
+        "display_name": "Support vector machine",
+        "score": 0.30293816328048706
+      }
+    ],
+    "concepts": [
+      {
+        "id": "https://openalex.org/C41008148",
+        "wikidata": "https://www.wikidata.org/wiki/Q21198",
+        "display_name": "Computer science",
+        "level": 0,
+        "score": 0.6964625716209412
+      },
+      {
+        "id": "https://openalex.org/C45942800",
+        "wikidata": "https://www.wikidata.org/wiki/Q245652",
+        "display_name": "Ensemble learning",
+        "level": 2,
+        "score": 0.6394115686416626
+      },
+      {
+        "id": "https://openalex.org/C141404830",
+        "wikidata": "https://www.wikidata.org/wiki/Q2823869",
+        "display_name": "AdaBoost",
+        "level": 3,
+        "score": 0.6145555377006531
+      },
+      {
+        "id": "https://openalex.org/C119857082",
+        "wikidata": "https://www.wikidata.org/wiki/Q2539",
+        "display_name": "Machine learning",
+        "level": 1,
+        "score": 0.6053874492645264
+      },
+      {
+        "id": "https://openalex.org/C154945302",
+        "wikidata": "https://www.wikidata.org/wiki/Q11660",
+        "display_name": "Artificial intelligence",
+        "level": 1,
+        "score": 0.5923442244529724
+      },
+      {
+        "id": "https://openalex.org/C151406439",
+        "wikidata": "https://www.wikidata.org/wiki/Q186588",
+        "display_name": "Time series",
+        "level": 2,
+        "score": 0.5106878876686096
+      },
+      {
+        "id": "https://openalex.org/C108010975",
+        "wikidata": "https://www.wikidata.org/wiki/Q500094",
+        "display_name": "Pruning",
+        "level": 2,
+        "score": 0.5018408298492432
+      },
+      {
+        "id": "https://openalex.org/C46686674",
+        "wikidata": "https://www.wikidata.org/wiki/Q466303",
+        "display_name": "Boosting (machine learning)",
+        "level": 2,
+        "score": 0.45984283089637756
+      },
+      {
+        "id": "https://openalex.org/C108583219",
+        "wikidata": "https://www.wikidata.org/wiki/Q197536",
+        "display_name": "Deep learning",
+        "level": 2,
+        "score": 0.4421789348125458
+      },
+      {
+        "id": "https://openalex.org/C119898033",
+        "wikidata": "https://www.wikidata.org/wiki/Q3433888",
+        "display_name": "Ensemble forecasting",
+        "level": 2,
+        "score": 0.43156197667121887
+      },
+      {
+        "id": "https://openalex.org/C143724316",
+        "wikidata": "https://www.wikidata.org/wiki/Q312468",
+        "display_name": "Series (stratigraphy)",
+        "level": 2,
+        "score": 0.42307576537132263
+      },
+      {
+        "id": "https://openalex.org/C2908647359",
+        "wikidata": "https://www.wikidata.org/wiki/Q2625603",
+        "display_name": "Population",
+        "level": 2,
+        "score": 0.4209068715572357
+      },
+      {
+        "id": "https://openalex.org/C12267149",
+        "wikidata": "https://www.wikidata.org/wiki/Q282453",
+        "display_name": "Support vector machine",
+        "level": 2,
+        "score": 0.30293816328048706
+      },
+      {
+        "id": "https://openalex.org/C6557445",
+        "wikidata": "https://www.wikidata.org/wiki/Q173113",
+        "display_name": "Agronomy",
+        "level": 1,
+        "score": 0.0
+      },
+      {
+        "id": "https://openalex.org/C149923435",
+        "wikidata": "https://www.wikidata.org/wiki/Q37732",
+        "display_name": "Demography",
+        "level": 1,
+        "score": 0.0
+      },
+      {
+        "id": "https://openalex.org/C151730666",
+        "wikidata": "https://www.wikidata.org/wiki/Q7205",
+        "display_name": "Paleontology",
+        "level": 1,
+        "score": 0.0
+      },
+      {
+        "id": "https://openalex.org/C86803240",
+        "wikidata": "https://www.wikidata.org/wiki/Q420",
+        "display_name": "Biology",
+        "level": 0,
+        "score": 0.0
+      },
+      {
+        "id": "https://openalex.org/C144024400",
+        "wikidata": "https://www.wikidata.org/wiki/Q21201",
+        "display_name": "Sociology",
+        "level": 0,
+        "score": 0.0
+      }
+    ],
+    "mesh": [],
+    "locations_count": 1,
+    "locations": [
+      {
+        "id": "doi:10.1016/j.ins.2020.08.053",
+        "is_oa": false,
+        "landing_page_url": "https://doi.org/10.1016/j.ins.2020.08.053",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S192650101",
+          "display_name": "Information Sciences",
+          "issn_l": "0020-0255",
+          "issn": [
+            "0020-0255",
+            "1872-6291"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "host_organization": "https://openalex.org/P4310320990",
+          "host_organization_name": "Elsevier BV",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310320990"
+          ],
+          "host_organization_lineage_names": [
+            "Elsevier BV"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Information Sciences",
+        "raw_type": "journal-article"
+      }
+    ],
+    "best_oa_location": null,
+    "sustainable_development_goals": [
+      {
+        "display_name": "Affordable and clean energy",
+        "id": "https://metadata.un.org/sdg/7",
+        "score": 0.8700000047683716
+      }
+    ],
+    "awards": [],
+    "funders": [
+      {
+        "id": "https://openalex.org/F4320321001",
+        "display_name": "National Natural Science Foundation of China",
+        "ror": "https://ror.org/01h0zpd94"
+      },
+      {
+        "id": "https://openalex.org/F4320338464",
+        "display_name": "Natural Science Foundation of Zhejiang Province",
+        "ror": "https://ror.org/01h0zpd94"
+      }
+    ],
+    "has_content": {
+      "pdf": false,
+      "grobid_xml": false
+    },
+    "content_urls": null,
+    "referenced_works_count": 50,
+    "referenced_works": [
+      "https://openalex.org/W28412257",
+      "https://openalex.org/W225015550",
+      "https://openalex.org/W1524037464",
+      "https://openalex.org/W1571836963",
+      "https://openalex.org/W1585939719",
+      "https://openalex.org/W1988790447",
+      "https://openalex.org/W2007272376",
+      "https://openalex.org/W2067656095",
+      "https://openalex.org/W2078369687",
+      "https://openalex.org/W2079335151",
+      "https://openalex.org/W2100128988",
+      "https://openalex.org/W2121043290",
+      "https://openalex.org/W2126105956",
+      "https://openalex.org/W2143381319",
+      "https://openalex.org/W2209748155",
+      "https://openalex.org/W2345740540",
+      "https://openalex.org/W2417021467",
+      "https://openalex.org/W2509599246",
+      "https://openalex.org/W2557283755",
+      "https://openalex.org/W2601912627",
+      "https://openalex.org/W2604847698",
+      "https://openalex.org/W2607306668",
+      "https://openalex.org/W2611953050",
+      "https://openalex.org/W2616881109",
+      "https://openalex.org/W2750787742",
+      "https://openalex.org/W2754880706",
+      "https://openalex.org/W2758567761",
+      "https://openalex.org/W2764126455",
+      "https://openalex.org/W2767031373",
+      "https://openalex.org/W2783336591",
+      "https://openalex.org/W2790834859",
+      "https://openalex.org/W2793187554",
+      "https://openalex.org/W2796072231",
+      "https://openalex.org/W2798157722",
+      "https://openalex.org/W2799918535",
+      "https://openalex.org/W2800991442",
+      "https://openalex.org/W2884415573",
+      "https://openalex.org/W2889094357",
+      "https://openalex.org/W2889697711",
+      "https://openalex.org/W2899717228",
+      "https://openalex.org/W2905528277",
+      "https://openalex.org/W2914856364",
+      "https://openalex.org/W2915806950",
+      "https://openalex.org/W2921218568",
+      "https://openalex.org/W2921713999",
+      "https://openalex.org/W2940914091",
+      "https://openalex.org/W2946883869",
+      "https://openalex.org/W2970891497",
+      "https://openalex.org/W2996552856",
+      "https://openalex.org/W6761962180"
+    ],
+    "related_works": [
+      "https://openalex.org/W2327035729",
+      "https://openalex.org/W2348748958",
+      "https://openalex.org/W3039673966",
+      "https://openalex.org/W1538046993",
+      "https://openalex.org/W2884325279",
+      "https://openalex.org/W1570592793",
+      "https://openalex.org/W1525436954",
+      "https://openalex.org/W2385662756",
+      "https://openalex.org/W2585372724",
+      "https://openalex.org/W2241444561"
+    ],
+    "abstract_inverted_index": null,
+    "counts_by_year": [
+      {
+        "year": 2026,
+        "cited_by_count": 2
+      },
+      {
+        "year": 2025,
+        "cited_by_count": 16
+      },
+      {
+        "year": 2024,
+        "cited_by_count": 26
+      },
+      {
+        "year": 2023,
+        "cited_by_count": 31
+      },
+      {
+        "year": 2022,
+        "cited_by_count": 29
+      },
+      {
+        "year": 2021,
+        "cited_by_count": 19
+      },
+      {
+        "year": 2020,
+        "cited_by_count": 2
+      }
+    ],
+    "updated_date": "2026-05-11T08:15:01.531666",
+    "created_date": "2025-10-10T00:00:00",
+    "abstract": ""
+  },
+  {
+    "id": "https://openalex.org/W2940914091",
+    "doi": "https://doi.org/10.1016/j.neucom.2018.12.084",
+    "title": "A novel time series forecasting model with deep learning",
+    "display_name": "A novel time series forecasting model with deep learning",
+    "publication_year": 2019,
+    "publication_date": "2019-04-24",
+    "ids": {
+      "openalex": "https://openalex.org/W2940914091",
+      "doi": "https://doi.org/10.1016/j.neucom.2018.12.084",
+      "mag": "2940914091"
+    },
+    "language": "en",
+    "primary_location": {
+      "id": "doi:10.1016/j.neucom.2018.12.084",
+      "is_oa": false,
+      "landing_page_url": "https://doi.org/10.1016/j.neucom.2018.12.084",
+      "pdf_url": null,
+      "source": {
+        "id": "https://openalex.org/S45693802",
+        "display_name": "Neurocomputing",
+        "issn_l": "0925-2312",
+        "issn": [
+          "0925-2312",
+          "1872-8286"
+        ],
+        "is_oa": false,
+        "is_in_doaj": false,
+        "is_core": true,
+        "host_organization": "https://openalex.org/P4310320990",
+        "host_organization_name": "Elsevier BV",
+        "host_organization_lineage": [
+          "https://openalex.org/P4310320990"
+        ],
+        "host_organization_lineage_names": [
+          "Elsevier BV"
+        ],
+        "type": "journal"
+      },
+      "license": null,
+      "license_id": null,
+      "version": "publishedVersion",
+      "is_accepted": true,
+      "is_published": true,
+      "raw_source_name": "Neurocomputing",
+      "raw_type": "journal-article"
+    },
+    "type": "article",
+    "indexed_in": [
+      "crossref"
+    ],
+    "open_access": {
+      "is_oa": false,
+      "oa_status": "closed",
+      "oa_url": null,
+      "any_repository_has_fulltext": false
+    },
+    "authorships": [
+      {
+        "author_position": "first",
+        "author": {
+          "id": "https://openalex.org/A5103005683",
+          "display_name": "Zhipeng Shen",
+          "orcid": null
+        },
+        "institutions": [
+          {
+            "id": "https://openalex.org/I55712492",
+            "display_name": "Zhejiang University of Technology",
+            "ror": "https://ror.org/02djqfd08",
+            "country_code": "CN",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I55712492"
+            ]
+          }
+        ],
+        "countries": [
+          "CN"
+        ],
+        "is_corresponding": false,
+        "raw_author_name": "Zhipeng Shen",
+        "raw_affiliation_strings": [
+          "College of Computer Science & Technology, Zhejiang University of Technology, Hangzhou 310023, China"
+        ],
+        "raw_orcid": null,
+        "affiliations": [
+          {
+            "raw_affiliation_string": "College of Computer Science & Technology, Zhejiang University of Technology, Hangzhou 310023, China",
+            "institution_ids": [
+              "https://openalex.org/I55712492"
+            ]
+          }
+        ]
+      },
+      {
+        "author_position": "middle",
+        "author": {
+          "id": "https://openalex.org/A5100710886",
+          "display_name": "Yuanming Zhang",
+          "orcid": "https://orcid.org/0000-0001-6208-6469"
+        },
+        "institutions": [
+          {
+            "id": "https://openalex.org/I55712492",
+            "display_name": "Zhejiang University of Technology",
+            "ror": "https://ror.org/02djqfd08",
+            "country_code": "CN",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I55712492"
+            ]
+          }
+        ],
+        "countries": [
+          "CN"
+        ],
+        "is_corresponding": true,
+        "raw_author_name": "Yuanming Zhang",
+        "raw_affiliation_strings": [
+          "College of Computer Science & Technology, Zhejiang University of Technology, Hangzhou 310023, China"
+        ],
+        "raw_orcid": null,
+        "affiliations": [
+          {
+            "raw_affiliation_string": "College of Computer Science & Technology, Zhejiang University of Technology, Hangzhou 310023, China",
+            "institution_ids": [
+              "https://openalex.org/I55712492"
+            ]
+          }
+        ]
+      },
+      {
+        "author_position": "middle",
+        "author": {
+          "id": "https://openalex.org/A5071016982",
+          "display_name": "Jiawei Lu",
+          "orcid": "https://orcid.org/0000-0001-7229-8887"
+        },
+        "institutions": [
+          {
+            "id": "https://openalex.org/I55712492",
+            "display_name": "Zhejiang University of Technology",
+            "ror": "https://ror.org/02djqfd08",
+            "country_code": "CN",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I55712492"
+            ]
+          }
+        ],
+        "countries": [
+          "CN"
+        ],
+        "is_corresponding": false,
+        "raw_author_name": "Jiawei Lu",
+        "raw_affiliation_strings": [
+          "College of Computer Science & Technology, Zhejiang University of Technology, Hangzhou 310023, China"
+        ],
+        "raw_orcid": null,
+        "affiliations": [
+          {
+            "raw_affiliation_string": "College of Computer Science & Technology, Zhejiang University of Technology, Hangzhou 310023, China",
+            "institution_ids": [
+              "https://openalex.org/I55712492"
+            ]
+          }
+        ]
+      },
+      {
+        "author_position": "middle",
+        "author": {
+          "id": "https://openalex.org/A5020766468",
+          "display_name": "Jun Xu",
+          "orcid": "https://orcid.org/0000-0001-7170-111X"
+        },
+        "institutions": [
+          {
+            "id": "https://openalex.org/I55712492",
+            "display_name": "Zhejiang University of Technology",
+            "ror": "https://ror.org/02djqfd08",
+            "country_code": "CN",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I55712492"
+            ]
+          }
+        ],
+        "countries": [
+          "CN"
+        ],
+        "is_corresponding": false,
+        "raw_author_name": "Jun Xu",
+        "raw_affiliation_strings": [
+          "College of Computer Science & Technology, Zhejiang University of Technology, Hangzhou 310023, China"
+        ],
+        "raw_orcid": null,
+        "affiliations": [
+          {
+            "raw_affiliation_string": "College of Computer Science & Technology, Zhejiang University of Technology, Hangzhou 310023, China",
+            "institution_ids": [
+              "https://openalex.org/I55712492"
+            ]
+          }
+        ]
+      },
+      {
+        "author_position": "last",
+        "author": {
+          "id": "https://openalex.org/A5066482162",
+          "display_name": "Gang Xiao",
+          "orcid": "https://orcid.org/0000-0002-0806-2156"
+        },
+        "institutions": [
+          {
+            "id": "https://openalex.org/I55712492",
+            "display_name": "Zhejiang University of Technology",
+            "ror": "https://ror.org/02djqfd08",
+            "country_code": "CN",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I55712492"
+            ]
+          }
+        ],
+        "countries": [
+          "CN"
+        ],
+        "is_corresponding": false,
+        "raw_author_name": "Gang Xiao",
+        "raw_affiliation_strings": [
+          "College of Computer Science & Technology, Zhejiang University of Technology, Hangzhou 310023, China"
+        ],
+        "raw_orcid": null,
+        "affiliations": [
+          {
+            "raw_affiliation_string": "College of Computer Science & Technology, Zhejiang University of Technology, Hangzhou 310023, China",
+            "institution_ids": [
+              "https://openalex.org/I55712492"
+            ]
+          }
+        ]
+      }
+    ],
+    "institutions": [],
+    "countries_distinct_count": 1,
+    "institutions_distinct_count": 5,
+    "corresponding_author_ids": [
+      "https://openalex.org/A5100710886"
+    ],
+    "corresponding_institution_ids": [
+      "https://openalex.org/I55712492"
+    ],
+    "apc_list": {
+      "value": 2470,
+      "currency": "USD",
+      "value_usd": 2470
+    },
+    "apc_paid": null,
+    "fwci": 17.2028,
+    "has_fulltext": false,
+    "cited_by_count": 219,
+    "citation_normalized_percentile": {
+      "value": 0.99573665,
+      "is_in_top_1_percent": true,
+      "is_in_top_10_percent": true
+    },
+    "cited_by_percentile_year": {
+      "min": 90,
+      "max": 100
+    },
+    "biblio": {
+      "volume": "396",
+      "issue": null,
+      "first_page": "302",
+      "last_page": "313"
+    },
+    "is_retracted": false,
+    "is_paratext": false,
+    "is_xpac": false,
+    "primary_topic": {
+      "id": "https://openalex.org/T12205",
+      "display_name": "Time Series Analysis and Forecasting",
+      "score": 0.9997000098228455,
+      "subfield": {
+        "id": "https://openalex.org/subfields/1711",
+        "display_name": "Signal Processing"
+      },
+      "field": {
+        "id": "https://openalex.org/fields/17",
+        "display_name": "Computer Science"
+      },
+      "domain": {
+        "id": "https://openalex.org/domains/3",
+        "display_name": "Physical Sciences"
+      }
+    },
+    "topics": [
+      {
+        "id": "https://openalex.org/T12205",
+        "display_name": "Time Series Analysis and Forecasting",
+        "score": 0.9997000098228455,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1711",
+          "display_name": "Signal Processing"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/17",
+          "display_name": "Computer Science"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T11326",
+        "display_name": "Stock Market Forecasting Methods",
+        "score": 0.9979000091552734,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1803",
+          "display_name": "Management Science and Operations Research"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/18",
+          "display_name": "Decision Sciences"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/2",
+          "display_name": "Social Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T12761",
+        "display_name": "Data Stream Mining Techniques",
+        "score": 0.9933000206947327,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1702",
+          "display_name": "Artificial Intelligence"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/17",
+          "display_name": "Computer Science"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      }
+    ],
+    "keywords": [
+      {
+        "id": "https://openalex.org/keywords/computer-science",
+        "display_name": "Computer science",
+        "score": 0.7446164488792419
+      },
+      {
+        "id": "https://openalex.org/keywords/time-series",
+        "display_name": "Time series",
+        "score": 0.6456639766693115
+      },
+      {
+        "id": "https://openalex.org/keywords/normalization",
+        "display_name": "Normalization (sociology)",
+        "score": 0.6202007532119751
+      },
+      {
+        "id": "https://openalex.org/keywords/generalization",
+        "display_name": "Generalization",
+        "score": 0.6157792210578918
+      },
+      {
+        "id": "https://openalex.org/keywords/artificial-intelligence",
+        "display_name": "Artificial intelligence",
+        "score": 0.5742173194885254
+      },
+      {
+        "id": "https://openalex.org/keywords/curse-of-dimensionality",
+        "display_name": "Curse of dimensionality",
+        "score": 0.5575046539306641
+      },
+      {
+        "id": "https://openalex.org/keywords/residual",
+        "display_name": "Residual",
+        "score": 0.5326587557792664
+      },
+      {
+        "id": "https://openalex.org/keywords/series",
+        "display_name": "Series (stratigraphy)",
+        "score": 0.5310832858085632
+      },
+      {
+        "id": "https://openalex.org/keywords/machine-learning",
+        "display_name": "Machine learning",
+        "score": 0.49261265993118286
+      },
+      {
+        "id": "https://openalex.org/keywords/autoregressive-integrated-moving-average",
+        "display_name": "Autoregressive integrated moving average",
+        "score": 0.48381274938583374
+      },
+      {
+        "id": "https://openalex.org/keywords/interval",
+        "display_name": "Interval (graph theory)",
+        "score": 0.4509257674217224
+      },
+      {
+        "id": "https://openalex.org/keywords/data-mining",
+        "display_name": "Data mining",
+        "score": 0.4128509759902954
+      },
+      {
+        "id": "https://openalex.org/keywords/algorithm",
+        "display_name": "Algorithm",
+        "score": 0.27404409646987915
+      },
+      {
+        "id": "https://openalex.org/keywords/mathematics",
+        "display_name": "Mathematics",
+        "score": 0.17230018973350525
+      }
+    ],
+    "concepts": [
+      {
+        "id": "https://openalex.org/C41008148",
+        "wikidata": "https://www.wikidata.org/wiki/Q21198",
+        "display_name": "Computer science",
+        "level": 0,
+        "score": 0.7446164488792419
+      },
+      {
+        "id": "https://openalex.org/C151406439",
+        "wikidata": "https://www.wikidata.org/wiki/Q186588",
+        "display_name": "Time series",
+        "level": 2,
+        "score": 0.6456639766693115
+      },
+      {
+        "id": "https://openalex.org/C136886441",
+        "wikidata": "https://www.wikidata.org/wiki/Q926129",
+        "display_name": "Normalization (sociology)",
+        "level": 2,
+        "score": 0.6202007532119751
+      },
+      {
+        "id": "https://openalex.org/C177148314",
+        "wikidata": "https://www.wikidata.org/wiki/Q170084",
+        "display_name": "Generalization",
+        "level": 2,
+        "score": 0.6157792210578918
+      },
+      {
+        "id": "https://openalex.org/C154945302",
+        "wikidata": "https://www.wikidata.org/wiki/Q11660",
+        "display_name": "Artificial intelligence",
+        "level": 1,
+        "score": 0.5742173194885254
+      },
+      {
+        "id": "https://openalex.org/C111030470",
+        "wikidata": "https://www.wikidata.org/wiki/Q1430460",
+        "display_name": "Curse of dimensionality",
+        "level": 2,
+        "score": 0.5575046539306641
+      },
+      {
+        "id": "https://openalex.org/C155512373",
+        "wikidata": "https://www.wikidata.org/wiki/Q287450",
+        "display_name": "Residual",
+        "level": 2,
+        "score": 0.5326587557792664
+      },
+      {
+        "id": "https://openalex.org/C143724316",
+        "wikidata": "https://www.wikidata.org/wiki/Q312468",
+        "display_name": "Series (stratigraphy)",
+        "level": 2,
+        "score": 0.5310832858085632
+      },
+      {
+        "id": "https://openalex.org/C119857082",
+        "wikidata": "https://www.wikidata.org/wiki/Q2539",
+        "display_name": "Machine learning",
+        "level": 1,
+        "score": 0.49261265993118286
+      },
+      {
+        "id": "https://openalex.org/C24338571",
+        "wikidata": "https://www.wikidata.org/wiki/Q2566298",
+        "display_name": "Autoregressive integrated moving average",
+        "level": 3,
+        "score": 0.48381274938583374
+      },
+      {
+        "id": "https://openalex.org/C2778067643",
+        "wikidata": "https://www.wikidata.org/wiki/Q166507",
+        "display_name": "Interval (graph theory)",
+        "level": 2,
+        "score": 0.4509257674217224
+      },
+      {
+        "id": "https://openalex.org/C124101348",
+        "wikidata": "https://www.wikidata.org/wiki/Q172491",
+        "display_name": "Data mining",
+        "level": 1,
+        "score": 0.4128509759902954
+      },
+      {
+        "id": "https://openalex.org/C11413529",
+        "wikidata": "https://www.wikidata.org/wiki/Q8366",
+        "display_name": "Algorithm",
+        "level": 1,
+        "score": 0.27404409646987915
+      },
+      {
+        "id": "https://openalex.org/C33923547",
+        "wikidata": "https://www.wikidata.org/wiki/Q395",
+        "display_name": "Mathematics",
+        "level": 0,
+        "score": 0.17230018973350525
+      },
+      {
+        "id": "https://openalex.org/C114614502",
+        "wikidata": "https://www.wikidata.org/wiki/Q76592",
+        "display_name": "Combinatorics",
+        "level": 1,
+        "score": 0.0
+      },
+      {
+        "id": "https://openalex.org/C151730666",
+        "wikidata": "https://www.wikidata.org/wiki/Q7205",
+        "display_name": "Paleontology",
+        "level": 1,
+        "score": 0.0
+      },
+      {
+        "id": "https://openalex.org/C86803240",
+        "wikidata": "https://www.wikidata.org/wiki/Q420",
+        "display_name": "Biology",
+        "level": 0,
+        "score": 0.0
+      },
+      {
+        "id": "https://openalex.org/C134306372",
+        "wikidata": "https://www.wikidata.org/wiki/Q7754",
+        "display_name": "Mathematical analysis",
+        "level": 1,
+        "score": 0.0
+      },
+      {
+        "id": "https://openalex.org/C144024400",
+        "wikidata": "https://www.wikidata.org/wiki/Q21201",
+        "display_name": "Sociology",
+        "level": 0,
+        "score": 0.0
+      },
+      {
+        "id": "https://openalex.org/C19165224",
+        "wikidata": "https://www.wikidata.org/wiki/Q23404",
+        "display_name": "Anthropology",
+        "level": 1,
+        "score": 0.0
+      }
+    ],
+    "mesh": [],
+    "locations_count": 1,
+    "locations": [
+      {
+        "id": "doi:10.1016/j.neucom.2018.12.084",
+        "is_oa": false,
+        "landing_page_url": "https://doi.org/10.1016/j.neucom.2018.12.084",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S45693802",
+          "display_name": "Neurocomputing",
+          "issn_l": "0925-2312",
+          "issn": [
+            "0925-2312",
+            "1872-8286"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "host_organization": "https://openalex.org/P4310320990",
+          "host_organization_name": "Elsevier BV",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310320990"
+          ],
+          "host_organization_lineage_names": [
+            "Elsevier BV"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Neurocomputing",
+        "raw_type": "journal-article"
+      }
+    ],
+    "best_oa_location": null,
+    "sustainable_development_goals": [],
+    "awards": [],
+    "funders": [
+      {
+        "id": "https://openalex.org/F4320338110",
+        "display_name": "Science and Technology Department of Zhejiang Province",
+        "ror": "https://ror.org/05yj3y977"
+      },
+      {
+        "id": "https://openalex.org/F4320338469",
+        "display_name": "Science and Technology Program of Zhejiang Province",
+        "ror": null
+      }
+    ],
+    "has_content": {
+      "pdf": false,
+      "grobid_xml": false
+    },
+    "content_urls": null,
+    "referenced_works_count": 80,
+    "referenced_works": [
+      "https://openalex.org/W1496317909",
+      "https://openalex.org/W1500474910",
+      "https://openalex.org/W1502922572",
+      "https://openalex.org/W1560739766",
+      "https://openalex.org/W1663792126",
+      "https://openalex.org/W1968371014",
+      "https://openalex.org/W1980418485",
+      "https://openalex.org/W1993882792",
+      "https://openalex.org/W2009642826",
+      "https://openalex.org/W2013744516",
+      "https://openalex.org/W2016287239",
+      "https://openalex.org/W2024558842",
+      "https://openalex.org/W2046356540",
+      "https://openalex.org/W2064675550",
+      "https://openalex.org/W2068773846",
+      "https://openalex.org/W2070681743",
+      "https://openalex.org/W2072886346",
+      "https://openalex.org/W2076063813",
+      "https://openalex.org/W2077179900",
+      "https://openalex.org/W2079502544",
+      "https://openalex.org/W2080690725",
+      "https://openalex.org/W2096125904",
+      "https://openalex.org/W2097117768",
+      "https://openalex.org/W2102605133",
+      "https://openalex.org/W2107878631",
+      "https://openalex.org/W2110242546",
+      "https://openalex.org/W2117014758",
+      "https://openalex.org/W2132638958",
+      "https://openalex.org/W2137983211",
+      "https://openalex.org/W2147768505",
+      "https://openalex.org/W2163605009",
+      "https://openalex.org/W2168156818",
+      "https://openalex.org/W2172073485",
+      "https://openalex.org/W2186222003",
+      "https://openalex.org/W2194775991",
+      "https://openalex.org/W2263604669",
+      "https://openalex.org/W2302255633",
+      "https://openalex.org/W2313953460",
+      "https://openalex.org/W2423557781",
+      "https://openalex.org/W2520164769",
+      "https://openalex.org/W2538830880",
+      "https://openalex.org/W2605070684",
+      "https://openalex.org/W2620858446",
+      "https://openalex.org/W2733044263",
+      "https://openalex.org/W2779054585",
+      "https://openalex.org/W2914313745",
+      "https://openalex.org/W2919115771",
+      "https://openalex.org/W2949888546",
+      "https://openalex.org/W2950133940",
+      "https://openalex.org/W2953061907",
+      "https://openalex.org/W2962949994",
+      "https://openalex.org/W2998704965",
+      "https://openalex.org/W3100245404",
+      "https://openalex.org/W3143835353",
+      "https://openalex.org/W3146803896",
+      "https://openalex.org/W4236965008",
+      "https://openalex.org/W4242688646",
+      "https://openalex.org/W4246587917",
+      "https://openalex.org/W4285719527",
+      "https://openalex.org/W4292483811",
+      "https://openalex.org/W6602254124",
+      "https://openalex.org/W6629804754",
+      "https://openalex.org/W6633552556",
+      "https://openalex.org/W6638824847",
+      "https://openalex.org/W6670164570",
+      "https://openalex.org/W6674914833",
+      "https://openalex.org/W6675026286",
+      "https://openalex.org/W6677096361",
+      "https://openalex.org/W6679436768",
+      "https://openalex.org/W6680532216",
+      "https://openalex.org/W6682691769",
+      "https://openalex.org/W6684191040",
+      "https://openalex.org/W6687483927",
+      "https://openalex.org/W6689986428",
+      "https://openalex.org/W6692936935",
+      "https://openalex.org/W6698183232",
+      "https://openalex.org/W6726381175",
+      "https://openalex.org/W6729063811",
+      "https://openalex.org/W6736259621",
+      "https://openalex.org/W6740421275"
+    ],
+    "related_works": [
+      "https://openalex.org/W3175321409",
+      "https://openalex.org/W4312561791",
+      "https://openalex.org/W2389894046",
+      "https://openalex.org/W2215717369",
+      "https://openalex.org/W4312309719",
+      "https://openalex.org/W2974356760",
+      "https://openalex.org/W2980748541",
+      "https://openalex.org/W3115491726",
+      "https://openalex.org/W4313123484",
+      "https://openalex.org/W4386362517"
+    ],
+    "abstract_inverted_index": null,
+    "counts_by_year": [
+      {
+        "year": 2026,
+        "cited_by_count": 7
+      },
+      {
+        "year": 2025,
+        "cited_by_count": 31
+      },
+      {
+        "year": 2024,
+        "cited_by_count": 38
+      },
+      {
+        "year": 2023,
+        "cited_by_count": 40
+      },
+      {
+        "year": 2022,
+        "cited_by_count": 48
+      },
+      {
+        "year": 2021,
+        "cited_by_count": 33
+      },
+      {
+        "year": 2020,
+        "cited_by_count": 21
+      },
+      {
+        "year": 2019,
+        "cited_by_count": 1
+      }
+    ],
+    "updated_date": "2026-06-05T09:01:59.212387",
+    "created_date": "2025-10-10T00:00:00",
+    "abstract": ""
+  }
+]

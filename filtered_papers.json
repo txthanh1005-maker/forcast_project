@@ -1,0 +1,902 @@
+[
+  {
+    "Title": "Two stage forecast engine with feature selection technique and improved meta-heuristic algorithm for electricity load forecasting",
+    "Year": 2018,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/j.energy.2018.07.088",
+    "Publisher": "elsevier bv",
+    "Source": "energy",
+    "Is_Target": true
+  },
+  {
+    "Title": "Short-Term Load Forecasting With Deep Residual Networks",
+    "Year": 2018,
+    "Abstract": "We present in this paper a model for forecasting short-term electric load based on deep residual networks. The proposed model is able to integrate domain knowledge and researchers' understanding of the task by virtue of different neural network building blocks. Specifically, a modified deep residual network is formulated to improve the forecast results. Further, a two-stage ensemble strategy is used to enhance the generalization capability of the proposed model. We also apply the proposed model to probabilistic load forecasting using Monte Carlo dropout. Three public datasets are used to prove the effectiveness of the proposed model. Multiple test cases and comparison with existing models show that the proposed model provides accurate load forecasting results and has high generalization capability.",
+    "URL": "https://doi.org/10.1109/tsg.2018.2844307",
+    "Publisher": "institute of electrical and electronics engineers",
+    "Source": "ieee transactions on smart grid",
+    "Is_Target": true
+  },
+  {
+    "Title": "Two-Stage Pattern Recognition of Load Curves for Classification of Electricity Customers",
+    "Year": 2007,
+    "Abstract": "This paper describes a two-stage methodology that was developed for the classification of electricity customers. It is based on pattern recognition methods, such as k-means, Kohonen adaptive vector quantization, fuzzy k-means, and hierarchical clustering, which are theoretically described and properly adapted. In the first stage, typical chronological load curves of various customers are estimated using pattern recognition methods, and their results are compared using six adequacy measures. In the second stage, classification of customers is performed by the same methods and measures, together with the representative load patterns of customers being obtained from the first stage. The results of the first stage can be used for load forecasting of customers and determination of tariffs. The results of the second stage provide valuable information for electricity suppliers in competitive energy markets. The developed methodology is applied on a set of medium voltage customers of the Greek power system, and the obtained results are presented and discussed.",
+    "URL": "https://doi.org/10.1109/tpwrs.2007.901287",
+    "Publisher": "institute of electrical and electronics engineers",
+    "Source": "ieee transactions on power systems",
+    "Is_Target": true
+  },
+  {
+    "Title": "Short-term load forecasting using a two-stage sarimax model",
+    "Year": 2017,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/j.energy.2017.05.126",
+    "Publisher": "elsevier bv",
+    "Source": "energy",
+    "Is_Target": true
+  },
+  {
+    "Title": "Two-Stage Energy Management for Office Buildings With Workplace EV Charging and Renewable Energy",
+    "Year": 2017,
+    "Abstract": "Workplace electric vehicle (EV) charging is now supported by more and more companies to encourage EV adoption. In the meantime, renewable energies are becoming an important power source. To participate in the day-ahead power market, decisions have to be made before knowing the actual power demand. This paper addresses the challenges of energy scheduling in office buildings integrated with photovoltaic systems and workplace EV charging. It proposes to leverage day-ahead power market and time-of-use electricity, and uses stochastic programming to address the uncertainties in EV charging demand. Two computationally efficient control algorithms, stochastic programming and load forecasting for energy management with two stages (SPLET) and sample average approximation-based SPLET, are proposed. Both algorithms contain two stages: day-ahead scheduling and real-time operation. First, they try to find the amount of power to purchase from the day-ahead power market while leveraging the flexibility of the load. Then, the real-time demand is satisfied while incorporating the uncertainties realization. Case study based on real-world data shows the proposed two algorithms could provide 7.2% and 6.9% average cost reduction, respectively. Vehicle-to-building and stand-alone battery system can serve as countermeasures for the mismatch between the day-ahead scheduling and real-time demand to further reduce the operation cost.",
+    "URL": "https://doi.org/10.1109/tte.2017.2659626",
+    "Publisher": "institute of electrical and electronics engineers",
+    "Source": "ieee transactions on transportation electrification",
+    "Is_Target": true
+  },
+  {
+    "Title": "Daily peak electricity demand forecasting based on an adaptive hybrid two-stage methodology",
+    "Year": 2015,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/j.ijepes.2015.11.046",
+    "Publisher": "elsevier bv",
+    "Source": "international journal of electrical power & energy systems",
+    "Is_Target": true
+  },
+  {
+    "Title": "Short-Term Load Forecasting Based on an Adaptive Hybrid Method",
+    "Year": 2006,
+    "Abstract": "This paper aims to develop a load forecasting method for short-term load forecasting, based on an adaptive two-stage hybrid network with self-organized map (SOM) and support vector machine (SVM). In the first stage, a SOM network is applied to cluster the input data set into several subsets in an unsupervised manner. Then, groups of 24 SVMs for the next day's load profile are used to fit the training data of each subset in the second stage in a supervised way. The proposed structure is robust with different data types and can deal well with the nonstationarity of load series. In particular, our method has the ability to adapt to different models automatically for the regular days and anomalous days at the same time. With the trained network, we can straightforwardly predict the next-day hourly electricity load. To confirm the effectiveness, the proposed model has been trained and tested on the data of the historical energy load from New York Independent System Operator.",
+    "URL": "https://doi.org/10.1109/tpwrs.2005.860944",
+    "Publisher": "institute of electrical and electronics engineers",
+    "Source": "ieee transactions on power systems",
+    "Is_Target": true
+  },
+  {
+    "Title": "Conditional Tabular GAN-Based Two-Stage Data Generation Scheme for Short-Term Load Forecasting",
+    "Year": 2020,
+    "Abstract": "Load forecasting is one of the critical tasks for enhancing the energy efficiency of smart grids. Even though recent deep learning-based load forecasting models have shown excellent forecasting performance, one of the common problems they faced was that their forecasting accuracy was highly dependent on the data quality and quantity available for the model training. Collecting a sufficient amount of high-quality data is expensive and time-consuming. Recently, a generative adversarial network (GAN) has shown its potential as a solution to the data shortage problem by generating virtual data based on a small amount of real data, and several studies have used GAN to generate electric load data for training forecasting models. However, due to the noise data problem of GANs, their predictive performance also deteriorated. To solve this problem, in this study, we propose a two-stage data generation scheme that more effectively generates input and output variables for short-term load forecasting. In the first stage, we generate virtual calendar and temperature data used as input variables using a conditional tabular GAN (CTGAN). In the second stage, we generate electric load data corresponding to the input variables using a deep learning-based regression model. Lastly, we construct our forecasting model by training another regression model using a mixture of generated data and real data. To verify the effectiveness of our scheme, we conducted extensive experiments using various datasets and data generation models. We report some of the results.",
+    "URL": "https://doi.org/10.1109/access.2020.3037063",
+    "Publisher": "institute of electrical and electronics engineers",
+    "Source": "ieee access",
+    "Is_Target": true
+  },
+  {
+    "Title": "Optimal two-stage ordering policy with Bayesian information updating",
+    "Year": 2003,
+    "Abstract": "We investigate in this paper an optimal two-stage ordering policy for seasonal products. Before the selling season, a retailer can place orders for a seasonal product from her supplier at two distinct stages satisfying the lead-time requirement. Market information is collected at the first stage and is used to update the demand forecast at the second stage by using Bayesian approach. The ordering cost at the first stage is known but the ordering cost at the second stage is uncertain. A two-stage dynamic optimization problem is formulated and an optimal policy is derived using dynamic programming. The optimal ordering policy exhibits nice structural properties and can easily be implemented by a computer program. The detailed implementation scheme is proposed. The service level and profit uncertainty level under the optimal policy are discussed. Extensive numerical analyses are carried out to study the performance of the optimal policy.",
+    "URL": "https://doi.org/10.1057/palgrave.jors.2601584",
+    "Publisher": "palgrave macmillan",
+    "Source": "journal of the operational research society",
+    "Is_Target": false
+  },
+  {
+    "Title": "Formulation and analysis of a rule-based short-term load forecasting algorithm",
+    "Year": 1990,
+    "Abstract": "The formulation of rules for the rule base and the application of such rules are discussed. The classification of the load forecast parameters into weather-sensitive and nonweather-sensitive categories is described. The rationale underlying the development of rules for both the one-day and seven-day forecast is presented. This exercise leads to the identification and estimation of parameters relating load, weather variables, day types, and seasons. Sample rules that are the product of identifiable statistical relationships and expert knowledge are examined. A self-learning process is described which shows how rules governing the electric utility load can be updated. Results from both the one-day and seven-day forecast algorithms are presented, where the seven-day forecast is generated using both accurate and predicted weather information. The monthly average load forecast errors range between 2.97% and 10.71% for the seven-day forecasts. For the one-day forecasts, the average seasonal errors range between 1.03% and 1.53%.",
+    "URL": "https://doi.org/10.1109/5.53400",
+    "Publisher": "institute of electrical and electronics engineers",
+    "Source": "proceedings of the ieee",
+    "Is_Target": true
+  },
+  {
+    "Title": "A Novel Two-Stage Framework for Mid-Term Electric Load Forecasting",
+    "Year": 2023,
+    "Abstract": "Electric utilities and planners rely heavily on accurate mid-term load projections to effectively schedule maintenance, coordinate load dispatch, and manage fuel reserves. Current approaches that attempt to forecast electric load for multiple horizons in a single stage, however, often result in inaccurate forecasts due to the lack of information for predicting the data at the farthest horizon and propagation of large errors. To address this issue, this article presents a two-step mechanism for forecasting electric load that utilizes the benefits of both backpropagation neural networks (BPNNs) and radial basis function neural networks (RBFNNs). The first stage utilizes a pool of BPNNs to make partial predictions. BPNNs are used as they are well-known for their capability of fast and accurate predictions. In the second stage, RBFNNs are used to make complete forecasts. RBFNNs are known for their ability to model nonlinear relationships in the data which is crucial in this stage of the forecast process. Additionally, this article also proposes a unique method for generating additional training samples by incorporating stacking noise, which adds more variability to the data, increasing the generalization capability of the models, resulting in better forecasting performance. The performance of the proposed framework has been investigated with simulation studies and has been validated on actual load data of the Madhya Pradesh Power Transmission System, India. The performance comparison with the existing methods in terms of both accuracy and reliability shows that the proposed forecasting framework provides more accurate results.",
+    "URL": "https://doi.org/10.1109/tii.2023.3259445",
+    "Publisher": "institute of electrical and electronics engineers",
+    "Source": "ieee transactions on industrial informatics",
+    "Is_Target": true
+  },
+  {
+    "Title": "Hourly cooling load forecasting using time-indexed ARX models with two-stage weighted least squares regression",
+    "Year": 2014,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/j.enconman.2013.12.060",
+    "Publisher": "elsevier bv",
+    "Source": "energy conversion and management",
+    "Is_Target": true
+  },
+  {
+    "Title": "Two-Stage Bootstrap Sampling for Probabilistic Load Forecasting",
+    "Year": 2020,
+    "Abstract": "The integration of distributed renewable energy and the implementation of the demand response complicate the change patterns of load profiles and present great uncertainties. Probabilistic load forecasting, an effective method for capturing the future load uncertainty, has been a hot issue. This article proposes a two-stage bootstrap sampling method for probabilistic load forecasting. In the first stage, alpha-bootstrap, which is a modification of traditional bootstrap methods, is applied to characterize the uncertainties from multiple forecasting models; in the second stage, the residual bootstrap method is used to formulate the regression errors. Finally, the probabilistic load forecasts can be obtained by integrating the uncertainties in both stages. Various off-the-shelf point load forecasting methods such as random forest (RF) and gradient boosting regression tree (GBRT) can be integrated into the proposed framework. We illustrate the effectiveness of our proposed method and superiority over direct quantile regression methods such as quantile RF and quantile GBRT using the case studies on open load datasets of eight zones in ISO New-England.",
+    "URL": "https://doi.org/10.1109/tem.2020.2967352",
+    "Publisher": "institute of electrical and electronics engineers",
+    "Source": "ieee transactions on engineering management",
+    "Is_Target": true
+  },
+  {
+    "Title": "Two-stage stochastic framework for energy hubs planning considering demand response programs",
+    "Year": 2020,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/j.energy.2020.118124",
+    "Publisher": "elsevier bv",
+    "Source": "energy",
+    "Is_Target": true
+  },
+  {
+    "Title": "Random vector functional link network for short-term electricity load demand forecasting",
+    "Year": 2016,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/j.ins.2015.11.039",
+    "Publisher": "elsevier bv",
+    "Source": "information sciences",
+    "Is_Target": true
+  },
+  {
+    "Title": "Improving the Accuracy of Bus Load Forecasting by a Two-Stage Bad Data Identification Method",
+    "Year": 2014,
+    "Abstract": "As a critical data input of security constraint unit commitment, bus load forecasting is currently conducted on a bus-by-bus fashion to improve the forecasting accuracy in most provinces in China. On such substation level forecasting, data quality is much worse than the aggregated power demand for the whole system, and identifying and restoring the inaccurate measurement and abnormal disturbance to retrieve the historical trend of load is urged to improve the forecasting accuracy. In this paper, a two-stage identification and restoration method is presented. The typical patterns of inaccurate measurement and abnormal disturbance are detected in the first stage based on statistical criteria independent with normal distribution. Historical trend is further retrieved in the second stage using frequency domain decomposition, and a typical daily curve is generated to compare with the data measurements. The deviations of the data measurements from the typical daily curve obey normal distribution and are used as criteria in the second stage. The effectiveness of the proposed methodology has been confirmed by examples in real bus load forecasting systems in this paper.",
+    "URL": "https://doi.org/10.1109/tpwrs.2014.2298463",
+    "Publisher": "institute of electrical and electronics engineers",
+    "Source": "ieee transactions on power systems",
+    "Is_Target": true
+  },
+  {
+    "Title": "COVID-19 ICU demand forecasting: A two-stage Prophet-LSTM approach",
+    "Year": 2022,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/j.asoc.2022.109181",
+    "Publisher": "elsevier bv",
+    "Source": "applied soft computing",
+    "Is_Target": true
+  },
+  {
+    "Title": "Short term load forecasting using fuzzy neural networks",
+    "Year": 1995,
+    "Abstract": "This paper presents the development of a fuzzy system for short term load forecasting. The fuzzy system has the network structure and the training procedure of a neural network and is called a fuzzy neural network (FNN). An FNN initially creates a rule base from existing historical load data. The parameters of the rule base are then tuned through a training process, so that the output of the FNN adequately matches the available historical load data. Once trained, the FNN can be used to forecast future loads. Test results show that the FNN can forecast future loads with an accuracy comparable to that of neural networks, while its training is much faster than that of neural networks.< <ETX xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">&gt;</ETX>",
+    "URL": "https://doi.org/10.1109/59.466494",
+    "Publisher": "institute of electrical and electronics engineers",
+    "Source": "ieee transactions on power systems",
+    "Is_Target": true
+  },
+  {
+    "Title": "Two-stage power system distribution planning algorithm",
+    "Year": 1993,
+    "Abstract": "A two-stage power system distribution planning algorithm is developed for solving sizing, location and timing problems of distribution substations and primary feeders. This comprehensive algorithm involves an accurate small-area electric load forecasting procedure, and provides the flexibility for both static- and dynamic-planning application modes. Also, the algorithm includes a new nondiscrete planning model which accurately simulates the different cost functions of substations and primary feeders. Moreover, constaints on voltage drop, equipment capacity and power-conservation constraints are included in the planning problem formulation. Finally, the proposed algorithm is illustrated using a detailed numerical example, and subsequently tested for both efficiency and accuracy.",
+    "URL": "https://doi.org/10.1049/ip-c.1993.0004",
+    "Publisher": "",
+    "Source": "iee proceedings c generation transmission and distribution",
+    "Is_Target": false
+  },
+  {
+    "Title": "Competition and Cooperation in a Two-Stage Supply Chain with Demand Forecasts",
+    "Year": 2010,
+    "Abstract": "We consider a serial supply chain with one supplier and one retailer. Each obtains some demand forecast information, which may be shared or not. We investigate the members' benefits from sharing information. The forecasts follow a variant of the Martingale model of forecast evolution (MMFE). We construct a simple transfer-payment scheme to align the players' incentives with that of the overall system. The main finding is that, unless the players' incentives are aligned in this way, sharing information makes little sense. It might hurt one or the other player and the system as a whole.",
+    "URL": "https://doi.org/10.1287/opre.1100.0809",
+    "Publisher": "institute for operations research and the management sciences",
+    "Source": "operations research",
+    "Is_Target": false
+  },
+  {
+    "Title": "A Load Forecasting Framework Considering Hybrid Ensemble Deep Learning With Two-Stage Load Decomposition",
+    "Year": 2024,
+    "Abstract": "Accurate load forecasting is essential for the operational management of distribution network. This paper proposes a hybrid ensemble deep learning (HEDL) load forecasting framework. Two-stage load decomposition is based on multiple seasonal-trend decomposition using loess (MSTL) and variational mode decomposition (VMD), which simplifies the observed load sequence with complex variation patterns on multi-timescales and multi-frequencies. Multidimensional feature matrices considering component variability are constructed based on the maximum information coefficient (MIC) and the sliding window. The component forecasting models based on temporal convolutional network (TCN) are built, which fully capture the long-term and short-term dependencies of loads through distinct receptive fields. A weighted ensemble method is utilized to obtain more accurate forecasting results for residual components with high uncertainties. The final load forecasting result is then ensembled by summing up the multiple component forecasting results. The results of case studies demonstrate the effectiveness of the proposed HEDL. Comparative experiments with five benchmark models and two advanced frameworks have verified the superiority of the proposed HEDL framework in load forecasting accuracy, generalizability and robustness.",
+    "URL": "https://doi.org/10.1109/tia.2024.3354222",
+    "Publisher": "institute of electrical and electronics engineers",
+    "Source": "ieee transactions on industry applications",
+    "Is_Target": true
+  },
+  {
+    "Title": "Improved Short-Term Load Forecasting Based on Two-Stage Predictions with Artificial Neural Networks in a Microgrid Environment",
+    "Year": 2013,
+    "Abstract": "Short-Term Load Forecasting plays a significant role in energy generation planning, and is specially gaining momentum in the emerging Smart Grids environment, which usually presents highly disaggregated scenarios where detailed real-time information is available thanks to Communications and Information Technologies, as it happens for example in the case of microgrids. This paper presents a two stage prediction model based on an Artificial Neural Network in order to allow Short-Term Load Forecasting of the following day in microgrid environment, which first estimates peak and valley values of the demand curve of the day to be forecasted. Those, together with other variables, will make the second stage, forecast of the entire demand curve, more precise than a direct, single-stage forecast. The whole architecture of the model will be presented and the results compared with recent work on the same set of data, and on the same location, obtaining a Mean Absolute Percentage Error of 1.62% against the original 2.47% of the single stage model.",
+    "URL": "https://doi.org/10.3390/en6094489",
+    "Publisher": "multidisciplinary digital publishing institute",
+    "Source": "energies",
+    "Is_Target": false
+  },
+  {
+    "Title": "Revisiting the value of information sharing in two-stage supply chains",
+    "Year": 2018,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/j.ejor.2018.04.040",
+    "Publisher": "elsevier bv",
+    "Source": "european journal of operational research",
+    "Is_Target": true
+  },
+  {
+    "Title": "Fuzzy rule-based demand forecasting for dynamic pricing of a maritime company",
+    "Year": 2014,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/j.knosys.2014.04.015",
+    "Publisher": "elsevier bv",
+    "Source": "knowledge-based systems",
+    "Is_Target": true
+  },
+  {
+    "Title": "Fuzzy Rule Base for Analytical Demand Forecasting Enhancement",
+    "Year": 2010,
+    "Abstract": "Demand data can be viewed as a number series from time to time. The series may be a pattern that can be analyzed for the next demand prediction if the slice of time is constant. The demand series which the time slice is constant can forecast the next demand valued by applying a formula. There are many methods to forecast the next demand. All formulas calculate the next demand by using the fact of demand as a pure number series. The next demand value is derived from analytical process using mathematics equation, from the simplest way to the complex one. In fact, the demand is influenced by environment factor, for example social and politics exchange, disaster, and mode. The demand forecasting must be reevaluated by considering the environment factors. The environment factor usually has uncertainty value which is good using fuzzy value. That is why the best way to enhance the demand forecasting is calculation using fuzzy rule base.",
+    "URL": "https://doi.org/10.1109/act.2010.61",
+    "Publisher": "",
+    "Source": "",
+    "Is_Target": false
+  },
+  {
+    "Title": "Highly accurate peak and valley prediction short-term net load forecasting approach based on decomposition for power systems with high PV penetration",
+    "Year": 2023,
+    "Abstract": "The increasing penetration of photovoltaic has been reshaping the electricity net load curve, which has a significant impact on power system operation and short-term dispatch scheduling. Accurate short-term net load forecasting is essential to ensure reliable and economical operations of a power system. Nonetheless, most of the existing net load forecasting approaches are mostly focused on net load forecasting at household, distribution or microgrid level, but not at grid system-wide level. They also suffer from low accuracy due to the presence of uncertainties on high-frequency fluctuations in the net load. This paper proposes a new improved two-stage net load forecasting method at grid system-wide level. Firstly, it contributes to eliminate the high-frequency components with insignificant amount of energy from the original net load by using the \u201cImproved Complete Ensemble Empirical Mode Decomposition with Adaptive Noise-ICEEMDAN\u201d technique. Then, net load decomposition outcomes form the inputs of a computationally efficient and accurate \u201cLong Short-Term Memory-LSTM\u201d network algorithm to produce an accurate day-ahead forecasting, which lays out the foundation of day-ahead power dispatch scheduling. The superiority of the suggested algorithm was confirmed by comparing the obtained results against five other algorithms that use different empirical based decomposition techniques along with Back Propagation (BP) or LSTM. Statistical metrics, Mean Absolute Error (MAE) and Mean Absolute Percentage Error (MAPE) were computed to show the model accuracy. The validity of the proposed method is verified by the net load data of \u201cSouth West Interconnected System\u201d power network in Western Australia, which refers to the total demand on the conventional generators made up of the consumers\u2019 actual demand plus system losses, minus the solar power harnessed by the rooftop PV panels installed within the grid system. Achieving a very high day-ahead net load forecasting accuracy of 96.67% confirms our hypothesis on ICEEMDAN\u2019s capability to decompose the net load carefully into different meaningful components.",
+    "URL": "https://doi.org/10.1016/j.apenergy.2023.120641",
+    "Publisher": "elsevier bv",
+    "Source": "applied energy",
+    "Is_Target": true
+  },
+  {
+    "Title": "Applications of random forest in multivariable response surface for short-term load forecasting",
+    "Year": 2022,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/j.ijepes.2022.108073",
+    "Publisher": "elsevier bv",
+    "Source": "international journal of electrical power & energy systems",
+    "Is_Target": true
+  },
+  {
+    "Title": "Residential load forecasting based on LSTM fusing self-attention mechanism with pooling",
+    "Year": 2021,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/j.energy.2021.120682",
+    "Publisher": "elsevier bv",
+    "Source": "energy",
+    "Is_Target": true
+  },
+  {
+    "Title": "A Two-Stage Industrial Load Forecasting Scheme for Day-Ahead Combined Cooling, Heating and Power Scheduling",
+    "Year": 2020,
+    "Abstract": "Smart grid systems, which have gained much attention due to its ability to reduce operation and management costs of power systems, consist of diverse components including energy storage, renewable energy, and combined cooling, heating and power (CCHP) systems. The CCHP has been investigated to reduce energy costs by using the thermal energy generated during the power generation process. For efficient utilization of CCHP and numerous power generation systems, accurate short-term load forecasting (STLF) is necessary. So far, even though many single algorithm-based STLF models have been proposed, they showed limited success in terms of applicability and coverage. This problem can be alleviated by combining such single algorithm-based models in ways that take advantage of their strengths. In this paper, we propose a novel two-stage STLF scheme; extreme gradient boosting and random forest models are executed in the first stage, and deep neural networks are executed in the second stage to combine them. To show the effectiveness of our proposed scheme, we compare our model with other popular single algorithm-based forecasting models and then show how much electric charges can be saved by operating CCHP based on the schedules made by the economic analysis on the predicted electric loads.",
+    "URL": "https://doi.org/10.3390/en13020443",
+    "Publisher": "multidisciplinary digital publishing institute",
+    "Source": "energies",
+    "Is_Target": false
+  },
+  {
+    "Title": "A Two-Stage Short-Term Load Forecasting Method Using Long Short-Term Memory and Multilayer Perceptron",
+    "Year": 2021,
+    "Abstract": "Load forecasting is an essential task in the operation management of a power system. Electric power companies utilize short-term load forecasting (STLF) technology to make reasonable power generation plans. A forecasting model with low prediction errors helps reduce operating costs and risks for the operators. In recent years, machine learning has become one of the most popular technologies for load forecasting. In this paper, a two-stage STLF model based on long short-term memory (LSTM) and multilayer perceptron (MLP), which improves the forecasting accuracy over the entire time horizon, is proposed. In the first stage, a sequence-to-sequence (seq2seq) architecture, which can handle a multi-sequence of input to extract more features of historical data than that of single sequence, is used to make multistep predictions. In the second stage, the MLP is used for residual modification by perceiving other information that the LSTM cannot. To construct the model, we collected the electrical load, calendar, and meteorological records of Kanto region in Japan for four years. Unlike other LSTM-based hybrid architectures, the proposed model uses two independent neural networks instead of making the neural network deeper by concatenating a series of LSTM cells and convolutional neural networks (CNNs). Therefore, the proposed model is easy to be trained and more interpretable. The seq2seq module performs well in the first few hours of the predictions. The MLP inherits the advantage of the seq2seq module and improves the results by feeding artificially selected features both from historical data and information of the target day. Compared to the LSTM-AM model and single MLP model, the mean absolute percentage error (MAPE) of the proposed model decreases from 2.82% and 2.65% to 2%, respectively. The results demonstrate that the MLP helps improve the prediction accuracy of seq2seq module and the proposed model achieves better performance than other popular models. In addition, this paper also reveals the reason why the MLP achieves the improvement.",
+    "URL": "https://doi.org/10.3390/en14185873",
+    "Publisher": "multidisciplinary digital publishing institute",
+    "Source": "energies",
+    "Is_Target": false
+  },
+  {
+    "Title": "Forecasting and inventory performance in a two-stage supply chain with ARIMA(0,1,1) demand: Theory and empirical analysis",
+    "Year": 2011,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/j.ijpe.2011.09.004",
+    "Publisher": "elsevier bv",
+    "Source": "international journal of production economics",
+    "Is_Target": true
+  },
+  {
+    "Title": "Combining a neural network with a rule-based expert system approach for short-term power load forecasting in Taiwan",
+    "Year": 1997,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/s0957-4174(97)00048-1",
+    "Publisher": "elsevier bv",
+    "Source": "expert systems with applications",
+    "Is_Target": true
+  },
+  {
+    "Title": "A two-stage short-term load forecasting approach using temperature daily profiles estimation",
+    "Year": 2018,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1007/s00521-017-3324-x",
+    "Publisher": "springer science+business media",
+    "Source": "neural computing and applications",
+    "Is_Target": false
+  },
+  {
+    "Title": "A two-stage energy management framework for optimal scheduling of multi-microgrids with generation and demand forecasting",
+    "Year": 2022,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1007/s00521-022-07103-w",
+    "Publisher": "springer science+business media",
+    "Source": "neural computing and applications",
+    "Is_Target": false
+  },
+  {
+    "Title": "Distributed Control of PEV Charging Based on Energy Demand Forecast",
+    "Year": 2017,
+    "Abstract": "This paper presents a new distributed smart charging strategy for grid integration of plug-in electric vehicles (PEVs). The main goal is to smooth the daily grid load profile while ensuring that each PEV has a desired state of charge level at the time of departure. Communication and computational overhead, and PEV user privacy are also considered during the development of the proposed strategy. It consists of two stages: 1) an offline process to estimate a reference operating power level based on the forecasted mobility energy demand and base loading profile, and 2) a real-time process to determine the charging power for each PEV so that the aggregated load tracks the reference loading level. Tests are carried out both on primary and secondary distribution networks for different heuristic charging scenarios and PEV penetration levels. Results are compared to that of the optimal solution and other state-of-the-art techniques in terms of variance and peak values, and shown to be competitive. Finally, a real vehicle test implementation is done using a commercial-of-the-shelf charging station and an electric vehicle.",
+    "URL": "https://doi.org/10.1109/tii.2017.2705075",
+    "Publisher": "institute of electrical and electronics engineers",
+    "Source": "ieee transactions on industrial informatics",
+    "Is_Target": true
+  },
+  {
+    "Title": "Two-Stage Fleet Assignment Model Considering Stochastic Passenger Demands",
+    "Year": 2008,
+    "Abstract": "An airline's fleet typically contains multiple aircraft families, each having a specific cockpit design and crew requirement. Each aircraft family contains multiple aircraft types having different capacities. Given a flight schedule network, the fleet assignment model is concerned with assigning aircraft to flight legs to maximize profits with respect to captured itinerary-based demand. However, because of related yield management and crew-scheduling regulations, in particular, this decision needs to be made well in advance of departures when market demand is still highly uncertain, although subsequently at a later stage, reassignments of aircraft types within a given family can be made when demand forecasts improve, while preserving crew schedules. In this paper, we propose a two-stage stochastic mixed-integer programming approach in which the first stage makes only higher-level family-assignment decisions, while the second stage performs subsequent family-based type-level assignments according to forecasted market demand realizations. By considering demand uncertainty up-front at the initial fleeting stage, we inject additional flexibility in the process that offers more judicious opportunities for later revisions. We conduct a polyhedral analysis of the proposed model and develop suitable solution approaches. Results of some numerical experiments are presented to exhibit the efficacy of using the stochastic model as opposed to the traditional deterministic model that considers only expected demand, and to demonstrate the efficiency of the proposed algorithms as compared with solving the model using its deterministic equivalent.",
+    "URL": "https://doi.org/10.1287/opre.1070.0476",
+    "Publisher": "institute for operations research and the management sciences",
+    "Source": "operations research",
+    "Is_Target": false
+  },
+  {
+    "Title": "Clustering and Support Vector Regression for Water Demand Forecasting and Anomaly Detection",
+    "Year": 2017,
+    "Abstract": "This paper presents a completely data-driven and machine-learning-based approach, in two stages, to first characterize and then forecast hourly water demand in the short term with applications of two different data sources: urban water demand (SCADA data) and individual customer water consumption (AMR data). In the first case, reliable forecasting can be used to optimize operations, particularly the pumping schedule, in order to reduce energy-related costs, while in the second case, the comparison between forecast and actual values may support the online detection of anomalies, such as smart meter faults, fraud or possible cyber-physical attacks. Results are presented for a real case: the water distribution network in Milan.",
+    "URL": "https://doi.org/10.3390/w9030224",
+    "Publisher": "multidisciplinary digital publishing institute",
+    "Source": "water",
+    "Is_Target": false
+  },
+  {
+    "Title": "A two-stage supervised learning approach for electricity price forecasting by leveraging different data sources",
+    "Year": 2019,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/j.apenergy.2019.03.129",
+    "Publisher": "elsevier bv",
+    "Source": "applied energy",
+    "Is_Target": true
+  },
+  {
+    "Title": "ALFA: automated load forecasting assistant",
+    "Year": 1988,
+    "Abstract": "ALFA, an expert system for forecasting short-term electricity demand is presented. ALFA is in operation at the Energy Management System center at Niagara Mohawk Power Corporation in upstate New York, generating, in real time, hourly load forecasts for up to 48 hours in advance. ALFA uses an extensive 10-year historical database of hourly observations of 12 weather variables and a rule base that takes into account daily, weekly, and seasonal variations of load, as well as holidays, special events, and load growth. A satellite interface for the real-time acquisition of weather data, and the machine-operator interface are also discussed.< <ETX xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">&gt;</ETX>",
+    "URL": "https://doi.org/10.1109/59.14540",
+    "Publisher": "institute of electrical and electronics engineers",
+    "Source": "ieee transactions on power systems",
+    "Is_Target": true
+  },
+  {
+    "Title": "Two-Stage Artificial Neural Network Model for Short-Term Load Forecasting",
+    "Year": 2018,
+    "Abstract": "Short-term load forecast (STLF) is important to ensure stable, reliable and efficient power system operations. In this paper, we propose a two-stage artificial neural network (ANN) model for load forecasting application. The proposed system is currently being tested in the Taiwan Power Company (TPC) with potential for future adoption in their decision support systems. The accuracy of the proposed forecast model is tested using the historical data obtained from TPC; the results show that the proposed two-stage ANN model can outperform a previously proposed single stage ANN load forecast model.",
+    "URL": "https://doi.org/10.1016/j.ifacol.2018.11.783",
+    "Publisher": "elsevier bv",
+    "Source": "ifac-papersonline",
+    "Is_Target": true
+  },
+  {
+    "Title": "A novel hybrid algorithm for electricity price and load forecasting in smart grids with demand-side management",
+    "Year": 2016,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/j.apenergy.2016.05.083",
+    "Publisher": "elsevier bv",
+    "Source": "applied energy",
+    "Is_Target": true
+  },
+  {
+    "Title": "Two-Stage Electricity Demand Modeling Using Machine Learning Algorithms",
+    "Year": 2017,
+    "Abstract": "Forecasting of electricity demand has become one of the most important areas of research in the electric power industry, as it is a critical component of cost-efficient power system management and planning. In this context, accurate and robust load forecasting is supposed to play a key role in reducing generation costs, and deals with the reliability of the power system. However, due to demand peaks in the power system, forecasts are inaccurate and prone to high numbers of errors. In this paper, our contributions comprise a proposed data-mining scheme for demand modeling through peak detection, as well as the use of this information to feed the forecasting system. For this purpose, we have taken a different approach from that of time series forecasting, representing it as a two-stage pattern recognition problem. We have developed a peak classification model followed by a forecasting model to estimate an aggregated demand volume. We have utilized a set of machine learning algorithms to benefit from both accurate detection of the peaks and precise forecasts, as applied to the Polish power system. The key finding is that the algorithms can detect 96.3% of electricity peaks (load value equal to or above the 99th percentile of the load distribution) and deliver accurate forecasts, with mean absolute percentage error (MAPE) of 3.10% and resistant mean absolute percentage error (r-MAPE) of 2.70% for the 24 h forecasting horizon.",
+    "URL": "https://doi.org/10.3390/en10101547",
+    "Publisher": "multidisciplinary digital publishing institute",
+    "Source": "energies",
+    "Is_Target": false
+  },
+  {
+    "Title": "A novel approach to short-term load forecasting using fuzzy neural networks",
+    "Year": 1998,
+    "Abstract": "An efficient modeling technique based on the fuzzy curve notion is developed in this paper to generate fuzzy models for short-term load forecasting. The suggested forecasting approach proceeds on the following steps: (a) prediction of the load curve extremals (peak and valley loads) using separate fuzzy models; (b) formulation of the representative day based on historical load data; and (c) mapping of the representative day load curve to the forecasted peak values to obtain the predicted day load curves. Very good prediction performance is attained as shown in the simulation results which verify the effectiveness of the modeling technique.",
+    "URL": "https://doi.org/10.1109/59.667372",
+    "Publisher": "institute of electrical and electronics engineers",
+    "Source": "ieee transactions on power systems",
+    "Is_Target": true
+  },
+  {
+    "Title": "Gene Expression Programming Coupled with Unsupervised Learning: A Two-Stage Learning Process in Multi-Scale, Short-Term Water Demand Forecasts",
+    "Year": 2018,
+    "Abstract": "This article proposes a new general approach in short-term water demand forecasting based on a two-stage learning process that couples time-series clustering with gene expression programming (GEP). The approach was tested on the real life water demand data of the city of Milan, in Italy. Moreover, multi-scale modeling using a series of head-time was deployed to investigate the optimum temporal resolution under study. Multi-scale modeling was performed based on rearranging hourly based patterns of water demand into 3, 6, 12, and 24 h lead times. Results showed that GEP should receive more attention among the emerging nonlinear modelling techniques if coupled with unsupervised learning algorithms in detailed spherical k-means.",
+    "URL": "https://doi.org/10.3390/w10020142",
+    "Publisher": "multidisciplinary digital publishing institute",
+    "Source": "water",
+    "Is_Target": false
+  },
+  {
+    "Title": "A novel fuzzy-based ensemble model for load forecasting using hybrid deep neural networks",
+    "Year": 2019,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/j.epsr.2019.106025",
+    "Publisher": "elsevier bv",
+    "Source": "electric power systems research",
+    "Is_Target": true
+  },
+  {
+    "Title": "Use of Sensors and Analyzers Data for Load Forecasting: A Two Stage Approach",
+    "Year": 2020,
+    "Abstract": "The increase in sensors in buildings and home automation bring potential information to improve buildings' energy management. One promissory field is load forecasting, where the inclusion of other sensors' data in addition to load consumption may improve the forecasting results. However, an adequate selection of sensor parameters to use as input to the load forecasting should be done. In this paper, a methodology is proposed that includes a two-stage approach to improve the use of sensor data for a specific building. As an innovation, in the first stage, the relevant sensor data is selected for each specific building, while in the second stage, the load forecast is updated according to the actual forecast error. When a certain error is reached, the forecasting algorithm (Artificial Neural Network or K-Nearest Neighbors) is trained with the most recent data instead of training the algorithm every time. Data collection is provided by a prototype of agent-based sensors developed by the authors in order to support the proposed methodology. In this case study, data over a period of six months with five-minute time intervals regarding eight types of sensors are used. These data have been adapted from an office building to illustrate the advantages of the proposed methodology.",
+    "URL": "https://doi.org/10.3390/s20123524",
+    "Publisher": "multidisciplinary digital publishing institute",
+    "Source": "sensors",
+    "Is_Target": false
+  },
+  {
+    "Title": "A two-stage random forest method for short-term load forecasting",
+    "Year": 2016,
+    "Abstract": "Machine learning methods are main stream algorithms applied in short term load forecasting. However, typical machine learning methods consisting of Artificial Neural Network (ANN) and Support Vector Regression (SVR) have deficiencies hard to overcome, such as easy to be trapped in local optimization (for ANN) or hard to decide kernel parameter and penalty parameter (for SVR). On the other hand, grey relational analysis is an effective method to select proper historical data as training set for training machine learning models. But it is not comprehensive and accurate enough. In this paper, a new two-stage hybrid algorithm aimed to solve these two problems is proposed. Random Forest (RF) method is introduced as the machine learning method, which will not cause overfitting problem and parameters are easy to be tuned. Furthermore, Grey Relational Projection (GRP) is introduced to select similar historical data to train random forest models. The final forecasting results based on real load data prove this new two-stage method performs better than the other two common methods.",
+    "URL": "https://doi.org/10.1109/pesgm.2016.7741295",
+    "Publisher": "",
+    "Source": "",
+    "Is_Target": false
+  },
+  {
+    "Title": "A neuro-fuzzy approach to short-term load forecasting in a price-sensitive environment",
+    "Year": 2002,
+    "Abstract": "This paper presents a new approach to short-term load forecasting in a deregulated and price-sensitive environment. A real-time pricing type scenario is envisioned where energy prices could change on an hourly basis with the consumer having the ability to react to the price signal through shifting his electricity usage from expensive hours to other times when possible. The load profile under this scenario would have different characteristics compared to that of the regulated, fixed-price era. Consequently, short-term load forecasting models customized on price-insensitive (PIS) historical data of regulated era would no longer be able to perform well. In this work, a price-sensitive (PS) load forecaster is developed. This forecaster consists of two stages, an artificial neural network based PIS load forecaster followed by a fuzzy logic (FL) system that transforms the PIS load forecasts of the first stage into PS forecasts. The first stage forecaster is a widely used forecaster in industry known as ANNSTLF. For the FL system of the second stage, a genetic algorithm based approach is developed to automatically optimize the number of rules and the number and parameters of the fuzzy membership functions. Another FL system is developed to simulate PS load data from the PIS historical data of a utility. This new forecaster termed NFSTLF is tested on three PS database and it is shown that it produces superior results to the PIS ANNSTLF.",
+    "URL": "https://doi.org/10.1109/tpwrs.2002.804999",
+    "Publisher": "institute of electrical and electronics engineers",
+    "Source": "ieee transactions on power systems",
+    "Is_Target": true
+  },
+  {
+    "Title": "Secondary Forecasting Based on Deviation Analysis for Short-Term Load Forecasting",
+    "Year": 2010,
+    "Abstract": "Short-term load forecasting (STLF) is the basis of power system planning and operation. With regard to the fast-growing load in China, a novel two-stage hybrid forecasting method is proposed in this paper. In the first stage, daily load is forecasted by time-series methods; in the second stage, the deviation caused by time-series methods is forecasted considering the impact of relative factors, and then is added to the result of the first stage. Different from other conventional methods, this paper does an in-depth analysis on the impact of relative factors on the deviation between actual load and the forecasting result of traditional time-series methods. On the basis of this analysis, an adaptive algorithm is proposed to perform the second stage which can be used to choose the most appropriate algorithm among linear regression, quadratic programming, and support vector machine (SVM) according to the characteristic of historical data. These ideas make the forecasting procedure more accurate, adaptive, and effective, comparing with SVM and other prevalent methods. The effectiveness has been demonstrated by the experiments and practical application in China.",
+    "URL": "https://doi.org/10.1109/tpwrs.2010.2052638",
+    "Publisher": "institute of electrical and electronics engineers",
+    "Source": "ieee transactions on power systems",
+    "Is_Target": true
+  },
+  {
+    "Title": "Energy demand forecasting in China: A support vector regression-compositional data second exponential smoothing model",
+    "Year": 2022,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/j.energy.2022.125955",
+    "Publisher": "elsevier bv",
+    "Source": "energy",
+    "Is_Target": true
+  },
+  {
+    "Title": "A New Two-Stage Approach to Short Term Electrical Load Forecasting",
+    "Year": 2013,
+    "Abstract": "In the deregulated energy market, the accuracy of load forecasting has a significant effect on the planning and operational decision making of utility companies. Electric load is a random non-stationary process influenced by a number of factors which make it difficult to model. To achieve better forecasting accuracy, a wide variety of models have been proposed. These models are based on different mathematical methods and offer different features. This paper presents a new two-stage approach for short-term electrical load forecasting based on least-squares support vector machines. With the aim of improving forecasting accuracy, one more feature was added to the model feature set, the next day average load demand. As this feature is unknown for one day ahead, in the first stage, forecasting of the next day average load demand is done and then used in the model in the second stage for next day hourly load forecasting. The effectiveness of the presented model is shown on the real data of the ISO New England electricity market. The obtained results confirm the validity advantage of the proposed approach.",
+    "URL": "https://doi.org/10.3390/en6042130",
+    "Publisher": "multidisciplinary digital publishing institute",
+    "Source": "energies",
+    "Is_Target": false
+  },
+  {
+    "Title": "Two-Stage Short-Term Load Forecasting for Power Transformers Under Different Substation Operating Conditions",
+    "Year": 2019,
+    "Abstract": "The load of transformers shows higher volatility and uncertainty than do the system-level and substation-level loads. This paper proposes a two-stage short-term load forecasting (STLF) model for power transformers. 1) Three state-of-the-art technologies are applied to predict the aggregated substation-level load by taking the historical load, weather, and calendar data as inputs. In this stage, no specific STLF model needs to be developed, which allows the forecasters to select the most accurate prediction results for transformer-level load forecasting. 2) The load distribution factor (LDF) is defined as the ratio of the transformer load to the substation load. The relationship between LDF and substation load is captured by nonlinear regression functions under different substation operating conditions, and the load of each parallel transformer is predicted using these nonlinear regression functions. Each nonlinear function can be accurately established even if the historical load data are scarce under some irregular operating conditions. Three application examples show the effectiveness and rationality of the proposed method. The third example demonstrates that STLF of transformers is necessary because it provides important information for optimizing substation operating schemes and equipment maintenance plans.",
+    "URL": "https://doi.org/10.1109/access.2019.2951422",
+    "Publisher": "institute of electrical and electronics engineers",
+    "Source": "ieee access",
+    "Is_Target": true
+  },
+  {
+    "Title": "Purchase contract management with demand forecast updates",
+    "Year": 2005,
+    "Abstract": "Abstract We study a two-stage purchase contract with a demand forecast update. The purchase contract provides the buyer an opportunity to adjust an initial commitment based on an updated demand forecast obtained at a later stage. An adjustment, if any, incurs a fixed as well as a variable cost. Using a dynamic programming formulation, we obtain optimal solutions for a class of demand distributions. We also discuss how these results can be applied to gain managerial insights that help in making decisions regarding where to allocate efforts in improving the forecast quality and whether or not to sign a contract. Contributed by the Supply Chains/Production-Inventory Systems Department Acknowledgements This research was supported in part by research grant RGC CUHK4239/03E and CUHK4167/04E. The authors would like to thank the AE and two referees for detailed comments and suggestions. Notes Contributed by the Supply Chains/Production-Inventory Systems Department",
+    "URL": "https://doi.org/10.1080/07408170590961157",
+    "Publisher": "taylor & francis",
+    "Source": "iie transactions",
+    "Is_Target": false
+  },
+  {
+    "Title": "A Two-Stage Multistep-Ahead Electricity Load ForecastingScheme Based on LightGBM and Attention-BiLSTM",
+    "Year": 2021,
+    "Abstract": "An efficient energy operation strategy for the smart grid requires accurate day-ahead electricity load forecasts with high time resolutions, such as 15 or 30 min. Most high-time resolution electricity load prediction techniques deal with a single output prediction, so their ability to cope with sudden load changes is limited. Multistep-ahead forecasting addresses this problem, but conventional multistep-ahead prediction models suffer from deterioration in prediction performance as the prediction range is expanded. In this paper, we propose a novel two-stage multistep-ahead forecasting model that combines a single-output forecasting model and a multistep-ahead forecasting model to solve the aforementioned problem. In the first stage, we perform a single-output prediction based on recent electricity load data using a light gradient boosting machine with time-series cross-validation, and feed it to the second stage. In the second stage, we construct a multistep-ahead forecasting model that applies an attention mechanism to sequence-to-sequence bidirectional long short-term memory (S2S ATT-BiLSTM). Compared to the single S2S ATT-BiLSTM model, our proposed model achieved improvements of 3.23% and 4.92% in mean absolute percentage error and normalized root mean square error, respectively.",
+    "URL": "https://doi.org/10.3390/s21227697",
+    "Publisher": "multidisciplinary digital publishing institute",
+    "Source": "sensors",
+    "Is_Target": false
+  },
+  {
+    "Title": "A two-stage capacity reservation supply contract with risky supplier and forecast updating",
+    "Year": 2018,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/j.ijpe.2018.01.019",
+    "Publisher": "elsevier bv",
+    "Source": "international journal of production economics",
+    "Is_Target": true
+  },
+  {
+    "Title": "Product life cycle based demand forecasting by using artificial bee colony algorithm optimized two-stage polynomial fitting",
+    "Year": 2016,
+    "Abstract": "Demand forecasting is one of the most essential components of supply chain management, which directly influences a company\u2019s overall performance and competitiveness. However, it is difficult to accurately forecast the demand of fashion products with short life cycle and high volatility characterist ics such as footwear and apparel products. An integrated demand forecasting method named Improved ABC-PF is proposed in this paper based on Product Life Cycle (PLC) theory considering the characteristics of fashion products. First, a PLC model based on cubic polynomial which is divided into two stages by the best-selling point, is established instead of traditional PLC modeling methods. Second, an improved Artificial Bee Colony (ABC) algorithm is utilized to optimize the parameters of the two-stage PLC function, which is conducted by initial population selection, optimization function design and convergence rate improvement. After that, an inventory control strategy based on PLC analysis is studied and applied in the \u201cPrecise Order\u201d mode. Finally, the proposed method is validated by real-world data from a Chinese footwear and apparel retailer. After being compared with the other demand forecasting methods such as Moving Average (MA), Support Vector Machine (SVM) and Radial Basis Function Neural Network (RBFNN), it is indicated that the proposed improved ABC-PF method can achieve higher prediction accuracy and lower safety inventory level, which improve the overall profitability of the company, therefore generate product demand management insights for footwear and apparel enterprises.",
+    "URL": "https://doi.org/10.3233/jifs-169014",
+    "Publisher": "ios press",
+    "Source": "journal of intelligent & fuzzy systems",
+    "Is_Target": false
+  },
+  {
+    "Title": "Combining a neural network and a rule-based expert system for short-term load forecasting",
+    "Year": 1997,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/s0360-8352(97)00009-0",
+    "Publisher": "elsevier bv",
+    "Source": "computers & industrial engineering",
+    "Is_Target": true
+  },
+  {
+    "Title": "Interpretable Tourism Demand Forecasting with Two-Stage Decomposition and Temporal Fusion Transformers",
+    "Year": 2024,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1007/s11424-024-2307-0",
+    "Publisher": "springer science+business media",
+    "Source": "journal of systems science and complexity",
+    "Is_Target": false
+  },
+  {
+    "Title": "An efficient two-stage algorithm for decentralized scheduling of micro-CHP units",
+    "Year": 2015,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/j.ejor.2015.04.016",
+    "Publisher": "elsevier bv",
+    "Source": "european journal of operational research",
+    "Is_Target": true
+  },
+  {
+    "Title": "A two-stage random forest method for short-term load forecasting",
+    "Year": 2015,
+    "Abstract": "Machine learning methods are main stream algorithms applied in short term load forecasting. However, typical machine learning methods consisting of Artificial Neural Network (ANN) and Support Vector Regression (SVR) have deficiencies hard to overcome, such as easy to be trapped in local optimization (for ANN) or hard to decide kernel parameter and penalty parameter (for SVR). On the other hand, grey relational analysis is an effective method to select proper historical data as training set for training machine learning models. But it is not comprehensive and accurate enough. In this paper, a new two-stage hybrid algorithm aimed to solve these two problems is proposed. Random Forest (RF) method is introduced as the machine learning method, which will not cause overfitting problem and parameters are easy to be tuned. Furthermore, Grey Relational Projection (GRP) is introduced to select similar historical data to train random forest models. The final forecasting results based on real load data prove this new two-stage method performs better than the other two common methods.",
+    "URL": "https://doi.org/10.1109/ptc.2015.7232530",
+    "Publisher": "",
+    "Source": "",
+    "Is_Target": false
+  },
+  {
+    "Title": "Mid-term interval load forecasting using multi-output support vector regression with a memetic algorithm for feature selection",
+    "Year": 2015,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/j.energy.2015.03.054",
+    "Publisher": "elsevier bv",
+    "Source": "energy",
+    "Is_Target": true
+  },
+  {
+    "Title": "A two-stage framework for multiobjective energy management in distribution networks with a high penetration of wind energy",
+    "Year": 2017,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/j.energy.2017.06.178",
+    "Publisher": "elsevier bv",
+    "Source": "energy",
+    "Is_Target": true
+  },
+  {
+    "Title": "Short-term power load forecasting using grey correlation contest modeling",
+    "Year": 2011,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/j.eswa.2011.07.072",
+    "Publisher": "elsevier bv",
+    "Source": "expert systems with applications",
+    "Is_Target": true
+  },
+  {
+    "Title": "Load forecasting for multiple sites: development of an expert system-based technique",
+    "Year": 1996,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/s0378-7796(96)01114-5",
+    "Publisher": "elsevier bv",
+    "Source": "electric power systems research",
+    "Is_Target": true
+  },
+  {
+    "Title": "Two-Stage Short-Term Power Load Forecasting Based on SSA\u2013VMD and Feature Selection",
+    "Year": 2023,
+    "Abstract": "Short-term power load forecasting is of great significance for the reliable and safe operation of power systems. In order to improve the accuracy of short-term load forecasting, for the problems of random fluctuation in load and the complexity of load-influencing factors, this paper proposes a two-stage short-term load forecasting method, SSA\u2013VMD-LSTM-MLR-FE (SVLM\u2013FE) based on sparrow search algorithm (SSA), to optimize variational mode decomposition (VMD) and feature engineering (FE). Firstly, an evaluation criterion on the loss of VMD decomposition is proposed, and SSA is used to find the optimal combination of parameters for VMD under this criterion. Secondly, the first stage of forecasting is carried out, and the different components obtained from SSA\u2013VMD are predicted separately, with the high-frequency components input to a long short-term memory network (LSTM) for forecasting and the low-frequency components input to a multiple linear regression model (MLR) for forecasting. Finally, the forecasting values of the components obtained in the first stage are input to the second stage for error correction; factors with a high degree of influence on the load are selected using the Pearson correlation coefficient (PCC) and maximal information coefficient (MIC), and the load value at the moment that has a great influence on the load value at the time to be predicted is selected using autocorrelation function (ACF). The forecasting values of the components are fused with the selected feature values to construct a vector, which is fed into the fully connected layer for forecasting. In this paper, the performance of SVLM\u2013FE is evaluated experimentally on two datasets from two places in China. In Place 1, the RMSE, MAE, and MAPE are 128.169 MW, 102.525 MW, and 1.562%, respectively; in Place 2, the RMSE, MAE, and MAPE are 111.636 MW, 92.291 MW, and 1.426%, respectively. The experimental results show that SVLM\u2013FE has high accuracy and stability.",
+    "URL": "https://doi.org/10.3390/app13116845",
+    "Publisher": "multidisciplinary digital publishing institute",
+    "Source": "applied sciences",
+    "Is_Target": false
+  },
+  {
+    "Title": "Two-Stage Short-Term Power Load Forecasting Based on RFECV Feature Selection Algorithm and a TCN\u2013ECA\u2013LSTM Neural Network",
+    "Year": 2023,
+    "Abstract": "To solve the problem of feature selection and error correction after mode decomposition and improve the ability of power load forecasting models to capture complex time series information, a two-stage short-term power load forecasting method based on recursive feature elimination with a cross validation (RFECV) algorithm and time convolution network\u2013efficient channel attention mechanism\u2013long short-term memory network (TCN\u2013ECA\u2013LSTM) is presented. First, the load sequence is decomposed into a relatively stable set of modal components using variational mode decomposition. Then, the RFECV-based method filters the feature set of each modal component to construct the best feature set. Finally, a two-stage prediction model based on TCN\u2013ECA\u2013LSTM is established. The first stage predicts each modal component and the second stage reconstructs the load forecast based on the predicted value of the previous stage. This paper takes actual data from New South Wales, Australia, as an example, and the results show that the method proposed in this paper can build the feature set reliably and efficiently and has a higher accuracy than the conventional prediction model.",
+    "URL": "https://doi.org/10.3390/en16041925",
+    "Publisher": "multidisciplinary digital publishing institute",
+    "Source": "energies",
+    "Is_Target": false
+  },
+  {
+    "Title": "Forecasting Peak Load Electricity Demand Using Statistics and Rule Based Approach",
+    "Year": 2009,
+    "Abstract": "Problem statement: Forecasting of electricity load demand is an essential activity and an important function in power system planning and development. It is a prerequisite to power system expansion planning as the world of electricity is dominated by substantial lead times between decision making and its implementation. The importance of demand forecasting needs to be emphasized at all level as the consequences of under or over forecasting the demand are serious and will affect all stakeholders in the electricity supply industry. Approach: If under estimated, the result is serious since plant installation cannot easily be advanced, this will affect the economy, business, loss of time and image. If over estimated, the financial penalty for excess capacity (i.e., over-estimated and wasting of resources). Therefore this study aimed to develop new forecasting model for forecasting electricity load demand which will minimize the error of forecasting. In this study, we explored the development of rule-based method for forecasting electricity peak load demand. The rule-based system synergized human reasoning style of fuzzy systems through the use of set of rules consisting of IF-THEN approximators with the learning and connectionist structure. Prior to the implementation of rule-based models, SARIMAT model and Regression time series were used. Results: Modification of the basic regression model and modeled it using Box-Jenkins auto regressive error had produced a satisfactory and adequate model with 2.41% forecasting error. With rule-based based forecasting, one can apply forecaster expertise and domain knowledge that is appropriate to the conditions of time series. Conclusion: This study showed a significant improvement in forecast accuracy when compared with the traditional time series model. Good domain knowledge of the experts had contributed to the increase in forecast accuracy. In general, the improvement will depend on the conditions of the data, the knowledge development and validation. The rule-based forecasting procedure offered many promises and we hoped this study can become a starting point for further research in this field.",
+    "URL": "https://doi.org/10.3844/ajassp.2009.1618.1625",
+    "Publisher": "science publications",
+    "Source": "american journal of applied sciences",
+    "Is_Target": false
+  },
+  {
+    "Title": "Design of artificial neural networks for short-term load forecasting. Part 2: Multilayer feedforward networks for peak load and valley load forecasting",
+    "Year": 1991,
+    "Abstract": "In Part I of the paper, a neural network with unsupervised learning has been proposed to identify the day types and compute the hourly load pattern by averaging the load patterns of the same day type. In this part of the paper a neural network, commonly referred to as the multilayer feedforward network, is developed to forecast daily peak load and valley load. Unlike the self-organising feature maps in Part I, the multilayer feedforward network is a neural net with supervised learning. The neural net is first trained using historical weather and load data. Then the trained neural net is applied to predict daily peak load and valley load. These peak and valley loads, when combined with the hourly load pattern, can yield the desired hourly loads. Results from short-term load forecasting of the Taiwan power system are given to demonstrate the effectiveness of the proposed neural networks.",
+    "URL": "https://doi.org/10.1049/ip-c.1991.0052",
+    "Publisher": "",
+    "Source": "iee proceedings c generation transmission and distribution",
+    "Is_Target": false
+  },
+  {
+    "Title": "Demand forecasting: evidence-based methods",
+    "Year": 2017,
+    "Abstract": "We looked at evidence from comparative empirical studies to identify methods that can be useful for predicting demand in various situations and to warn against methods that should not be used. In general, use structured methods and avoid intuition, unstructured meetings, focus groups, and data mining. In situations where there are sufficient data, use quantitative methods including extrapolation, quantitative analogies, rule-based forecasting, and causal methods. Otherwise, use methods that structure judgement including surveys of intentions and expectations, judgmental bootstrapping, structured analogies, and simulated interaction. Managers\u2019 domain knowledge should be incorporated into statistical forecasts. Methods for combining forecasts, including Delphi and prediction markets, improve accuracy. We provide guidelines for the effective use of forecasts, including such procedures as scenarios. Few organizations use many of the methods described in this paper. Thus, there are opportunities to improve efficiency by adopting these forecasting practices.",
+    "URL": "https://doi.org/10.4225/03/5938dcf1c5ba8",
+    "Publisher": "university of pennsylvania",
+    "Source": "scholarlycommons (university of pennsylvania)",
+    "Is_Target": false
+  },
+  {
+    "Title": "A new cascade NN based method to short-term load forecast in deregulated electricity market",
+    "Year": 2013,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/j.enconman.2013.03.014",
+    "Publisher": "elsevier bv",
+    "Source": "energy conversion and management",
+    "Is_Target": true
+  },
+  {
+    "Title": "Fuzzy short-term electric load forecasting using Kalman filter",
+    "Year": 2006,
+    "Abstract": "A linear time-varying fuzzy load model for solving the short-term electric load forecasting problem is presented. The model utilises a moving window of current values of weather data as well as the recent past history of load and weather data. The parameters of this model are assumed to be fuzzy numbers with a triangular membership function yielding a fuzzy load that has both central and spread values. Both the load and load error are predicted for the following 24 hours on an hourly basis. The forecasting method is based on state space and the Kalman filtering prediction approach in conjunction with fuzzy rule-based logic. The technique is used recursively to estimate the optimal load forecast fuzzy parameters for each hour of the day. The central values of the fuzzy parameters represent the crisp forecast values while the spread values represent the amount of variation of the forecast. The predicted load spread value provides an approximate envelope of the extremes the load possibly takes. The effectiveness of the approach is demonstrated on real load and weather data which show the load forecast with a mean absolute percent error of less than 0.7% and absolute percent error standard deviation of 0.9%.",
+    "URL": "https://doi.org/10.1049/ip-gtd:20050088",
+    "Publisher": "institution of engineering and technology",
+    "Source": "iee proceedings - generation transmission and distribution",
+    "Is_Target": false
+  },
+  {
+    "Title": "Short-term load forecasting by a neuro-fuzzy based approach",
+    "Year": 2002,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/s0142-0615(01)00021-7",
+    "Publisher": "elsevier bv",
+    "Source": "international journal of electrical power & energy systems",
+    "Is_Target": true
+  },
+  {
+    "Title": "A Cooperative Ant Colony Optimization-Genetic Algorithm approach for construction of energy demand forecasting knowledge-based expert systems",
+    "Year": 2012,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/j.knosys.2012.10.017",
+    "Publisher": "elsevier bv",
+    "Source": "knowledge-based systems",
+    "Is_Target": true
+  },
+  {
+    "Title": "Effect of temperature on short term load forecasting using an integrated ANN",
+    "Year": 2004,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/j.epsr.2004.03.006",
+    "Publisher": "elsevier bv",
+    "Source": "electric power systems research",
+    "Is_Target": true
+  },
+  {
+    "Title": "A belief-rule-based inventory control method under nonstationary and uncertain demand",
+    "Year": 2011,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/j.eswa.2011.05.047",
+    "Publisher": "elsevier bv",
+    "Source": "expert systems with applications",
+    "Is_Target": true
+  },
+  {
+    "Title": "A compound framework for short-term gas load forecasting combining time-enhanced perception transformer and two-stage feature extraction",
+    "Year": 2024,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/j.energy.2024.131365",
+    "Publisher": "elsevier bv",
+    "Source": "energy",
+    "Is_Target": true
+  },
+  {
+    "Title": "Rule-based vs. optimisation-based order release in workload control: A simulation study of a MTO manufacturer",
+    "Year": 2011,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/j.ijpe.2011.09.012",
+    "Publisher": "elsevier bv",
+    "Source": "international journal of production economics",
+    "Is_Target": true
+  },
+  {
+    "Title": "A novel two-stage combination model for tourism demand forecasting",
+    "Year": 2024,
+    "Abstract": "The tourism literature has shown that a combination of tourism forecasting models can provide better performance than individual models. In the literature, the models to be combined are usually subjectively selected and authors focus on the combination method. In this study, a new direction is represented by the integration of forecasts from several models using a two-stage forecasting system. In stage I, a subset of the best available models is objectively selected according to their performance. Then, in stage II, linear and nonlinear combination methods are utilized to integrate the forecast values of the optimal subset. The empirical study using tourist arrivals in Hong Kong from five major source markets indicates that the proposed two-stage tourism forecasting system with linear combination substantially improves forecasting performance compared with benchmarks. This study also finds that when combining forecasts from different models, the linear combination method is more suitable than nonlinear AI models.",
+    "URL": "https://doi.org/10.1177/13548166241237845",
+    "Publisher": "sage publishing",
+    "Source": "tourism economics",
+    "Is_Target": false
+  },
+  {
+    "Title": "Multi-source transfer learning guided ensemble LSTM for building multi-load forecasting",
+    "Year": 2022,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/j.eswa.2022.117194",
+    "Publisher": "elsevier bv",
+    "Source": "expert systems with applications",
+    "Is_Target": true
+  },
+  {
+    "Title": "Short-term load forecasting for demand side management",
+    "Year": 1997,
+    "Abstract": "A method for short-term load forecasting which would help demand side management is presented. This is particularly suitable for developing countries where the total load is not large, especially at substation levels, and the data available are grossly inadequate. It is based on the Kalman filtering algorithm with the incorporation of a \u2018fading memory\u2019. A two-stage forecast is carried out, where the mean is first predicted and a correction is then incorporated in real time using an error feedback from the previous hours. This method has been used to predict the local load at 11 kV and also the bulk load at 220 kV. The results and the prediction errors are presented.",
+    "URL": "https://doi.org/10.1049/ip-gtd:19970599",
+    "Publisher": "institution of engineering and technology",
+    "Source": "iee proceedings - generation transmission and distribution",
+    "Is_Target": false
+  },
+  {
+    "Title": "Fuzzy neural network and fuzzy expert system for load forecasting",
+    "Year": 1996,
+    "Abstract": "A hybrid neural network fuzzy expert system is developed to forecast short-term electric load accurately. The fuzzy membership values of the load and other weather variables are the inputs to the neural network, and the output comprises the membership values of the predicted load. An adaptive fuzzy correction scheme is used to forecast the final load by using a fuzzy rule base and fuzzy inference mechanism. Extensive studies have been performed for all seasons, and a few examples are presented in the paper, including average, peak and hourly load forecasts.",
+    "URL": "https://doi.org/10.1049/ip-gtd:19960314",
+    "Publisher": "institution of engineering and technology",
+    "Source": "iee proceedings - generation transmission and distribution",
+    "Is_Target": false
+  },
+  {
+    "Title": "Personalized Federated DARTS for Electricity Load Forecasting of Individual Buildings",
+    "Year": 2023,
+    "Abstract": "Building-level load forecasting is becoming increasingly crucial since it forms the foundation for better building energy management, which will lower energy consumption and reduce CO2 emissions. However, building-level load forecasting faces the challenges of high load volatility and heterogeneous consumption behaviors. Simple regression models may fail to fit the complex load curves, whereas sophisticated models are prone to overfitting due to the limited data of an individual building. To this end, we develop a novel forecasting model that integrates federated learning (FL), the differentiable architecture search (DARTS) technique, and a two-stage personalization approach. Specifically, buildings are first grouped according to the model architectures, and for each building cluster, a global model is designed and trained in a federated manner. Then, a local fine-tuning approach is used to adapt the cluster global model to each individual building. In this way, data resources from multiple buildings can be utilized to construct high-performance forecasting models while protecting each building\u2019s data privacy. Furthermore, personalized models with specific architectures can be trained for heterogeneous buildings. Extensive experiments on a publicly available dataset are conducted to validate the superiority of the proposed method.",
+    "URL": "https://doi.org/10.1109/tsg.2023.3253855",
+    "Publisher": "institute of electrical and electronics engineers",
+    "Source": "ieee transactions on smart grid",
+    "Is_Target": true
+  },
+  {
+    "Title": "A two-stage demand response strategy for multiple scenarios based on deviation compensation",
+    "Year": 2023,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/j.jclepro.2023.137838",
+    "Publisher": "elsevier bv",
+    "Source": "journal of cleaner production",
+    "Is_Target": true
+  },
+  {
+    "Title": "Two-Stage Load Forecasting for Residual Reduction and Economic Dispatch Using PJM Datasets",
+    "Year": 2018,
+    "Abstract": "This paper discusses preliminary results obtained using auto-regressive integrated moving average (ARIMA), and exponential smoothing (ES) forecasting methods for loads in 11 regions of PJM Interconnection. The datasets used to predict day-ahead loads include demand values in both 24-hour and 30-day format for 2016 calendar year for multiple (e.g., 11 regions) areas. The accuracy of forecasting is evaluated using Mean Absolute Percentage Error (MAPE) and Mean Absolute Deviation (MAD) parameters. An economic dispatch was then carried using a linear programming formulation in Algebraic Mathematical Programming Language (AMPL) environment. The preliminary results indicate ARIMA outperforms ES for both 24-hour and 30-day to predict day-ahead forecasting.",
+    "URL": "https://doi.org/10.1109/eit.2018.8500149",
+    "Publisher": "",
+    "Source": "",
+    "Is_Target": false
+  },
+  {
+    "Title": "Rule-based procedures in short-term electricity load forecasting",
+    "Year": 1993,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1093/imaman/5.1.131",
+    "Publisher": "oxford university press",
+    "Source": "ima journal of management mathematics",
+    "Is_Target": false
+  },
+  {
+    "Title": "A Novel Short-Term Residential Load Forecasting Methodology using Two-Stage Stacked LSTM and Hampel Filter",
+    "Year": 2022,
+    "Abstract": "Various deep learning-based algorithms have been developed recently for accurate residential load forecasts. The deep learning models in the literature are trained using a few years of data to learn patterns over all the seasons. The authors of some of the work have appended appliance level data to train for the outliers in the load data caused by the non-periodic usage of medium-duty appliances. These methodologies are data-intensive and challenging to implement for a large number of customers. Hence, this work proposes a novel technique of disaggregating the residential load data set into a base/general load pattern and a non-periodic outlier load pattern using a Hampel filter and training two stacked long short term memory (LSTM) models. The proposed methodology also uses less data to train the LSTM model. The model achieved comparable results just by training over four months of residential load data. The model is trained using actual residential load data acquired using a WiFi energy monitor installed at one of the households in Fairbanks, Alaska.",
+    "URL": "https://doi.org/10.1109/pesgm48719.2022.9917173",
+    "Publisher": "",
+    "Source": "2022 ieee power &amp; energy society general meeting (pesgm)",
+    "Is_Target": true
+  },
+  {
+    "Title": "A fog based load forecasting strategy for smart grids using big electrical data",
+    "Year": 2018,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1007/s10586-018-2848-x",
+    "Publisher": "springer science+business media",
+    "Source": "cluster computing",
+    "Is_Target": false
+  },
+  {
+    "Title": "Fuzzy-Rule based Load Pattern Classifier for Short-Tern Electrical Load Forecasting",
+    "Year": 2006,
+    "Abstract": "Based on the knowledge of historical data sets, a fuzzy rule-based classifier for electrical load pattern classification is set up. Considering with the accuracy and interpretation of fuzzy rules, multi-objective genetic algorithm are applied to choose the Pareto optimum rules that are used to classify electrical load. In the computation experiments, the generated fuzzy rule-based classifier is used to load forecasting, the computation results show that it leads to high classification performance, and it can supply more sufficient and effective historical data for load forecasting, better performance of load forecasting is gained accordingly.",
+    "URL": "https://doi.org/10.1109/iceis.2006.1703133",
+    "Publisher": "",
+    "Source": "",
+    "Is_Target": false
+  },
+  {
+    "Title": "Evaluating Feature Selection Methods for Short-Term Load Forecasting",
+    "Year": 2019,
+    "Abstract": "Identifying an appropriate set of predictors is important for making efficient and accurate forecasting models. In this paper, we study the application of some feature selection methods for prediction of household energy consumption. This study follows a two-stage framework. First, it identifies candidate features based on literature study and data characteristics of a load profile and then it selects a subset of relevant features using four different feature selection methods; F-regression, Mutual Information, Recursive Feature Elimination and Elastic Net. We evaluate the effectiveness of these methods, in conjunction with an ensemble-based prediction algorithm (Gradient Boosted Regression Tree), using smart meter data of 23 houses in Norway. To study the performance of these methods for different load profiles, we grouped households into clusters of similar consumption behaviour and computed average performance of each mechanism over clusters' members. Test results show that all feature selection methods could identify a custom-made subset of highly relevant features for each household. Across all clusters, building predictive models utilizing feature selection techniques led to considerable improvements in training speed and simplicity, as well as comparable prediction accuracy with models without feature engineering.",
+    "URL": "https://doi.org/10.1109/bigcomp.2019.8679188",
+    "Publisher": "",
+    "Source": "",
+    "Is_Target": false
+  },
+  {
+    "Title": "Two-stage robust planning method for distribution network energy storage based on load forecasting",
+    "Year": 2024,
+    "Abstract": "A two-stage robust planning method for energy storage in distribution networks based on load prediction is proposed to address the uncertainty of active load in energy storage planning. First, considering the uncertainty of active load, a short-term load forecasting model combining the mutual information method and BiLSTM is established based on k-means++ clustering. Second, based on the results of load forecasting, a comprehensive norm-constrained uncertainty set is constructed, and a two-stage robust model for distribution network energy storage planning is established. The first stage aims to minimize the annual investment cost of the energy storage system, while the second stage aims to minimize the daily operating cost of the distribution network. At the same time, a second-order cone relaxation transformation model with non-convex constraints is introduced to ultimately achieve the optimal economy of the distribution network in energy storage planning. Finally, the effectiveness of the proposed method and model is validated on the IEEE 33-node distribution network model using the MATLAB platform.",
+    "URL": "https://doi.org/10.3389/fenrg.2024.1327857",
+    "Publisher": "frontiers media",
+    "Source": "frontiers in energy research",
+    "Is_Target": false
+  },
+  {
+    "Title": "Design optimization and two-stage control strategy on combined cooling, heating and power system",
+    "Year": 2019,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/j.enconman.2019.111869",
+    "Publisher": "elsevier bv",
+    "Source": "energy conversion and management",
+    "Is_Target": true
+  },
+  {
+    "Title": "Demand Forecasting: Evidence-Based Methods",
+    "Year": 2012,
+    "Abstract": "",
+    "URL": "https://doi.org/10.2139/ssrn.3063308",
+    "Publisher": "relx group (netherlands)",
+    "Source": "ssrn electronic journal",
+    "Is_Target": false
+  },
+  {
+    "Title": "Demand forecasting of spare parts with regression and machine learning methods: Application in a bus fleet",
+    "Year": 2023,
+    "Abstract": "Forecasting the demand of spare parts of vehicles in bus fleets is a vital issue. Vehicles must operate effectively and must have a high availability rate in the fleet. In maintenance operations, faulty parts or parts that complete their lifetime must be replaced with a new one. Spare parts needed must be in inventories with the required amount on time. In this sector, there are thousands of spare parts to manage. The maintenance and repair department must operate effectively. In order to accomplish this, accurate forecast of spare parts is required. In this study, demand forecasting was carried out with regression-based methods (multivariate linear regression, multivariate nonlinear regression, Gaussian process regression, additive regression, regression by discretion, support vector regression), rule-based methods (decision table, M5Rule), tree-based methods (random forest, M5P, Random tree, REPTree) and artificial neural networks. The forecasting model developed in this study includes critical variables such as the number of vehicles in the fleet, the number of breakdowns that cause parts to change, the number of periodic maintenance, mean time between failure and demand quantity in previous years. The application was carried out with real data of eight (2013\u20132020) years. 2013\u20132019 data was used for training and 2020 data was used for testing. In forecasts, support vector regression among regression-based methods, decision table among rule-based methods, M5P among tree-based methods gave the best results. It has been observed that the artificial neural network produced more accurate forecasts than all other methods. Artificial neural network forecasts give the highest forecast accuracy rate and the least deviation.",
+    "URL": "https://doi.org/10.1016/j.jer.2023.100057",
+    "Publisher": "elsevier bv",
+    "Source": "journal of engineering research",
+    "Is_Target": true
+  },
+  {
+    "Title": "A hybrid transfer learning model for short-term electric load forecasting",
+    "Year": 2020,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1007/s00202-020-00930-x",
+    "Publisher": "springer science+business media",
+    "Source": "electrical engineering",
+    "Is_Target": false
+  },
+  {
+    "Title": "How to capture tourists\u2019 search behavior in tourism forecasts? A two-stage feature selection approach",
+    "Year": 2022,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/j.eswa.2022.118895",
+    "Publisher": "elsevier bv",
+    "Source": "expert systems with applications",
+    "Is_Target": true
+  },
+  {
+    "Title": "FUZZY AND NEURO-FUZZY MODELS FOR SHORT-TERM WATER DEMAND FORECASTING IN TEHRAN",
+    "Year": 2009,
+    "Abstract": "Abstract\u2013 Water demand forecasting cannot be described by any mathematical function because it is a complicated function of a large number of interacting variables. In this paper, several fuzzy and neuro-fuzzy models are presented and their results for short-term water demand forecasting in Tehran are compared. Weather data from three Tehran weather stations is weighted with the Thissen method and effective input data parameters are selected with regression of weighted effective weather and consumption data. The effective parameters include daily average temperature, relative humidity percent and last day, last week and last year water consumption. Consumption of all days between last day and the last week were also used. For the construction of fuzzy models a fuzzy rule-based approach is applied. The working rules are formulated from a set of past observations such as the relation between the parameters and the given input/output data sets. For neuro fuzzy modeling the toolbox function of Adaptive Neuro-Fuzzy Inference System (ANFIS) constructs a Sugeno Inference System (SFIS). The membership function parameters are adjusted using a back propagation algorithm in combination with a least squares method. Outputs of the fuzzy and the neuro fuzzy models demonstrate that the results of fuzzy models do not show high accuracy, but neuro fuzzy models produce better results. Besides, outputs of the neuro fuzzy models with just water consumption inputs have high accuracy. A comparison of outputs with the results of the Artificial Neural Networks (ANN) approach shows the capability of the ANFIS model to predict Tehran water consumption.",
+    "URL": "https://www.sid.ir/en/VEWSSID/J_pdf/8542009B107.pdf",
+    "Publisher": "",
+    "Source": "",
+    "Is_Target": false
+  },
+  {
+    "Title": "Robust investment model for long-range capacity expansion of chemical processing networks under uncertain demand forecast scenarios",
+    "Year": 1998,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/s0098-1354(97)00274-3",
+    "Publisher": "elsevier bv",
+    "Source": "computers & chemical engineering",
+    "Is_Target": true
+  },
+  {
+    "Title": "Energy demand in Portuguese manufacturing: A two-stage model",
+    "Year": 1992,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/0360-5442(92)90033-v",
+    "Publisher": "elsevier bv",
+    "Source": "energy",
+    "Is_Target": true
+  },
+  {
+    "Title": "Load forecasting for regional integrated energy system based on two-phase decomposition and mixture prediction model",
+    "Year": 2024,
+    "Abstract": "",
+    "URL": "https://doi.org/10.1016/j.energy.2024.131236",
+    "Publisher": "elsevier bv",
+    "Source": "energy",
+    "Is_Target": true
+  },
+  {
+    "Title": "On optimal emergency orders with updated demand forecast and limited supply",
+    "Year": 2014,
+    "Abstract": "This study analyses a two-stage newsvendor system with a regular and an emergency order. The emergency order can be placed at a later time based on a more accurate demand forecast. However, the unit cost for the emergency order is higher, and the quantity is limited. To maximise the expected profit, a retailer should determine both regular and emergency order quantities by considering the demand forecast updating, ordering cost and quantity constraint. Using dynamic programming, optimal ordering quantities are derived, and properties of the optimal solutions are obtained. Numerical experiments are carried out to illustrate the effect of the emergency order on the ordering decisions and expected profit. Some managerial insights are gained from the numerical results.",
+    "URL": "https://doi.org/10.1080/00207543.2014.987882",
+    "Publisher": "taylor & francis",
+    "Source": "international journal of production research",
+    "Is_Target": false
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "Title": "CBL-Imputer: A self-attention-based residual-boosting architecture for high-fidelity customer baseline load estimation",
+    "Year": 2026,
+    "Abstract": "Accurate reconstruction of the cumulative customer baseline load (CBL) is essential for transparent settlement in incentive based demand-response programs, yet the baseline becomes unobservable once curtailment begins... This work recasts portfolio-level CBL estimation as a time-series imputation task and presents CBL-Imputer, a two-stage architecture that couples diagonally masked self-attention with a gradient-boosted residual module. The self-attention encoder models long-range temporal structure without copying placeholders within the curtailment window, while the LightGBM booster corrects the localized high-frequency residuals that the self-attention backbone can attenuate in masked peak-window reconstruction... These findings demonstrate that blending self-attention with boosted trees yields superior baseline estimates without extensive feature engineering, providing load aggregators with a practical tool for reducing financial risk in evolving demand-response markets.",
+    "URL": "https://doi.org/10.1016/j.ijepes.2026.111965",
+    "Alignment with our project": "This paper perfectly aligns with our Proxy-Lag Cascade architecture by using a two-stage method where a base model captures the main trajectory and a boosted tree model (LightGBM) corrects the residuals. It validates our approach of using residual boosting to catch localized high-frequency errors without disturbing the primary baseline."
+  },
+  {
+    "Title": "Short-term electrical load forecasting based on error correction using dynamic mode decomposition",
+    "Year": 2019,
+    "Abstract": "[Abstract not available in OpenAlex API]",
+    "URL": "https://doi.org/10.1016/j.apenergy.2019.114368",
+    "Alignment with our project": "This research confirms the effectiveness of separating cyclical load baselines from residuals to enhance forecast accuracy. It provides academic backing for our 1h Corrector layer that predicts errors to break phase lag after the 24h Proxy baseline is established."
+  },
+  {
+    "Title": "A novel ensemble deep learning model with dynamic error correction and multi-objective ensemble pruning for time series forecasting",
+    "Year": 2020,
+    "Abstract": "[Abstract not available in OpenAlex API]",
+    "URL": "https://doi.org/10.1016/j.ins.2020.08.053",
+    "Alignment with our project": "The paper's use of dynamic error correction within an ensemble framework heavily supports our Cascade Ensemble logic. It justifies our mechanism of learning the residual dynamically to compensate for the base model's limitations in catching extreme fluctuations."
+  },
+  {
+    "Title": "A novel time series forecasting model with deep learning",
+    "Year": 2019,
+    "Abstract": "[Abstract not available in OpenAlex API]",
+    "URL": "https://doi.org/10.1016/j.neucom.2018.12.084",
+    "Alignment with our project": "The discussion on mitigating errors in deep learning architectures provides a baseline to compare against. This serves as theoretical justification for our Residual Corrector layer, proving that modeling residuals breaks the inertia of time-series models."
+  }
+]

@@ -1,0 +1,37 @@
+[
+    {
+        "Title": "Short-Term Load Forecasting With Deep Residual Networks",
+        "Year": 2018,
+        "Abstract": "We present in this paper a model for forecasting short-term electric load based on deep residual networks. The proposed model is able to integrate domain knowledge and researchers' understanding of the task by virtue of different neural network building blocks. Specifically, a modified deep residual network is formulated to improve the forecast results. Further, a two-stage ensemble strategy is used to enhance the generalization capability of the proposed model. We also apply the proposed model to probabilistic load forecasting using Monte Carlo dropout. Three public datasets are used to prove the effectiveness of the proposed model. Multiple test cases and comparison with existing models show that the proposed model provides accurate load forecasting results and has high generalization capability.",
+        "URL": "https://doi.org/10.1109/tsg.2018.2844307",
+        "Alignment with our project": "This paper supports our architectural choice of using a two-stage ensemble strategy where the second stage acts as a residual corrector. It demonstrates that learning on residuals after a primary proxy prediction significantly reduces phase lag and generalization errors."
+    },
+    {
+        "Title": "Daily peak electricity demand forecasting based on an adaptive hybrid two-stage methodology",
+        "Year": 2015,
+        "Abstract": "",
+        "URL": "https://doi.org/10.1016/j.ijepes.2015.11.046",
+        "Alignment with our project": "This research emphasizes the necessity of adaptive two-stage methodologies to capture peak demand accurately in power systems. It validates our use of physical rule-based triggers (e.g., threshold 0.55) over heavy classifiers for switching between peak and valley models."
+    },
+    {
+        "Title": "Highly accurate peak and valley prediction short-term net load forecasting approach based on decomposition for power systems with high PV penetration",
+        "Year": 2023,
+        "Abstract": "The increasing penetration of photovoltaic has been reshaping the electricity net load curve, which has a significant impact on power system operation and short-term dispatch scheduling. Accurate short-term net load forecasting is essential to ensure reliable and economical operations of a power system. Nonetheless, most of the existing net load forecasting approaches are mostly focused on net load forecasting at household, distribution or microgrid level, but not at grid system-wide level. They also suffer from low accuracy due to the presence of uncertainties on high-frequency fluctuations in the net load. This paper proposes a new improved two-stage net load forecasting method at grid system-wide level. Firstly, it contributes to eliminate the high-frequency components with insignificant amount of energy from the original net load by using the \u201cImproved Complete Ensemble Empirical Mode Decomposition with Adaptive Noise-ICEEMDAN\u201d technique. Then, net load decomposition outcomes form the inputs of a computationally efficient and accurate \u201cLong Short-Term Memory-LSTM\u201d network algorithm to produce an accurate day-ahead forecasting, which lays out the foundation of day-ahead power dispatch scheduling. The superiority of the suggested algorithm was confirmed by comparing the obtained results against five other algorithms that use different empirical based decomposition techniques along with Back Propagation (BP) or LSTM. Statistical metrics, Mean Absolute Error (MAE) and Mean Absolute Percentage Error (MAPE) were computed to show the model accuracy. The validity of the proposed method is verified by the net load data of \u201cSouth West Interconnected System\u201d power network in Western Australia, which refers to the total demand on the conventional generators made up of the consumers\u2019 actual demand plus system losses, minus the solar power harnessed by the rooftop PV panels installed within the grid system. Achieving a very high day-ahead net load forecasting accuracy of 96.67% confirms our hypothesis on ICEEMDAN\u2019s capability to decompose the net load carefully into different meaningful components.",
+        "URL": "https://doi.org/10.1016/j.apenergy.2023.120641",
+        "Alignment with our project": "This recent study validates our Two-Stage architecture by proving that separating the high-frequency peaks and valleys from the main curve fundamentally increases prediction accuracy. It justifies our decision to use a dedicated Stage 1 for extreme value bounding before applying the 1h corrector."
+    },
+    {
+        "Title": "Two-Stage Artificial Neural Network Model for Short-Term Load Forecasting",
+        "Year": 2018,
+        "Abstract": "Short-term load forecast (STLF) is important to ensure stable, reliable and efficient power system operations. In this paper, we propose a two-stage artificial neural network (ANN) model for load forecasting application. The proposed system is currently being tested in the Taiwan Power Company (TPC) with potential for future adoption in their decision support systems. The accuracy of the proposed forecast model is tested using the historical data obtained from TPC; the results show that the proposed two-stage ANN model can outperform a previously proposed single stage ANN load forecast model.",
+        "URL": "https://doi.org/10.1016/j.ifacol.2018.11.783",
+        "Alignment with our project": "This paper provides empirical evidence that splitting the forecasting problem into a two-stage hierarchical model systematically outperforms single-stage end-to-end ML models. It strongly backs our rejection of a monolithic ML approach in favor of a divide-and-conquer rule-based pipeline."
+    },
+    {
+        "Title": "A novel approach to short-term load forecasting using fuzzy neural networks",
+        "Year": 1998,
+        "Abstract": "An efficient modeling technique based on the fuzzy curve notion is developed in this paper to generate fuzzy models for short-term load forecasting. The suggested forecasting approach proceeds on the following steps: (a) prediction of the load curve extremals (peak and valley loads) using separate fuzzy models; (b) formulation of the representative day based on historical load data; and (c) mapping of the representative day load curve to the forecasted peak values to obtain the predicted day load curves. Very good prediction performance is attained as shown in the simulation results which verify the effectiveness of the modeling technique.",
+        "URL": "https://doi.org/10.1109/59.667372",
+        "Alignment with our project": "Serving as a foundational piece, this paper established the paradigm of predicting peak and valley extremals separately and mapping the rest of the curve based on them. It perfectly aligns with our Proxy-Lag Cascade design where the 24h Proxy provides the boundaries for the 1h interpolations."
+    }
+]

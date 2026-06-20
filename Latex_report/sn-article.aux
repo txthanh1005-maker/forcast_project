@@ -1,0 +1,82 @@
+\relax 
+\bibstyle{sn-mathphys-num}
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{eren2024comprehensive,zhu2019electric}
+\citation{lu2021comparative,wang2020ensemble,shahriar2020machine}
+\Newlabel{1}{1}
+\Newlabel{2}{2}
+\citation{wu2021support,ko2025deterministic,kim2026methodology}
+\citation{laouafi2016daily,hsu2018two}
+\citation{chen2019short,rubasinghe2023highly,papadakis1998novel}
+\citation{kong2020short,shen2020novel}
+\citation{zhang2021novel}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{2}{section.1}\protected@file@percent }
+\newlabel{sec1}{{1}{2}{Introduction}{section.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Material and Methodology}{3}{section.2}\protected@file@percent }
+\newlabel{sec2}{{2}{3}{Material and Methodology}{section.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Data Preprocessing and Feature Engineering}{3}{subsection.2.1}\protected@file@percent }
+\newlabel{subsec2_1}{{2.1}{3}{Data Preprocessing and Feature Engineering}{subsection.2.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Proxy-Lag Cascade Ensemble Architecture. The system bifurcates the macroscopic 24-hour prediction using a Rule-Based trigger, subsequently establishing a cyclical proxy that guides the microscopic 1-hour micro-tuner.}}{4}{figure.1}\protected@file@percent }
+\newlabel{fig:architecture}{{1}{4}{Proxy-Lag Cascade Ensemble Architecture. The system bifurcates the macroscopic 24-hour prediction using a Rule-Based trigger, subsequently establishing a cyclical proxy that guides the microscopic 1-hour micro-tuner}{figure.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Data Characteristic Analysis and Algorithm Selection}{5}{subsection.2.2}\protected@file@percent }
+\newlabel{subsec2_2}{{2.2}{5}{Data Characteristic Analysis and Algorithm Selection}{subsection.2.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Exploratory Data Analysis: Real-world EV charging station utilization over a 1-week period (ACN-Data). The visualization clearly illustrates the extreme temporal sparsity and bimodal peak volatility, where long periods of near-zero utilization are abruptly interrupted by localized charging spikes.}}{5}{figure.2}\protected@file@percent }
+\newlabel{fig:eda_bimodal}{{2}{5}{Exploratory Data Analysis: Real-world EV charging station utilization over a 1-week period (ACN-Data). The visualization clearly illustrates the extreme temporal sparsity and bimodal peak volatility, where long periods of near-zero utilization are abruptly interrupted by localized charging spikes}{figure.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}The Mathematics of Peak Catching: Custom Loss and Target Power Transformation (TPT)}{6}{subsection.2.3}\protected@file@percent }
+\newlabel{subsec2_3}{{2.3}{6}{The Mathematics of Peak Catching: Custom Loss and Target Power Transformation (TPT)}{subsection.2.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Overcoming the Valley: The Two-Stage Rule-Based Architecture}{7}{subsection.2.4}\protected@file@percent }
+\newlabel{subsec2_4}{{2.4}{7}{Overcoming the Valley: The Two-Stage Rule-Based Architecture}{subsection.2.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}The Proxy-Lag Cascade Ensemble: Fusing Macro and Micro Horizons}{8}{subsection.2.5}\protected@file@percent }
+\newlabel{subsec2_5}{{2.5}{8}{The Proxy-Lag Cascade Ensemble: Fusing Macro and Micro Horizons}{subsection.2.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Optuna Hyperparameter Optimization History. The scatter plot visualizes the convergence of the objective function (Validation RMSE) across 100 trials, rigorously establishing the optimal parameter configurations (e.g., the Golden Ensemble Ratio) and proving they are mathematical optima rather than heuristic assumptions.}}{9}{figure.3}\protected@file@percent }
+\newlabel{fig:optuna}{{3}{9}{Optuna Hyperparameter Optimization History. The scatter plot visualizes the convergence of the objective function (Validation RMSE) across 100 trials, rigorously establishing the optimal parameter configurations (e.g., the Golden Ensemble Ratio) and proving they are mathematical optima rather than heuristic assumptions}{figure.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6}Building the 1h Corrector Layer: From Failed Attempts to the Proxy-Lag Cascade}{10}{subsection.2.6}\protected@file@percent }
+\newlabel{subsec2_6}{{2.6}{10}{Building the 1h Corrector Layer: From Failed Attempts to the Proxy-Lag Cascade}{subsection.2.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Results and Discussion}{11}{section.3}\protected@file@percent }
+\newlabel{sec3}{{3}{11}{Results and Discussion}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Superiority of Tabular Models over Deep Learning}{11}{subsection.3.1}\protected@file@percent }
+\newlabel{subsec3_1}{{3.1}{11}{Superiority of Tabular Models over Deep Learning}{subsection.3.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces RMSE and MAE Comparison of Baseline Models on EV Charging Utilization}}{11}{table.1}\protected@file@percent }
+\newlabel{tab:rmse_comparison}{{1}{11}{RMSE and MAE Comparison of Baseline Models on EV Charging Utilization}{table.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Performance of Peak-Catching Mathematics and Two-Stage Architecture}{12}{subsection.3.2}\protected@file@percent }
+\newlabel{subsec3_2}{{3.2}{12}{Performance of Peak-Catching Mathematics and Two-Stage Architecture}{subsection.3.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Performance of the Baseline Model (MSE), demonstrating chronic under-forecasting of extreme EV charging peaks.}}{12}{figure.4}\protected@file@percent }
+\newlabel{fig:base_model}{{4}{12}{Performance of the Baseline Model (MSE), demonstrating chronic under-forecasting of extreme EV charging peaks}{figure.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Performance of the TPT Model, highlighting successful peak capture but severely compromised, noisy valley stability.}}{13}{figure.5}\protected@file@percent }
+\newlabel{fig:tpt_model}{{5}{13}{Performance of the TPT Model, highlighting successful peak capture but severely compromised, noisy valley stability}{figure.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Performance of the Two-Stage Rule-Based Architecture, perfectly harmonizing stable valley protection with aggressive peak capture.}}{13}{figure.6}\protected@file@percent }
+\newlabel{fig:two_stage_model}{{6}{13}{Performance of the Two-Stage Rule-Based Architecture, perfectly harmonizing stable valley protection with aggressive peak capture}{figure.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Breaking Phase Lag with Proxy-Lag Integration}{13}{subsection.3.3}\protected@file@percent }
+\newlabel{subsec3_3}{{3.3}{13}{Breaking Phase Lag with Proxy-Lag Integration}{subsection.3.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Standard 1-hour ahead model exhibiting the classic Phase Lag phenomenon, where predictions are noticeably delayed during sudden load volatility.}}{14}{figure.7}\protected@file@percent }
+\newlabel{fig:1h_phase_lag}{{7}{14}{Standard 1-hour ahead model exhibiting the classic Phase Lag phenomenon, where predictions are noticeably delayed during sudden load volatility}{figure.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Performance of the Micro-Tuner. By integrating the proxy feature, the model breaks free from the phase lag.}}{14}{figure.8}\protected@file@percent }
+\newlabel{fig:1h_residual}{{8}{14}{Performance of the Micro-Tuner. By integrating the proxy feature, the model breaks free from the phase lag}{figure.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}State-of-the-Art Performance and Deployment Discussion}{14}{subsection.3.4}\protected@file@percent }
+\newlabel{subsec3_4}{{3.4}{14}{State-of-the-Art Performance and Deployment Discussion}{subsection.3.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces The Final Proxy-Lag Cascade Architecture. Combining cyclical memory with microscopic reflex agility completely eliminates phase lag and perfectly tracks sudden volatility.}}{15}{figure.9}\protected@file@percent }
+\newlabel{fig:proxy_cascade}{{9}{15}{The Final Proxy-Lag Cascade Architecture. Combining cyclical memory with microscopic reflex agility completely eliminates phase lag and perfectly tracks sudden volatility}{figure.9}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Evolution of Forecasting Architectures and Final SOTA Performance}}{15}{table.2}\protected@file@percent }
+\newlabel{tab:sota_rmse}{{2}{15}{Evolution of Forecasting Architectures and Final SOTA Performance}{table.2}{}}
+\bibdata{sn-bibliography}
+\bibcite{eren2024comprehensive}{{1}{2024}{{Eren and K{\"u}{\c {c}}{\"u}kdemiral}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Conclusion}{16}{section.4}\protected@file@percent }
+\newlabel{sec4}{{4}{16}{Conclusion}{section.4}{}}
+\bibcite{zhu2019electric}{{2}{2019}{{Zhu et~al.}}{{}}}
+\bibcite{lu2021comparative}{{3}{2021}{{Lu and Hong}}{{}}}
+\bibcite{wang2020ensemble}{{4}{2020}{{Wang and Chen}}{{}}}
+\bibcite{shahriar2020machine}{{5}{2020}{{Shahriar et~al.}}{{}}}
+\bibcite{wu2021support}{{6}{2021}{{Wu et~al.}}{{}}}
+\bibcite{ko2025deterministic}{{7}{2025}{{Ko et~al.}}{{}}}
+\bibcite{kim2026methodology}{{8}{2026}{{Kim}}{{}}}
+\bibcite{laouafi2016daily}{{9}{2016}{{Laouafi et~al.}}{{}}}
+\bibcite{hsu2018two}{{10}{2018}{{Hsu et~al.}}{{}}}
+\bibcite{chen2019short}{{11}{2019}{{Chen et~al.}}{{}}}
+\bibcite{rubasinghe2023highly}{{12}{2023}{{Rubasinghe et~al.}}{{}}}
+\bibcite{papadakis1998novel}{{13}{1998}{{Papadakis et~al.}}{{}}}
+\bibcite{kong2020short}{{14}{2020}{{Kong et~al.}}{{}}}
+\bibcite{shen2020novel}{{15}{2020}{{Shen et~al.}}{{}}}
+\bibcite{zhang2021novel}{{16}{2021}{{Zhang et~al.}}{{}}}
+\gdef \@abspage@last{18}

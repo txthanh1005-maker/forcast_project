@@ -1,0 +1,600 @@
+[
+  {
+    "id": "https://openalex.org/W7163366063",
+    "title": "CBL-Imputer: A self-attention-based residual-boosting architecture for high-fidelity customer baseline load estimation",
+    "publication_year": 2026,
+    "abstract_inverted_index": {
+      "Accurate": [
+        0
+      ],
+      "reconstruction": [
+        1,
+        186
+      ],
+      "of": [
+        2,
+        114,
+        179,
+        187
+      ],
+      "the": [
+        3,
+        20,
+        41,
+        87,
+        91,
+        95,
+        100,
+        134,
+        174
+      ],
+      "cumulative": [
+        4
+      ],
+      "customer": [
+        5
+      ],
+      "baseline": [
+        6,
+        21,
+        200
+      ],
+      "load": [
+        7,
+        207
+      ],
+      "(CBL)": [
+        8
+      ],
+      "is": [
+        9
+      ],
+      "essential": [
+        10
+      ],
+      "for": [
+        11,
+        213
+      ],
+      "transparent": [
+        12
+      ],
+      "settlement": [
+        13,
+        47
+      ],
+      "in": [
+        14,
+        105,
+        217
+      ],
+      "incentive": [
+        15
+      ],
+      "based": [
+        16
+      ],
+      "demand-response": [
+        17,
+        219
+      ],
+      "programs,": [
+        18
+      ],
+      "yet": [
+        19
+      ],
+      "becomes": [
+        22
+      ],
+      "unobservable": [
+        23
+      ],
+      "once": [
+        24
+      ],
+      "curtailment": [
+        25,
+        88,
+        130
+      ],
+      "begins.": [
+        26
+      ],
+      "Traditional": [
+        27
+      ],
+      "methods": [
+        28
+      ],
+      "rely": [
+        29
+      ],
+      "on": [
+        30,
+        124
+      ],
+      "historical": [
+        31
+      ],
+      "averaging": [
+        32
+      ],
+      "or": [
+        33
+      ],
+      "low-capacity": [
+        34
+      ],
+      "regression": [
+        35
+      ],
+      "and": [
+        36,
+        60,
+        122,
+        151
+      ],
+      "therefore": [
+        37
+      ],
+      "struggle": [
+        38
+      ],
+      "to": [
+        39,
+        162,
+        170,
+        176
+      ],
+      "reproduce": [
+        40
+      ],
+      "sharp": [
+        42
+      ],
+      "evening": [
+        43
+      ],
+      "peaks": [
+        44
+      ],
+      "that": [
+        45,
+        66,
+        99,
+        192
+      ],
+      "dominate": [
+        46
+      ],
+      "payments.": [
+        48
+      ],
+      "This": [
+        49
+      ],
+      "work": [
+        50
+      ],
+      "recasts": [
+        51
+      ],
+      "portfolio-level": [
+        52
+      ],
+      "CBL": [
+        53
+      ],
+      "estimation": [
+        54
+      ],
+      "as": [
+        55
+      ],
+      "a": [
+        56,
+        63,
+        72,
+        112,
+        177,
+        210
+      ],
+      "time-series": [
+        57
+      ],
+      "imputation": [
+        58
+      ],
+      "task": [
+        59
+      ],
+      "presents": [
+        61
+      ],
+      "CBL-Imputer,": [
+        62
+      ],
+      "two-stage": [
+        64
+      ],
+      "architecture": [
+        65
+      ],
+      "couples": [
+        67
+      ],
+      "diagonally": [
+        68
+      ],
+      "masked": [
+        69,
+        106
+      ],
+      "self-attention": [
+        70,
+        77,
+        101,
+        194
+      ],
+      "with": [
+        71,
+        133,
+        139,
+        195,
+        209
+      ],
+      "gradient-boosted": [
+        73
+      ],
+      "residual": [
+        74
+      ],
+      "module.": [
+        75
+      ],
+      "The": [
+        76,
+        109
+      ],
+      "encoder": [
+        78
+      ],
+      "models": [
+        79
+      ],
+      "long-range": [
+        80
+      ],
+      "temporal": [
+        81
+      ],
+      "structure": [
+        82
+      ],
+      "without": [
+        83,
+        202
+      ],
+      "copying": [
+        84
+      ],
+      "placeholders": [
+        85
+      ],
+      "within": [
+        86
+      ],
+      "window,": [
+        89
+      ],
+      "while": [
+        90,
+        172
+      ],
+      "LightGBM": [
+        92
+      ],
+      "booster": [
+        93
+      ],
+      "corrects": [
+        94
+      ],
+      "localized": [
+        96
+      ],
+      "high-frequency": [
+        97
+      ],
+      "residuals": [
+        98
+      ],
+      "backbone": [
+        102
+      ],
+      "can": [
+        103
+      ],
+      "attenuate": [
+        104
+      ],
+      "peak-window": [
+        107
+      ],
+      "reconstruction.": [
+        108
+      ],
+      "evaluation": [
+        110
+      ],
+      "uses": [
+        111
+      ],
+      "year": [
+        113
+      ],
+      "half-hourly": [
+        115
+      ],
+      "smart-meter": [
+        116
+      ],
+      "data": [
+        117
+      ],
+      "from": [
+        118,
+        159
+      ],
+      "3771": [
+        119
+      ],
+      "London": [
+        120
+      ],
+      "households": [
+        121
+      ],
+      "focuses": [
+        123
+      ],
+      "twelve": [
+        125
+      ],
+      "peak-day": [
+        126
+      ],
+      "events": [
+        127
+      ],
+      "whose": [
+        128
+      ],
+      "four-hour": [
+        129
+      ],
+      "windows": [
+        131
+      ],
+      "coincide": [
+        132
+      ],
+      "highest": [
+        135
+      ],
+      "monthly": [
+        136
+      ],
+      "loads.": [
+        137
+      ],
+      "Compared": [
+        138
+      ],
+      "ten": [
+        140
+      ],
+      "established": [
+        141
+      ],
+      "benchmarks,": [
+        142
+      ],
+      "including": [
+        143
+      ],
+      "High5of10,": [
+        144
+      ],
+      "temperature-adjusted": [
+        145
+      ],
+      "linear": [
+        146
+      ],
+      "regression,": [
+        147,
+        150
+      ],
+      "support": [
+        148
+      ],
+      "vector": [
+        149
+      ],
+      "clusterwise": [
+        152
+      ],
+      "variants,": [
+        153
+      ],
+      "CBL-Imputer": [
+        154
+      ],
+      "reduces": [
+        155
+      ],
+      "mean": [
+        156,
+        166
+      ],
+      "absolute": [
+        157,
+        167
+      ],
+      "error": [
+        158,
+        169
+      ],
+      "33": [
+        160
+      ],
+      "kWh": [
+        161
+      ],
+      "24": [
+        163
+      ],
+      "kWh,": [
+        164,
+        181
+      ],
+      "lowers": [
+        165
+      ],
+      "percentage": [
+        168
+      ],
+      "1.9%": [
+        171
+      ],
+      "keeping": [
+        173
+      ],
+      "bias": [
+        175
+      ],
+      "minimum": [
+        178
+      ],
+      "5": [
+        180
+      ],
+      "which": [
+        182
+      ],
+      "indicates": [
+        183
+      ],
+      "an": [
+        184
+      ],
+      "accurate": [
+        185
+      ],
+      "baseline.": [
+        188
+      ],
+      "These": [
+        189
+      ],
+      "findings": [
+        190
+      ],
+      "demonstrate": [
+        191
+      ],
+      "blending": [
+        193
+      ],
+      "boosted": [
+        196
+      ],
+      "trees": [
+        197
+      ],
+      "yields": [
+        198
+      ],
+      "superior": [
+        199
+      ],
+      "estimates": [
+        201
+      ],
+      "extensive": [
+        203
+      ],
+      "feature": [
+        204
+      ],
+      "engineering,": [
+        205
+      ],
+      "providing": [
+        206
+      ],
+      "aggregators": [
+        208
+      ],
+      "practical": [
+        211
+      ],
+      "tool": [
+        212
+      ],
+      "reducing": [
+        214
+      ],
+      "financial": [
+        215
+      ],
+      "risk": [
+        216
+      ],
+      "evolving": [
+        218
+      ],
+      "markets.": [
+        220
+      ]
+    },
+    "doi": "https://doi.org/10.1016/j.ijepes.2026.111965",
+    "primary_location": {
+      "id": "doi:10.1016/j.ijepes.2026.111965",
+      "is_oa": true,
+      "landing_page_url": "https://doi.org/10.1016/j.ijepes.2026.111965",
+      "pdf_url": null,
+      "source": {
+        "id": "https://openalex.org/S168377509",
+        "display_name": "International Journal of Electrical Power & Energy Systems",
+        "issn_l": "0142-0615",
+        "issn": [
+          "0142-0615",
+          "1879-3517"
+        ],
+        "is_oa": true,
+        "is_in_doaj": true,
+        "is_core": true,
+        "host_organization": "https://openalex.org/P4310320990",
+        "host_organization_name": "Elsevier BV",
+        "host_organization_lineage": [
+          "https://openalex.org/P4310320990"
+        ],
+        "host_organization_lineage_names": [
+          "Elsevier BV"
+        ],
+        "type": "journal"
+      },
+      "license": "cc-by-nc-nd",
+      "license_id": "https://openalex.org/licenses/cc-by-nc-nd",
+      "version": "publishedVersion",
+      "is_accepted": true,
+      "is_published": true,
+      "raw_source_name": "International Journal of Electrical Power &amp; Energy Systems",
+      "raw_type": "journal-article"
+    },
+    "abstract": "Accurate reconstruction of the cumulative customer baseline load (CBL) is essential for transparent settlement in incentive based demand-response programs, yet the baseline becomes unobservable once curtailment begins. Traditional methods rely on historical averaging or low-capacity regression and therefore struggle to reproduce the sharp evening peaks that dominate settlement payments. This work recasts portfolio-level CBL estimation as a time-series imputation task and presents CBL-Imputer, a two-stage architecture that couples diagonally masked self-attention with a gradient-boosted residual module. The self-attention encoder models long-range temporal structure without copying placeholders within the curtailment window, while the LightGBM booster corrects the localized high-frequency residuals that the self-attention backbone can attenuate in masked peak-window reconstruction. The evaluation uses a year of half-hourly smart-meter data from 3771 London households and focuses on twelve peak-day events whose four-hour curtailment windows coincide with the highest monthly loads. Compared with ten established benchmarks, including High5of10, temperature-adjusted linear regression, support vector regression, and clusterwise variants, CBL-Imputer reduces mean absolute error from 33 kWh to 24 kWh, lowers mean absolute percentage error to 1.9% while keeping the bias to a minimum of 5 kWh, which indicates an accurate reconstruction of baseline. These findings demonstrate that blending self-attention with boosted trees yields superior baseline estimates without extensive feature engineering, providing load aggregators with a practical tool for reducing financial risk in evolving demand-response markets."
+  }
+]
