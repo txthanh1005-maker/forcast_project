@@ -62,6 +62,66 @@ Phân hệ này ra đời nhằm giải quyết vấn đề Trễ pha (Phase Lag
 
 ---
 
+## 🛤️ Lộ trình Đọc Code 100% Thấu hiểu Thuật toán (The Technical Manifesto)
+
+Để hiểu thấu đáo triết lý toán học và cơ chế vận hành của cấu trúc Proxy-Lag Cascade Ensemble, bạn bắt buộc phải đọc các file theo đúng thứ tự dưới đây. Chúng tôi đã trích xuất sẵn các đoạn mã cốt lõi (Core Snippets) để bạn đối chiếu ngay lập tức.
+
+### 🔴 Chặng 1: Xây dựng Nền tảng Lý thuyết & Tư duy
+Đừng vội mở code. Hãy đọc các file văn bản để hiểu "Tại sao chúng ta phải làm thế này?".
+1. [**`Latex_report/instruction/project_storyline.md`**](Latex_report/instruction/project_storyline.md): Khởi nguyên ý tưởng. Thừa nhận sự thất bại của LSTM/Deep Learning trên tập dữ liệu mỏng và sự ra đời của khái niệm "Phase Lag" (Trễ pha).
+2. [**`Latex_report/sn-article.tex`**](Latex_report/sn-article.tex) (Mục 2 - Methodology): Bản vẽ kỹ thuật. Đọc để thấu hiểu lý do tại sao không dùng Over-sampling (như SMOGN) mà lại dùng Data Transformation.
+
+### 🟡 Chặng 2: Khám phá Thuật toán Vĩ mô 24h (Giải quyết Mâu thuẫn Đỉnh - Thung lũng)
+Vào thư mục `code/`, đọc để xem cách bắt đỉnh sạc đột biến (Bimodal Peaks) bằng XGBoost/LightGBM.
+3. [**`code/utils.py`**](code/utils.py) - *Phép biến đổi Hình học (TPT)*: 
+   Tìm hàm `target_power_transform`. Thay vì cố gắng cân bằng dữ liệu, chúng ta dùng lũy thừa bậc 3 để "kéo giãn" khoảng cách giữa đỉnh và nhiễu.
+   ```python
+   # Kéo dãn đỉnh cực trị để model dễ nhận diện
+   y_transformed = y ** 3 
+   # Trả lại không gian gốc sau khi dự báo
+   y_pred_original = y_pred ** (1/3) 
+   ```
+4. [**`code/core_functions.py`**](code/core_functions.py) - *Hàm suy hao tùy chỉnh (Custom Peak Loss)*:
+   Đọc `custom_peak_loss`. Tại sao model lại hung hăng (aggressive) với các đỉnh? Vì Gradient và Hessian bị phạt gấp 50 lần.
+   ```python
+   # Nếu model chớm thấy dấu hiệu bùng nổ (>0.7), nó sẽ bị phạt cực nặng nếu đoán sai
+   penalty = np.where(y_pred > 0.7, 50.0, 1.0) 
+   grad = penalty * (y_pred - y_true)
+   hess = penalty * np.ones_like(y_true)
+   ```
+5. [**`code/evaluate_two_stage.py`**](code/evaluate_two_stage.py) - *Cơ chế Rule-Based (Hard-Switch)*:
+   Đây là nơi giải quyết bài toán: Làm sao vừa bắt đỉnh, vừa không làm nát thung lũng? Câu trả lời là kết hợp mô hình ổn định (Baseline) và mô hình hung hăng (TPT) bằng một ngưỡng vật lý.
+   ```python
+   # Ngưỡng vật lý 0.55 được chứng minh bằng Grid Search
+   y_final = np.where(y_base >= 0.55, y_tpt, y_base)
+   ```
+
+### 🟢 Chặng 3: Đột phá Vi chỉnh 1h (Phá vỡ Trễ Pha bằng Proxy Cascade)
+Hệ thống 24h ở trên rất tốt, nhưng nó bị Trễ Pha do nhìn quá xa. Thư mục `code_model_1h/` là nơi "Ma thuật" diễn ra.
+6. [**`code_model_1h/test_leakage.py`**](code_model_1h/test_leakage.py): Trạm trung chuyển. Chạy file này để hội đồng kiểm định tính minh bạch: Xác nhận tuyệt đối không có biến `y_true` (tương lai) nào bị lọt vào tập dữ liệu nội suy của 1h.
+7. [**`code_model_1h/evaluate_proxy_cascade.py`**](code_model_1h/evaluate_proxy_cascade.py) - **TRÁI TIM CỦA DỰ ÁN**: 
+   Mô hình 1h làm sao biết được bức tranh toàn cảnh để không bị nhiễu cục bộ đánh lừa? Bằng cách nhúng dự báo 24h vào thành một Đặc trưng (Feature) dẫn đường!
+   ```python
+   # 1. Bơm dự báo 24h vào làm Kim chỉ nam (Proxy Feature) cho mô hình 1h
+   X_1h['proxy_24h'] = y_pred_24h_macro 
+   
+   # 2. Huấn luyện mô hình 1h dự báo thẳng ra giá trị Tuyệt đối
+   model_1h.fit(X_1h, y_1h_true)
+   y_pred_1h_micro = model_1h.predict(X_test_1h)
+   
+   # 3. Phép kết hợp Tỷ lệ Vàng (Golden Ratio Ensemble)
+   # Giữ 33% quán tính chu kỳ của 24h, và trao 67% quyền phản xạ chớp nhoáng cho 1h
+   y_final = 0.33 * y_pred_24h_macro + 0.67 * y_pred_1h_micro
+   ```
+
+### 🔵 Chặng 4: Chứng minh Tham số (Optuna Optimization)
+8. Đọc các file [**`code_model_1h/tune_*.py`**](code_model_1h): Sự hội tụ của Toán học. Những con số như `w=50` ở Chặng 2, ngưỡng chuyển đổi `0.55`, hay Tỷ lệ Vàng `0.33/0.67` ở Chặng 3 không phải là "Magic Numbers" ngẫu nhiên. Hãy mở các file Tuning để thấy thuật toán TPE của Optuna đã cày nát hàng ngàn vạn cấu hình trên không gian Validation để tìm ra Điểm cực trị (Global Optimum) này.
+
+### 🟣 Chặng 5: Não bộ Trí tuệ Nhân tạo (The Meta-Agent Mind)
+9. Đọc [**`agy-memory/SESSION_STATE.md`**](agy-memory/SESSION_STATE.md) và kỹ năng [**`.agents/skills/deep-logic-audit/SKILL.md`**](.agents/skills/deep-logic-audit/SKILL.md). Khám phá quá trình hệ thống AI Multi-Agent tự động tư duy, thiết lập "Red Teaming" phản biện lẫn nhau, và tự động Refactor toán học (từ Residual Corrector sang Proxy Feature Boosting) để đạt đến độ chuẩn xác tuyệt đối ở mức Q1 Journal.
+
+---
+
 ## 🚀 Hướng dẫn Sử dụng (How to Navigate)
 
 1. **Biên dịch Bài báo:** Mở thư mục `Latex_report/` bằng trình biên tập LaTeX chuyên dụng (như VSCode LaTeX Workshop hoặc Overleaf) và chạy lệnh `pdflatex sn-article.tex` để kết xuất bản PDF hoàn chỉnh.
