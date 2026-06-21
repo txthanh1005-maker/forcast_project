@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.11.8)  21 JUN 2026 04:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.11.8)  21 JUN 2026 10:24
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -857,29 +857,29 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <images/optuna_history.pdf, id=232, 578.16pt x 361.35pt>
 File: images/optuna_history.pdf Graphic file (type pdf)
 <use images/optuna_history.pdf>
-Package pdftex.def Info: images/optuna_history.pdf  used on input line 229.
+Package pdftex.def Info: images/optuna_history.pdf  used on input line 231.
 (pdftex.def)             Requested size: 297.60114pt x 186.00084pt.
 
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.236 
-       <./images/optuna_history.pdf>]
+ [9]
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10]
-LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 250.
+ [10
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.245 \section
+              {Results and Discussion}\label{sec3} <./images/optuna_history.pdf>]
+LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 252.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <4.015> not available
-(Font)              size <5> substituted on input line 250.
+(Font)              size <5> substituted on input line 252.
 
 
 
@@ -890,27 +890,22 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.266 \subsection
-                 {Performance of Peak-Catching Mathematics and Two-Stage Arc...]
+l.267 
+      ]
 <../workspace/figures/base_7days.png, id=315, 1084.05pt x 433.62pt>
 File: ../workspace/figures/base_7days.png Graphic file (type png)
 <use ../workspace/figures/base_7days.png>
-Package pdftex.def Info: ../workspace/figures/base_7days.png  used on input line 272.
+Package pdftex.def Info: ../workspace/figures/base_7days.png  used on input line 274.
 (pdftex.def)             Requested size: 334.79773pt x 133.91795pt.
 <../workspace/figures/tpt_7days.png, id=318, 1084.05pt x 433.62pt>
 File: ../workspace/figures/tpt_7days.png Graphic file (type png)
 <use ../workspace/figures/tpt_7days.png>
-Package pdftex.def Info: ../workspace/figures/tpt_7days.png  used on input line 281.
+Package pdftex.def Info: ../workspace/figures/tpt_7days.png  used on input line 283.
 (pdftex.def)             Requested size: 334.79773pt x 133.91795pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../workspace/figures/two_stage_7days.png, id=320, 1084.05pt x 433.62pt>
-File: ../workspace/figures/two_stage_7days.png Graphic file (type png)
-<use ../workspace/figures/two_stage_7days.png>
-Package pdftex.def Info: ../workspace/figures/two_stage_7days.png  used on input line 290.
-(pdftex.def)             Requested size: 334.79773pt x 133.91795pt.
 
 
 
@@ -920,22 +915,22 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.293 \end{figure}
-                   <../workspace/figures/base_7days.png>]
+l.289 
+       <../workspace/figures/base_7days.png>]
+<../workspace/figures/two_stage_7days.png, id=328, 1084.05pt x 433.62pt>
+File: ../workspace/figures/two_stage_7days.png Graphic file (type png)
+<use ../workspace/figures/two_stage_7days.png>
+Package pdftex.def Info: ../workspace/figures/two_stage_7days.png  used on input line 292.
+(pdftex.def)             Requested size: 334.79773pt x 133.91795pt.
 <../workspace/figures/1h_tune_7days.png, id=330, 1084.05pt x 433.62pt>
 File: ../workspace/figures/1h_tune_7days.png Graphic file (type png)
 <use ../workspace/figures/1h_tune_7days.png>
-Package pdftex.def Info: ../workspace/figures/1h_tune_7days.png  used on input line 300.
+Package pdftex.def Info: ../workspace/figures/1h_tune_7days.png  used on input line 302.
 (pdftex.def)             Requested size: 334.79773pt x 133.91795pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../workspace/figures/1h_tune_residual_7days.png, id=332, 1084.05pt x 433.62pt>
-File: ../workspace/figures/1h_tune_residual_7days.png Graphic file (type png)
-<use ../workspace/figures/1h_tune_residual_7days.png>
-Package pdftex.def Info: ../workspace/figures/1h_tune_residual_7days.png  used on input line 309.
-(pdftex.def)             Requested size: 334.79773pt x 133.91795pt.
 
 
 
@@ -945,21 +940,23 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.312 \end{figure}
-                  
+l.308 
+      
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.312 \end{figure}
-                   <../workspace/figures/tpt_7days.png> <../workspace/figures/two_stage_7days.png>]
+l.308 
+       <../workspace/figures/tpt_7days.png> <../workspace/figures/two_stage_7days.png>]
+<../workspace/figures/1h_tune_residual_7days.png, id=340, 1084.05pt x 433.62pt>
+File: ../workspace/figures/1h_tune_residual_7days.png Graphic file (type png)
+<use ../workspace/figures/1h_tune_residual_7days.png>
+Package pdftex.def Info: ../workspace/figures/1h_tune_residual_7days.png  used on input line 311.
+(pdftex.def)             Requested size: 334.79773pt x 133.91795pt.
 <../workspace/figures/proxy_cascade_7days.png, id=342, 1084.05pt x 433.62pt>
 File: ../workspace/figures/proxy_cascade_7days.png Graphic file (type png)
 <use ../workspace/figures/proxy_cascade_7days.png>
-Package pdftex.def Info: ../workspace/figures/proxy_cascade_7days.png  used on input line 318.
+Package pdftex.def Info: ../workspace/figures/proxy_cascade_7days.png  used on input line 320.
 (pdftex.def)             Requested size: 334.79773pt x 133.91795pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -973,13 +970,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.341 
-      
+l.340 \end{table}
+                 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.341 
-       <../workspace/figures/1h_tune_7days.png> <../workspace/figures/1h_tune_residual_7days.png>]
+l.340 \end{table}
+                  <../workspace/figures/1h_tune_7days.png> <../workspace/figures/1h_tune_residual_7days.png>]
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -988,18 +985,18 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.345 
+l.347 
       
 pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.345 
-       <../workspace/figures/proxy_cascade_7days.png>] (./sn-article.bbl
+l.347 
+       <../workspace/figures/proxy_cascade_7days.png>]
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [16]
+ [16] (./sn-article.bbl
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1025,13 +1022,13 @@ Package rerunfilecheck Info: File `sn-article.out' has not changed.
 Here is how much of TeX's memory you used:
  25643 strings out of 474006
  476674 string characters out of 5729242
- 853217 words of memory out of 5000000
+ 853218 words of memory out of 5000000
  48314 multiletter control sequences out of 15000+600000
  582277 words of font info for 127 fonts, out of 8000000 for 9000
  632 hyphenation exceptions out of 8191
  90i,11n,93p,1269b,804s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/Ungdung/Latex/installed/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><d:/Ungdung/Latex/installed/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/Ungdung/Latex/installed/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><d:/Ungdung/Latex/installed/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><d:/Ungdung/Latex/installed/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/Ungdung/Latex/installed/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/Ungdung/Latex/installed/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><d:/Ungdung/Latex/installed/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/Ungdung/Latex/installed/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/Ungdung/Latex/installed/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><d:/Ungdung/Latex/installed/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><d:/Ungdung/Latex/installed/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><d:/Ungdung/Latex/installed/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/Ungdung/Latex/installed/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><d:/Ungdung/Latex/installed/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/Ungdung/Latex/installed/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><d:/Ungdung/Latex/installed/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on sn-article.pdf (18 pages, 4695008 bytes).
+Output written on sn-article.pdf (18 pages, 4696129 bytes).
 PDF statistics:
  463 PDF objects out of 1000 (max. 8388607)
  268 compressed objects within 3 object streams
