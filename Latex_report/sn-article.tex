@@ -113,60 +113,21 @@ The remainder of this paper is organized as follows: Section \ref{sec2} details 
 
 \section{Material and Methodology}\label{sec2}
 
-\begin{figure}[h]
-\centering
-\begin{tikzpicture}[
-    box/.style={draw, rectangle, minimum width=2.5cm, minimum height=1cm, align=center, fill=blue!5, rounded corners},
-    arrow/.style={->, thick, >=Stealth}
-]
-% Nodes
-\node (input) at (0, 0) {\textbf{Input Features}};
-\node[box] (base) at (3.5, 0) {24h Base Model \\ (Trajectory)};
-\node[box, fill=yellow!10] (trigger) at (7.5, 0) {Rule-Based Trigger \\ ($\hat{y}_{base} \ge 0.55$)};
-\node[box, fill=red!10] (tpt) at (7.5, 2.5) {TPT + Custom \\ Loss Model};
-\node[box] (proxy) at (11.5, 0) {Proxy Feature \\ ($\hat{y}_{24h\_proxy}$)};
-\node[box, fill=green!10] (corrector) at (11.5, -2.5) {1h Micro \\ Tuner (Absolute)};
-\node[align=center] (output) at (11.5, -4.5) {\textbf{Final Output} \\ ($\hat{y}_{final}$)};
+\subsection{Case Study: EV Station 00015}
 
-% Arrows
-\draw[arrow] (input) -- (base);
-\draw[arrow] (base) -- (trigger);
-\draw[arrow] (trigger) -- node[left] {Yes} (tpt);
-\draw[arrow] (tpt) -| (proxy);
-\draw[arrow] (trigger) -- node[above] {No} (proxy);
-\draw[arrow] (proxy) -- (corrector);
-\draw[arrow] (corrector) -- (output);
-\draw[arrow] (input) |- (corrector);
-\end{tikzpicture}
-\caption{Proxy-Lag Cascade Ensemble Architecture. The system bifurcates the macroscopic 24-hour prediction using a Rule-Based trigger, subsequently establishing a cyclical proxy that guides the microscopic 1-hour micro-tuner.}
-\label{fig:architecture}
-\end{figure}
+This research leverages a comprehensive "EV charging station availability tracking" dataset \footnote{Kaggle: EV charging station availability tracking dataset}, which systematically captures $1,317,750$ high-resolution time-series records across an expansive network. The macroscopic dataset monitors 150 charging stations belonging to 8 major operational networks (e.g., Tesla Supercharger, ChargePoint, EVgo, Electrify America) distributed across 15 major US metropolitan areas over a contiguous 6-month tracking period (July–December 2025). Rather than presenting a unidimensional perspective of load demand, the dataset constructs a rich, 33-dimensional feature space sampled at 30-minute intervals. This multidimensional ecosystem encapsulates not only physical station specifications (ranging from Level 2 to 350 kW Hyper-Fast chargers) and real-time availability metrics (e.g., utilization rates and occupied ports), but also incorporates dynamic pricing models (such as 15\% surge adjustments during 5-8 PM peak hours), granular meteorological conditions (temperature, precipitation), and exogenous urban mobility factors (traffic congestion indices and local events).
+
+At the macroscopic network level, the data exposes profound spatial-temporal heterogeneity in charging behaviors. Empirical insights from the dataset confirm non-linear consumption patterns strictly governed by geographic context: Highway Corridors experience intense utilization peaks aligned with transit hours (7-9 AM, 4-7 PM) and weekends; Workplace chargers exhibit sustained plateau usage during business hours; whereas Residential nodes manifest delayed overnight charging surges (6 PM - 6 AM). Furthermore, the overarching demand is demonstrably perturbed by external climatic stressors, where extreme temperatures accelerate battery drain thereby magnifying load demand, while heavy precipitation inversely suppresses vehicular transit.
+
+To rigorously evaluate the predictive capacity and robustness of the proposed hybrid forecasting framework, this research necessitates a deliberate shift from the smoothed macro-network average to a highly volatile micro-level node. Consequently, EV Station 00015 was systematically isolated and selected as the core Case Study. The fundamental rationale behind selecting EV Station 00015 lies in its exceptionally complex load profile, acting as a microscopic intersection of the aforementioned erratic variables. It features extreme decentralization, intense temporal volatility, and a distinct bimodal peak distribution. Unlike conventional stations characterized by predictable diurnal cycles, EV 00015 is subjected to irregular usage spikes and substantial stochastic noise induced by overlapping traffic and weather anomalies. Therefore, successfully forecasting the availability rate at this specific bottleneck serves as a severe algorithmic stress test, empirically demonstrating that the proposed proxy-lag cascade architecture is fully capable of adapting to the most unpredictable and chaotic components within the smart grid.
 
 \subsection{Data Preprocessing and Feature Engineering}\label{subsec2_1}
 
-The primary dataset utilized in this study is the ACN-Data (Adaptive Charging Network Data), an open-source dataset containing real-world electric vehicle charging sessions. Specifically, our data spans multiple months of continuous operation across several high-traffic charging stations. Crucially, the target variable---station utilization rate ($y$)---is defined as the ratio of active charging sessions to the total capacity of the station. This scales the target within the range of $[0, 1]$, where 0 indicates an idle station and 1 signifies maximum capacity. This bounding provides context for our subsequent error metrics (e.g., RMSE), grounding the performance in physical constraints. 
+The raw operational data inherently exhibits localized noise that often obscures broader macroscopic trends. To establish a stable modeling baseline, we implement a structured temporal aggregation strategy, down-sampling the raw temporal resolution to 1-hour intervals. This resampling process applies specific aggregations tailored to the physical meaning of each feature class: continuous variables (e.g., temperatures) are aggregated via the arithmetic mean, whereas categorical or boolean event indicators utilize the logical maximum operator or state-extraction to ensure categorical continuity.
 
-The raw operational dataset, recorded at a high-frequency 30-minute resolution, exhibits localized noise that often obscures broader macroscopic trends of electric vehicle charging demand. To establish a stable modeling baseline, we implement a structured temporal aggregation strategy, down-sampling the temporal resolution to 1-hour intervals. This resampling process applies specific aggregations tailored to the physical meaning of each feature class. Continuous variables, such as utilization rates and environmental temperatures, are aggregated via the arithmetic mean to preserve their representative magnitudes. Conversely, boolean event indicators---such as weekend markers or peak-hour flags---are aggregated utilizing the logical maximum operator, ensuring that the occurrence of critical events within the hour is preserved. Furthermore, categorical features, including localized weather conditions, are sampled by extracting the first observed state within the temporal window, maintaining categorical continuity.
+Following this temporal alignment, rigorous feature engineering is executed to construct a comprehensive predictive state space. Time-series forecasting fundamentally relies on capturing both the immediate short-term memory and the historical cyclic inertia of the system. Guided by the rigorous autocorrelation analysis and feature selection processes (which will be detailed extensively in Section \ref{subsec:lag_analysis}), we explicitly extract a targeted set of lag features, specifically at $t-1$, $t-2$, $t-4$, and $t-24$. This specific subset provides the algorithms with the optimal mathematical balance between immediate kinematic momentum and macroscopic diurnal cyclicity, without introducing excessive multicollinearity.
 
-Following this temporal alignment, rigorous feature engineering is executed to construct a comprehensive predictive state space. Effective time-series forecasting relies on capturing the temporal kinematics and historical inertia of the target variable. To quantify the immediate short-term memory and the trajectory of the system, we extract explicit lag features at $t-1$ and $t-2$. Furthermore, to capture the diurnal cyclic behaviors dictated by human commuting routines, a 24-hour historical lag ($t-24$) is integrated as a macroscopic cyclical anchor. Beyond these point-wise historical coordinates, the predictive model must also comprehend the underlying momentum of the utilization trends. To achieve this, rolling mean features calculated over $3$-hour and $6$-hour windows are engineered into the dataset. These rolling statistics function as low-pass filters, suppressing stochastic volatility and providing the algorithms with the directional momentum of the charging load. This comprehensive extraction of kinematic lags and momentum vectors equips the subsequent algorithms with a descriptive temporal context.
-
-To ensure robust model evaluation, the time-series dataset is chronologically partitioned into Training, Validation, and Testing sets using a 70-15-15 ratio. The Validation set serves for Optuna hyperparameter tuning and for establishing the mathematical Ensemble Ratio (33\% macro, 67\% micro) used in the cascade. Furthermore, feature normalization via MinMax scaling is applied. This is a technical requirement to prevent variables with large magnitudes from dominating the tree-splits and to create the numerical stability required for the Custom Loss Function.
-
-\subsection{Data Characteristic Analysis and Algorithm Selection}\label{subsec2_2}
-
-A comprehensive analysis of the EV charging station utilization dataset reveals two dominant structural characteristics: extreme temporal sparsity and bimodal peak volatility. Unlike aggregated, grid-level electrical load profiles---which benefit from statistical smoothing to produce predictable daily curves---individual station-level data remains erratic. Extended durations of near-zero utilization (valleys) are punctuated by localized charging spikes corresponding to specific commuting windows. This dynamic yields a bimodal peak distribution characterized by flat valleys interspersed with sudden peaks. Furthermore, the total volume of historical operational data available per station is restricted by the deployment timelines of EV infrastructure. This renders the dataset small in the context of modern machine learning, heavily imbalanced, and dominated by the stable valley state.
-
-\begin{figure}[ht]%
-\centering
-\includegraphics[width=0.9\textwidth]{images/eda_bimodal_peak.pdf}
-\caption{Exploratory Data Analysis: Real-world EV charging statithôi non utilization over a 1-week period (ACN-Data). The visualization clearly illustrates the extreme temporal sparsity and bimodal peak volatility, where long periods of near-zero utilization are abruptly interrupted by localized charging spikes.}\label{fig:eda_bimodal}
-\end{figure}
-
-This dual challenge of extreme sparsity and constrained sample size dictates the strategic selection of forecasting algorithms. Load forecasting literature frequently defaults to Deep Learning architectures, particularly Long Short-Term Memory (LSTM) networks, due to their prowess in modeling sequential dependencies. However, deep neural networks are data-intensive and susceptible to overfitting when confronted with stochastic, small-scale datasets. They optimize over continuous, high-dimensional manifolds, struggling to map the discontinuous, discrete jumps that characterize sudden EV charging spikes.
-
-Conversely, ensemble tree-based models---most notably XGBoost, LightGBM, and Random Forest---operate on a divergent mathematical paradigm that is tailored to this environment. Tree-based algorithms partition the feature space using rigid, orthogonal splits, granting them the ability to isolate and memorize discrete, high-frequency anomalies without forcing a continuous mathematical relationship across the entire sparse data manifold. This piecewise constant approximation excels in small tabular data structures, as the ensemble mechanism regularizes the predictive space, mitigating the overfitting characteristic of deep learning models. Moreover, the gradient boosting framework iteratively prioritizes the minimization of sequential residuals, rendering it adept at mapping the non-linear, discontinuous jumps inherent to bimodal peak volatility. Therefore, for this operational domain of localized, sparse, and erratic EV load forecasting, tabular tree-based models provide a robust and sound baseline compared to monolithic deep learning frameworks.
-
-Despite the architectural supremacy of XGBoost and tabular models on sparse data, deploying them out-of-the-box yields underperformance at the peaks. This occurs because their default objective function, typically Mean Squared Error (MSE), is mean-seeking. It optimizes for the dense, stable valleys and ignores the rare extreme peaks, causing chronic under-forecasting. This fundamental limitation necessitates an intervention in the output space, leading to the advanced optimization strategies discussed next.
+To ensure robust model evaluation, the time-series dataset is chronologically partitioned into Training, Validation, and Testing sets using a 70-15-15 ratio. The Validation set is strictly reserved for hyperparameter tuning and the mathematical derivation of threshold parameters. Finally, feature normalization via MinMax scaling is applied. This is a technical requirement to prevent variables with large magnitudes from dominating the algorithmic splits and to create the numerical stability required for the Custom Loss Function.
 
 \subsection{The Mathematics of Peak Catching: Custom Loss and Target Power Transformation (TPT)}\label{subsec2_3}
 
@@ -242,10 +203,84 @@ The definitive breakthrough required a structural paradigm shift toward Proxy Fe
 
 This residual strategy culminates in the formulation of the Proxy-Lag Cascade architecture. To synchronize the dual horizons, the deterministic prediction generated by the 24-hour Two-Stage model is explicitly injected into the 1-hour Micro-Tuner as a primary ``Proxy Feature''. This mechanism acts as a macroscopic navigational map; the 24-hour proxy anchors the forecast with structural predictability, while the 1-hour micro-model leverages this baseline to instantly compute and overlay micro-corrections. By perfectly intertwining macroscopic cyclical stability with microscopic reflex agility, the Proxy-Lag Cascade definitively dismantles the phase lag inertia, achieving unprecedented responsiveness without the mathematical instability of sequence-level optimizations.
 
+\begin{figure}[h]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[
+    box/.style={draw, rectangle, minimum width=2.5cm, minimum height=1cm, align=center, fill=blue!5, rounded corners},
+    arrow/.style={->, thick, >=Stealth}
+]
+% Nodes
+\node (input) at (0, 0) {\textbf{Input Features}};
+\node[box] (base) at (3.5, 0) {24h Base Model \\ (Trajectory)};
+\node[box, fill=yellow!10] (trigger) at (7.5, 0) {Rule-Based Trigger \\ ($\hat{y}_{base} \ge 0.55$)};
+\node[box, fill=red!10] (tpt) at (7.5, 2.5) {TPT + Custom \\ Loss Model};
+\node[box] (proxy) at (11.5, 0) {Proxy Feature \\ ($\hat{y}_{24h\_proxy}$)};
+\node[box, fill=green!10] (corrector) at (11.5, -2.5) {1h Micro \\ Tuner (Absolute)};
+\node[align=center] (output) at (11.5, -4.5) {\textbf{Final Output} \\ ($\hat{y}_{final}$)};
+
+% Arrows
+\draw[arrow] (input) -- (base);
+\draw[arrow] (base) -- (trigger);
+\draw[arrow] (trigger) -- node[left] {Yes} (tpt);
+\draw[arrow] (tpt) -| (proxy);
+\draw[arrow] (trigger) -- node[above] {No} (proxy);
+\draw[arrow] (proxy) -- (corrector);
+\draw[arrow] (corrector) -- (output);
+\draw[arrow] (input) |- (corrector);
+\end{tikzpicture}%
+}
+\caption{Proxy-Lag Cascade Ensemble Architecture. The system bifurcates the macroscopic 24-hour prediction using a Rule-Based trigger, subsequently establishing a cyclical proxy that guides the microscopic 1-hour micro-tuner.}
+\label{fig:architecture}
+\end{figure}
 \section{Results and Discussion}\label{sec3}
 
+\subsection{Data Characteristic Analysis and Algorithm Selection}\label{subsec:data_characteristics}
+
+A comprehensive analysis of the time-series data generated from EV Station 00015 reveals two dominant structural characteristics: extreme temporal sparsity and bimodal peak volatility. Unlike aggregated, grid-level electrical load profiles---which benefit from statistical smoothing to produce predictable daily curves---individual station-level data remains erratic. Extended durations of near-zero utilization (valleys) are punctuated by localized charging spikes corresponding to specific commuting windows. This dynamic yields a bimodal peak distribution characterized by flat valleys interspersed with sudden peaks. Furthermore, the total volume of historical operational data available per station is restricted by the deployment timelines of EV infrastructure. This renders the dataset small in the context of modern machine learning, heavily imbalanced, and dominated by the stable valley state.
+
+\begin{figure}[H]%
+\centering
+\includegraphics[width=0.9\textwidth]{images/eda_bimodal_peak.pdf}
+\caption{Exploratory Data Analysis: Real-world EV charging station utilization over a 1-week period. The visualization clearly illustrates the extreme temporal sparsity and bimodal peak volatility, where long periods of near-zero utilization are abruptly interrupted by localized charging spikes.}\label{fig:eda_bimodal}
+\end{figure}
+
+This dual challenge of extreme sparsity and constrained sample size dictates the strategic selection of forecasting algorithms. Load forecasting literature frequently defaults to Deep Learning architectures, particularly Long Short-Term Memory (LSTM) networks, due to their prowess in modeling sequential dependencies. However, deep neural networks are data-intensive and susceptible to overfitting when confronted with stochastic, small-scale datasets. They optimize over continuous, high-dimensional manifolds, struggling to map the discontinuous, discrete jumps that characterize sudden EV charging spikes.
+
+Conversely, ensemble tree-based models---most notably XGBoost, LightGBM, and Random Forest---operate on a divergent mathematical paradigm that is tailored to this environment. Tree-based algorithms partition the feature space using rigid, orthogonal splits, granting them the ability to isolate and memorize discrete, high-frequency anomalies without forcing a continuous mathematical relationship across the entire sparse data manifold. This piecewise constant approximation excels in small tabular data structures, as the ensemble mechanism regularizes the predictive space, mitigating the overfitting characteristic of deep learning models. Moreover, the gradient boosting framework iteratively prioritizes the minimization of sequential residuals, rendering it adept at mapping the non-linear, discontinuous jumps inherent to bimodal peak volatility. Therefore, for this operational domain of localized, sparse, and erratic EV load forecasting, tabular tree-based models provide a robust and sound baseline compared to monolithic deep learning frameworks.
+
+Despite the architectural supremacy of XGBoost and tabular models on sparse data, deploying them out-of-the-box yields underperformance at the peaks. This occurs because their default objective function, typically Mean Squared Error (MSE), is mean-seeking. It optimizes for the dense, stable valleys and ignores the rare extreme peaks, causing chronic under-forecasting. This fundamental limitation necessitates an intervention in the output space, leading to the advanced optimization strategies discussed next.
+
+\subsection{Lag Analysis and Feature Selection}\label{subsec:lag_analysis}
+
+In the pursuit of defining an optimal predictive state space, a rigorous preliminary evaluation of historical temporal dependencies is paramount. Time-series forecasting intrinsically depends on the extraction of autoregressive momentum to bridge the temporal gap between historical states and future predictions. Figure~\ref{fig:acf_pacf} presents a comprehensive visual analysis utilizing both the Autocorrelation Function (ACF) and the Partial Autocorrelation Function (PACF) applied directly to the EV Station 00015 time series. The ACF plot serves as a macroscopic lens, capturing the compounded, indirect inertia of the charging demand across extended time horizons. Conversely, the PACF effectively strips away intervening correlations, mathematically isolating the pure, direct influence of discrete historical steps on the present state. The empirical graphical output unequivocally reveals profound and statistically significant correlation spikes at explicitly targeted lags: Lags 1, 2, 4, and 24. From a physical domain perspective, Lags 1 and 2 encapsulate the immediate transient continuity of the charging sessions---representing vehicles currently plugged in and dictating short-term occupancy inertia. Lag 4 acts as a critical intermediate bridge, potentially reflecting the turnover rate (average duration) of typical Level 2 charging sessions. Finally, the massive correlation spike precisely at Lag 24 confirms the macroscopic diurnal cyclicity of human mobility, serving as a cyclic anchor for the model. Consequently, these specific lags are identified not by heuristic guessing, but rather through empirical validation, effectively capturing both localized kinematics and global day-night cyclical boundaries.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{images/acf_pacf.png}
+\caption{ACF and PACF plots illustrating significant temporal correlations at targeted lags. The visual confirms strong immediate continuity (Lags 1-2) and a profound 24-hour diurnal cycle.}\label{fig:acf_pacf}
+\end{figure}
+
+While ACF and PACF provide a theoretical foundation for feature extraction, translating these statistical correlations into an optimized machine learning input vector requires rigorous empirical validation to combat the 'Curse of Dimensionality' and suppress multicollinearity. To definitively resolve the optimal subset, an exhaustive computational Hyper-Tuning process was executed utilizing the advanced Bayesian optimization framework, Optuna. We systematically generated and evaluated multiple combinatorial subsets of the identified lags (e.g., $\{1\}, \{1, 2\}, \{1, 2, 24\}, \{1, 2, 3, 4\}$, and $\{1, 2, 4, 24\}$). For each combination, Optuna conducted a strict, multi-trial search across the high-dimensional hyperparameter space of the LightGBM algorithm, aggressively optimizing the loss surface to extract the absolute maximum predictive capacity of each feature set. The visual manifestation of this intense optimization, depicted in Figure~\ref{fig:lag_optimization}, presents a comparative bar chart of the resultant Root Mean Squared Error (RMSE) and Mean Absolute Error (MAE) metrics. The empirical outcome is striking: the specific lag combination comprising strictly $\{1, 2, 4, 24\}$ unequivocally dominates the evaluation, achieving unprecedented predictive performance and registering minimal error bounds. This rigorous combinatorial search proves that naively stacking sequential lags (e.g., $\{1, 2, 3, 4\}$) inevitably introduces destructive noise and multicollinearity, whereas mathematically spacing the lags to capture specific temporal frequencies (immediate, turnover, and diurnal) yields a leaner, significantly more powerful input vector.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{images/lag_optimization.png}
+\caption{Performance evaluation of various lag combinations via Optuna Hyper-Tuning. The exhaustive search empirically identifies the $\{1, 2, 4, 24\}$ subset as the absolute global optimum, minimizing both RMSE and MAE.}\label{fig:lag_optimization}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\textwidth]{images/feature_importance.png}
+\caption{LightGBM Feature Importance corroborating the dominant predictive power of the selected lag variables. The hierarchy visually confirms that the engineered autoregressive memory supersedes exogenous factors in directing the tree-split decisions.}\label{fig:feature_importance}
+\end{figure}
+
+To finalize the justification of our feature engineering methodology and ensure complete transparency of the algorithmic decision-making process, we extracted the internal split-gain metrics from the optimized LightGBM model. The resulting LightGBM Feature Importance plot, meticulously presented in Figure~\ref{fig:feature_importance}, robustly corroborates the findings of both the ACF/PACF statistical analysis and the Optuna combinatorial search. The graphical hierarchy of feature contributions delivers a compelling narrative: the selected autoregressive lag variables---most notably Lag 1, Lag 24, and Lag 2---exercise absolute predictive supremacy, vastly overshadowing the impact of exogenous variables. The chart graphically illustrates that while external environmental factors (such as ambient temperature) and temporal categoricals provide supplementary contextual boundaries, the foundational scaffolding of the forecast is entirely constructed upon the autoregressive memory of the $\{1, 2, 4, 24\}$ subset. This empirical evidence completely validates our deliberate architectural choice to focus computational resources on a precisely engineered autoregressive vector rather than blindly expanding the exogenous feature space. Ultimately, the synthesis of these three analytical vectors---statistical (ACF/PACF), combinatorial (Optuna), and internal tree-mechanics (Feature Importance)---guarantees that the proposed modeling framework operates on a scientifically unassailable, highly performant, and optimally lean input space.
+
+
+
 \subsection{Superiority of Tabular Models over Deep Learning}\label{subsec3_1}
-To empirically validate the theoretical assertions articulated in Section \ref{subsec2_2}, an initial comparative analysis was conducted to benchmark state-of-the-art tree-based tabular models against a representative Deep Learning architecture, specifically Long Short-Term Memory (LSTM) networks. The primary evaluation metric, Root Mean Squared Error (RMSE), was utilized to quantify the absolute predictive deviation across the baseline forecasting horizon. The experimental results, systematically detailed in Table \ref{tab:rmse_comparison}, unequivocally demonstrate the pronounced superiority of ensemble tree-based methodologies within the operational constraints of extreme data sparsity and localized volatility.
+To empirically validate the theoretical assertions articulated in Section \ref{subsec:data_characteristics}, an initial comparative analysis was conducted to benchmark state-of-the-art tree-based tabular models against a representative Deep Learning architecture, specifically Long Short-Term Memory (LSTM) networks. The primary evaluation metric, Root Mean Squared Error (RMSE), was utilized to quantify the absolute predictive deviation across the baseline forecasting horizon. The experimental results, systematically detailed in Table \ref{tab:rmse_comparison}, unequivocally demonstrate the pronounced superiority of ensemble tree-based methodologies within the operational constraints of extreme data sparsity and localized volatility.
 
 \begin{table}[h]
 \caption{RMSE and MAE Comparison of Baseline Models on EV Charging Utilization}\label{tab:rmse_comparison}

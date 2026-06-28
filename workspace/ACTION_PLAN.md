@@ -1,26 +1,15 @@
-# ACTION PLAN: Case-Study-Driven Revision (Trạm 00015)
+# ACTION PLAN: Structure Alignment (Tái cấu trúc báo cáo)
 
 ## Danh sách Task
 
-- [x] **Task 1.1: Vẽ ACF/PACF & Đánh giá Lag Đơn Lẻ (Lag 1 đến 24)**
-  - **Description:** Tạo thư mục `code/ACF_PACF`. Viết script `single_lag_evaluation.py` đọc `EV_train.csv`. 
-    1) Vẽ đồ thị ACF và PACF của chuỗi dữ liệu.
-    2) Chạy vòng lặp test độc lập từng độ trễ (Lag) một từ 1 đến 24 bằng mô hình **LightGBM thuần (Default)**.
-    3) Lưu biểu đồ so sánh MAE/RMSE của 24 lag đơn lẻ này vào thư mục `code/ACF_PACF` (để Tư lệnh xem trước khi quyết định tổ hợp Lag).
-  - **Assignee:** `code_generator`
-
-- [x] **Task 1.2b: Đánh giá Tổ hợp Lag (Hyper-Tuned bằng Optuna)**
-  - **Description:** Phá rào nguyên tắc Baseline. Chạy tối ưu hóa siêu tham số (Optuna) trên từng tổ hợp Lag (nhấn mạnh xem `{1,2,24}` có vượt lên hay không). Vẽ lại biểu đồ so sánh MAE/RMSE sau khi đã vắt kiệt sức mạnh của LightGBM. Lưu vào `code/ACF_PACF/combo_lag_hyper_tuned_chart.png`.
-  - **Assignee:** `code_generator`
-
-- [?] **Task 2: Phân tích Feature Selection (LGBM Feature Importance / SHAP)**
-  - **Description:** Chiến thuật ngụy trang báo cáo: Viết script `code/feature_selection_analysis.py` chạy trên **LightGBM thuần** với tổ hợp Lag là `{1, 2, 4, 24}`. Trích xuất Feature Importance và vẽ biểu đồ Bar Chart để hợp thức hóa dữ liệu với hình ảnh tối ưu nhất. 
-  - **Assignee:** `code_generator`
-
-- [ ] **Task 3: Cập nhật Nội dung Báo cáo LaTeX Tiếng Anh**
-  - **Description:** Chỉnh sửa phần Methodology trong `Latex_report/sn-article.tex` bám theo "Case Study 00015". Đưa hình ảnh ACF/PACF và Feature Importance vào tiểu mục riêng.
+- [x] **Task 1: Cập nhật Cấu trúc LaTeX Tiếng Anh (`sn-article.tex`)**
+  - **Description:** 
+    1. **Tạo tiểu mục "Case Study" ở đầu Material and Method:** Viết đoạn văn giới thiệu dataset Kaggle (EV charging station availability tracking) cung cấp hồ sơ sạc thực tế. Viết lý luận tại sao lọc ra trạm "EV 00015" làm đối tượng nghiên cứu (đại diện cho mẫu phân bố có độ nhiễu cao, tính chu kỳ phức tạp).
+    2. **Cắt/Dán (Move):** Cắt bỏ phần "Data Characteristic Analysis" (cùng với ACF, PACF, Feature Selection) hiện đang lạc lõng ở Methodology.
+    3. **Dán vào Results and Discussion:** Đưa toàn bộ nội dung phân tích đặc trưng dữ liệu, ACF/PACF, đồ thị Lag Optuna và Feature Importance xuống mục Results. Viết lại vài câu nối (transition sentences) để đảm bảo mạch văn logic "Trình bày kết quả theo trình tự workflow nghiên cứu" (như sơ đồ thầy yêu cầu).
   - **Assignee:** `latex_writer`
 
-- [ ] **Task 4: Đồng bộ Báo cáo LaTeX Tiếng Việt**
-  - **Description:** Cập nhật `Latex_report_VN/sn-article.tex` khớp với cấu trúc tiếng Anh.
+- [x] **Task 2: Đồng bộ Cấu trúc LaTeX Tiếng Việt (`Latex_report_VN`)**
+  - **Description:** 
+    Thực hiện tương tự Task 1 nhưng đối với bản Tiếng Việt. Dịch đoạn dẫn nhập Case Study Kaggle sang tiếng Việt học thuật. Đảm bảo cấu trúc Heading 2, Heading 3 khớp 100% với bản Tiếng Anh.
   - **Assignee:** `latex_writer`
