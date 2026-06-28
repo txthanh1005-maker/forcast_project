@@ -17,6 +17,7 @@ Xây dựng báo cáo khoa học dự báo tỷ lệ sử dụng trạm sạc xe
   - Vẽ biểu đồ Feature Importance (SHAP/LGBM) để khẳng định sức mạnh của các biến trễ so với ngoại sinh.
   - Cập nhật thành công các biện luận học thuật (Occam's Razor & Trade-off Justification) vào cả 2 bản LaTeX Tiếng Anh và Tiếng Việt.
 - **[Chiến dịch Structure Alignment]:** Hoàn tất tái phẫu thuật cấu trúc văn bản LaTeX theo đúng sơ đồ của Thầy (`requimentinreport.png`). Đưa phần mô tả nguồn gốc Open Data Kaggle (Trạm 00015) lên đầu Methodology. Cách ly toàn bộ phân tích thực nghiệm (Data Characteristic, ACF/PACF, Feature Selection) và đẩy xuống phần Results and Discussion. Đã đồng bộ hoàn chỉnh cho cả bản Anh và Việt.
+- **[Chiến dịch Học thuật Đồ họa (TikZ/pgfplots)]:** Thiết kế thành công hệ thống 4 siêu biểu đồ (Time-series Split, TPT Graph, Optuna Flow, XAI Tree). Tiến hành Audit chéo (Peer-review) với tỷ lệ Pass 100%. Khắc phục hoàn toàn lỗi tràn lề/đè chữ.
 
 ## Key Decisions
 - Biến mục tiêu: `utilization_rate` $[0, 1]$.

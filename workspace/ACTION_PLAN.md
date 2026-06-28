@@ -13,3 +13,13 @@
   - **Description:** 
     Thực hiện tương tự Task 1 nhưng đối với bản Tiếng Việt. Dịch đoạn dẫn nhập Case Study Kaggle sang tiếng Việt học thuật. Đảm bảo cấu trúc Heading 2, Heading 3 khớp 100% với bản Tiếng Anh.
   - **Assignee:** `latex_writer`
+
+- [x] **Task 3: Nâng cấp Đồ họa Học thuật (TikZ / pgfplots Diagrams)**
+  - **Description:** 
+    Thiết kế và lập trình 4 biểu đồ vector phân tích kiến trúc ngay trong mã LaTeX:
+    1. **Time-Series Split:** Cấu trúc chia 70-15-15 chặn rò rỉ dữ liệu (No Look-ahead bias).
+    2. **TPT Graph:** Đồ thị toán học hàm lũy thừa bậc 3 ($y^3$) và vùng kích hoạt Penalty.
+    3. **Optuna Flowchart:** Sơ đồ thuật toán Bayesian Optimization TPE.
+    4. **XAI Decision Tree:** Cây giải thích thuật toán phân tách Peak/Valley.
+    - Vượt qua kiểm định an toàn và logic (Domain Reviewer Audit: Pass 100%). Đã tinh chỉnh hoàn thiện đồ họa.
+  - **Assignee:** `meta-agent`
