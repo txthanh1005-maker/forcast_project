@@ -43,6 +43,9 @@
 
 \usepackage{graphicx}%
 \usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{positioning, shapes.geometric, arrows.meta, decorations.pathreplacing}
 \usetikzlibrary{positioning, shapes.geometric, arrows.meta}
 \usepackage{multirow}%
 \usepackage{amsmath,amssymb,amsfonts}%
@@ -123,11 +126,54 @@ To rigorously evaluate the predictive capacity and robustness of the proposed hy
 
 \subsection{Data Preprocessing and Feature Engineering}\label{subsec2_1}
 
+\begin{figure}[htbp]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[
+    box/.style={draw, rectangle, minimum width=3cm, minimum height=1.2cm, align=center, fill=gray!5, rounded corners, font=\small},
+    arrow/.style={->, thick, >=Stealth}
+]
+\node[box] (raw) at (0, 0) {Raw EV Data \\ (1.3M records, 30-min)};
+\node[box] (agg) at (4.5, 0) {Temporal Aggregation \\ (1-hour downsampling)};
+\node[box, fill=green!10] (feature) at (9.5, 0) {Feature Engineering \\ (Extract $\{1, 2, 4, 24\}$ lags)};
+\node[box, fill=orange!10] (split) at (14.5, 0) {Chronological Split \\ (70\% Train, 15\% Val, 15\% Test)};
+\node[box, fill=red!10] (scale) at (14.5, -2.5) {MinMax Scaling \\ (Numerical Stability)};
+
+\draw[arrow] (raw) -- (agg);
+\draw[arrow] (agg) -- (feature);
+\draw[arrow] (feature) -- (split);
+\draw[arrow] (split) -- (scale);
+\end{tikzpicture}%
+}
+\caption{End-to-End Data Preprocessing and Feature Engineering Workflow.}\label{fig:preprocessing}
+\end{figure}
+
 The raw operational data inherently exhibits localized noise that often obscures broader macroscopic trends. To establish a stable modeling baseline, we implement a structured temporal aggregation strategy, down-sampling the raw temporal resolution to 1-hour intervals. This resampling process applies specific aggregations tailored to the physical meaning of each feature class: continuous variables (e.g., temperatures) are aggregated via the arithmetic mean, whereas categorical or boolean event indicators utilize the logical maximum operator or state-extraction to ensure categorical continuity.
 
 Following this temporal alignment, rigorous feature engineering is executed to construct a comprehensive predictive state space. Time-series forecasting fundamentally relies on capturing both the immediate short-term memory and the historical cyclic inertia of the system. Guided by the rigorous autocorrelation analysis and feature selection processes (which will be detailed extensively in Section \ref{subsec:lag_analysis}), we explicitly extract a targeted set of lag features, specifically at $t-1$, $t-2$, $t-4$, and $t-24$. This specific subset provides the algorithms with the optimal mathematical balance between immediate kinematic momentum and macroscopic diurnal cyclicity, without introducing excessive multicollinearity.
 
 To ensure robust model evaluation, the time-series dataset is chronologically partitioned into Training, Validation, and Testing sets using a 70-15-15 ratio. The Validation set is strictly reserved for hyperparameter tuning and the mathematical derivation of threshold parameters. Finally, feature normalization via MinMax scaling is applied. This is a technical requirement to prevent variables with large magnitudes from dominating the algorithmic splits and to create the numerical stability required for the Custom Loss Function.
+
+\begin{figure}[htbp]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}
+    % Timeline base
+    \draw[->, thick] (0,-1) -- (17.5,-1) node[below left, yshift=2pt] {\textbf{Time (July - Dec 2025)}};
+    % Rectangles
+    \filldraw[fill=blue!20, draw=blue!80, thick] (0, 0.2) rectangle (11, 1.2) node[midway, font=\small\bfseries] {Training Set (70\%)};
+    \filldraw[fill=yellow!30, draw=yellow!80!orange, thick] (11, 0.2) rectangle (14, 1.2) node[midway, align=center, font=\small\bfseries] {Validation \\ (15\%)};
+    \filldraw[fill=red!20, draw=red!80, thick] (14, 0.2) rectangle (17, 1.2) node[midway, align=center, font=\small\bfseries] {Testing Set \\ (15\%)};
+    % Braces & annotations
+    \draw[thick, decorate, decoration={brace, amplitude=5pt, mirror}] (0,-0) -- (11,-0) node[midway, below=5pt, font=\footnotesize] {Model Training \& Base Splits};
+    \draw[thick, decorate, decoration={brace, amplitude=5pt, mirror}] (11,-0) -- (14,-0) node[midway, below=5pt, align=center, font=\footnotesize] {Optuna Tuning \& \\ Threshold Search};
+    \draw[thick, decorate, decoration={brace, amplitude=5pt, mirror}] (14,-0) -- (17,-0) node[midway, below=5pt, align=center, font=\footnotesize] {Out-of-Sample \\ Evaluation};
+    % No Look-ahead arrow
+    \draw[->, thick, red, dashed] (11, 1.5) to[bend left=20] node[above, font=\footnotesize\bfseries] {Strict Chronological Boundary (No Look-ahead Bias)} (17, 1.5);
+\end{tikzpicture}%
+}
+\caption{Chronological Time-Series Split illustrating the strict temporal partitioning strategy.}\label{fig:time_split}
+\end{figure}
 
 \subsection{The Mathematics of Peak Catching: Custom Loss and Target Power Transformation (TPT)}\label{subsec2_3}
 
@@ -150,6 +196,38 @@ where the dynamic penalty weight $w_i$ is governed by the critical threshold $0.
 w_i = \begin{cases} 50.0, & \text{if } y'_i \ge 0.343 \\ 1.0, & \text{otherwise} \end{cases}
 \end{equation}
 Because $0.7^3 = 0.343$, this threshold precisely targets the critical operational regime where the original utilization rate $y$ reaches $0.7$ (or 70\%). Crucially, these specific parameters---the $0.7$ threshold definition of an extreme peak and the massive $50.0$ penalty weight---were not heuristically assumed. They were rigorously identified via the Optuna hyperparameter optimization framework executing an exhaustive search over the Validation set, guaranteeing they represent the mathematical optima for this specific small-data distribution. By mathematically anchoring this optimized $50.0\times$ penalty strictly to the $y \ge 0.343$ threshold, the algorithm is explicitly forced to aggressively map the underlying kinematics of extreme charging events, thereby overcoming the mean-seeking limitations of traditional regression without compromising the integrity of the input data.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=10cm, height=6cm,
+    domain=0:1,
+    samples=100,
+    axis lines=left,
+    xlabel={Original Utilization Rate $y$},
+    ylabel={Transformed Target $y' = y^3$},
+    ymin=0, ymax=1,
+    xmin=0, xmax=1,
+    grid=major,
+    legend pos=north west
+]
+% Plot y^3
+\addplot [blue, thick] {x^3};
+\addlegendentry{$y^3$ Transformation}
+
+% Highlight threshold region
+\addplot [fill=red!20, draw=none, domain=0.7:1] {x^3} \closedcycle;
+\addlegendentry{Penalty $50\times$ Trigger Zone}
+
+% Threshold line
+\draw[dashed, red, thick] (axis cs:0.7,0) -- (axis cs:0.7,0.343);
+\draw[dashed, red, thick] (axis cs:0,0.343) -- (axis cs:0.7,0.343);
+\node[red, anchor=south east] at (axis cs:0.68, 0.36) {$y \ge 0.7 \Rightarrow y' \ge 0.343$};
+\end{axis}
+\end{tikzpicture}
+\caption{Mathematical visualization of the Target Power Transformation (TPT). The non-linear cubic function exponentially separates extreme peaks from stable valleys, while the highlighted region denotes the aggressive $50\times$ penalty zone determined by Optuna.}\label{fig:tpt_graph}
+\end{figure}
 
 \subsection{Overcoming the Valley: The Two-Stage Rule-Based Architecture}\label{subsec2_4}
 
@@ -207,27 +285,39 @@ This residual strategy culminates in the formulation of the Proxy-Lag Cascade ar
 \centering
 \resizebox{\textwidth}{!}{%
 \begin{tikzpicture}[
-    box/.style={draw, rectangle, minimum width=2.5cm, minimum height=1cm, align=center, fill=blue!5, rounded corners},
-    arrow/.style={->, thick, >=Stealth}
+    box/.style={draw, rectangle, minimum width=2.8cm, minimum height=1.2cm, align=center, fill=blue!5, rounded corners, font=\small},
+    arrow/.style={->, thick, >=Stealth},
+    dashed_arrow/.style={->, thick, dashed, >=Stealth}
 ]
 % Nodes
-\node (input) at (0, 0) {\textbf{Input Features}};
-\node[box] (base) at (3.5, 0) {24h Base Model \\ (Trajectory)};
-\node[box, fill=yellow!10] (trigger) at (7.5, 0) {Rule-Based Trigger \\ ($\hat{y}_{base} \ge 0.55$)};
-\node[box, fill=red!10] (tpt) at (7.5, 2.5) {TPT + Custom \\ Loss Model};
-\node[box] (proxy) at (11.5, 0) {Proxy Feature \\ ($\hat{y}_{24h\_proxy}$)};
-\node[box, fill=green!10] (corrector) at (11.5, -2.5) {1h Micro \\ Tuner (Absolute)};
-\node[align=center] (output) at (11.5, -4.5) {\textbf{Final Output} \\ ($\hat{y}_{final}$)};
+\node[box, fill=gray!15] (lags) at (0, 1.5) {Autoregressive Lags \\ $\{1, 2, 4, 24\}$};
+\node[box, fill=gray!15] (exog) at (0, -1.5) {Exogenous Factors \\ (Weather, Time)};
+
+\node[box] (input_concat) at (3.5, 0) {Input Vector \\ $X_t$};
+
+\node[box, fill=blue!10] (base) at (8, 0) {Stage 1: 24h Base Model};
+\node[box, fill=yellow!20] (trigger) at (13.5, 0) {Hard-Switch Trigger \\ ($\hat{y}_{base} \ge 0.55$)};
+
+\node[box, fill=red!15] (tpt) at (13.5, 3) {Extreme Peak Catcher \\ (TPT + $50\times$ WMSE)};
+\node[box, fill=cyan!15] (proxy) at (19, 0) {Proxy Target Variable \\ ($\hat{y}_{proxy\_24h}$)};
+
+\node[box, fill=green!15] (corrector) at (19, -3) {Stage 2: 1h Micro-Tuner \\ (LightGBM / Huber Loss)};
+
+\node[box, fill=orange!15] (output) at (19, -6) {Final Forecast \\ ($\hat{y}_{final}$)};
 
 % Arrows
-\draw[arrow] (input) -- (base);
-\draw[arrow] (base) -- (trigger);
-\draw[arrow] (trigger) -- node[left] {Yes} (tpt);
-\draw[arrow] (tpt) -| (proxy);
-\draw[arrow] (trigger) -- node[above] {No} (proxy);
-\draw[arrow] (proxy) -- (corrector);
+\draw[arrow] (lags) -| (input_concat);
+\draw[arrow] (exog) -| (input_concat);
+\draw[arrow] (input_concat) -- (base);
+\draw[arrow] (base) -- node[above, font=\footnotesize] {Trajectory} (trigger);
+
+\draw[arrow] (trigger) -- node[left, font=\footnotesize] {Yes (Peak)} (tpt);
+\draw[arrow] (tpt) -| node[above, font=\footnotesize] {Amplified Forecast} (proxy);
+\draw[arrow] (trigger) -- node[above, font=\footnotesize] {No (Valley)} (proxy);
+
+\draw[arrow] (proxy) -- node[right, font=\footnotesize] {Guidance Signal} (corrector);
+\draw[arrow] (input_concat) |- node[above right, font=\footnotesize] {Original State $X_t$} (corrector);
 \draw[arrow] (corrector) -- (output);
-\draw[arrow] (input) |- (corrector);
 \end{tikzpicture}%
 }
 \caption{Proxy-Lag Cascade Ensemble Architecture. The system bifurcates the macroscopic 24-hour prediction using a Rule-Based trigger, subsequently establishing a cyclical proxy that guides the microscopic 1-hour micro-tuner.}
@@ -265,6 +355,29 @@ While ACF and PACF provide a theoretical foundation for feature extraction, tran
 
 \begin{figure}[htbp]
 \centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[
+    box/.style={draw, rectangle, minimum width=2.5cm, minimum height=1cm, align=center, fill=blue!5, rounded corners, font=\small},
+    arrow/.style={->, thick, >=Stealth}
+]
+\node[box] (init) at (0, 0) {Define Search Space \\ (Lags, Learning Rate)};
+\node[box, fill=yellow!15] (sampler) at (4.5, 0) {TPE Sampler \\ (Bayesian Selection)};
+\node[box, fill=red!10] (lgbm) at (9, 0) {Train LightGBM \\ (Validation Set)};
+\node[box, fill=orange!10] (loss) at (13.5, 0) {Evaluate Objective \\ (Minimize WMSE)};
+\node[box, fill=green!15] (optimal) at (9, -2.5) {Global Optima Reached \\ $\{1, 2, 4, 24\}$};
+
+\draw[arrow] (init) -- (sampler);
+\draw[arrow] (sampler) -- (lgbm);
+\draw[arrow] (lgbm) -- (loss);
+\draw[arrow, dashed] (loss) -- node[above, font=\footnotesize] {Update Priors} (4.5, 1.5) -- (sampler);
+\draw[arrow] (loss) |- (optimal);
+\end{tikzpicture}%
+}
+\caption{Optuna TPE (Tree-structured Parzen Estimator) Optimization Workflow. The system aggressively explores the high-dimensional hyperparameter space to definitively isolate the optimal lag subset without heuristic bias.}\label{fig:optuna_flow}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
 \includegraphics[width=0.8\textwidth]{images/lag_optimization.png}
 \caption{Performance evaluation of various lag combinations via Optuna Hyper-Tuning. The exhaustive search empirically identifies the $\{1, 2, 4, 24\}$ subset as the absolute global optimum, minimizing both RMSE and MAE.}\label{fig:lag_optimization}
 \end{figure}
@@ -276,6 +389,34 @@ While ACF and PACF provide a theoretical foundation for feature extraction, tran
 \end{figure}
 
 To finalize the justification of our feature engineering methodology and ensure complete transparency of the algorithmic decision-making process, we extracted the internal split-gain metrics from the optimized LightGBM model. The resulting LightGBM Feature Importance plot, meticulously presented in Figure~\ref{fig:feature_importance}, robustly corroborates the findings of both the ACF/PACF statistical analysis and the Optuna combinatorial search. The graphical hierarchy of feature contributions delivers a compelling narrative: the selected autoregressive lag variables---most notably Lag 1, Lag 24, and Lag 2---exercise absolute predictive supremacy, vastly overshadowing the impact of exogenous variables. The chart graphically illustrates that while external environmental factors (such as ambient temperature) and temporal categoricals provide supplementary contextual boundaries, the foundational scaffolding of the forecast is entirely constructed upon the autoregressive memory of the $\{1, 2, 4, 24\}$ subset. This empirical evidence completely validates our deliberate architectural choice to focus computational resources on a precisely engineered autoregressive vector rather than blindly expanding the exogenous feature space. Ultimately, the synthesis of these three analytical vectors---statistical (ACF/PACF), combinatorial (Optuna), and internal tree-mechanics (Feature Importance)---guarantees that the proposed modeling framework operates on a scientifically unassailable, highly performant, and optimally lean input space.
+
+\begin{figure}[htbp]
+\centering
+\resizebox{0.8\textwidth}{!}{%
+\begin{tikzpicture}[
+    node/.style={draw, rectangle, align=center, fill=blue!5, rounded corners, font=\small, minimum height=0.8cm},
+    leaf/.style={draw, rectangle, align=center, fill=red!10, rounded corners, font=\small, minimum width=1.5cm},
+    arrow/.style={->, thick, >=Stealth}
+]
+\node[node, fill=yellow!20] (root) at (0,0) {\textbf{Lag 24} \\ $> 0.65$?};
+\node[node] (l1) at (-3,-1.5) {\textbf{Lag 1} \\ $> 0.4$?};
+\node[node] (r1) at (3,-1.5) {\textbf{Lag 4} \\ $< 0.2$?};
+
+\node[leaf, fill=green!10] (l1_l) at (-4.5,-3) {Valley \\ (Stable)};
+\node[leaf] (l1_r) at (-1.5,-3) {Minor Peak \\ (Turnover)};
+\node[leaf] (r1_l) at (1.5,-3) {Extreme Peak \\ (Surge)};
+\node[leaf, fill=green!10] (r1_r) at (4.5,-3) {Valley \\ (Plateau)};
+
+\draw[arrow] (root) -- node[above left, font=\footnotesize] {No} (l1);
+\draw[arrow] (root) -- node[above right, font=\footnotesize] {Yes} (r1);
+\draw[arrow] (l1) -- node[above left, font=\footnotesize] {No} (l1_l);
+\draw[arrow] (l1) -- node[above right, font=\footnotesize] {Yes} (l1_r);
+\draw[arrow] (r1) -- node[above left, font=\footnotesize] {Yes} (r1_l);
+\draw[arrow] (r1) -- node[above right, font=\footnotesize] {No} (r1_r);
+\end{tikzpicture}%
+}
+\caption{Explainable AI (XAI) Conceptual Tree Split. This structural visualization illustrates how the LightGBM algorithm intrinsically utilizes the foundational autoregressive lags (Lag 24 and Lag 1) to logically isolate extreme peak events from stable valleys.}\label{fig:xai_tree}
+\end{figure}
 
 
 
