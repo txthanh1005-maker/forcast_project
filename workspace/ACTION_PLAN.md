@@ -1,18 +1,26 @@
-# ACTION PLAN: Cập nhật Ngôn ngữ Toán học và Sơ đồ Kiến trúc
+# ACTION PLAN: Case-Study-Driven Revision (Trạm 00015)
 
-## Tình trạng các chiến dịch cũ
-- [x] **Task 1-4:** Chiến dịch "Càn quét & Tái thiết" Bibliography (Đã hoàn tất).
+## Danh sách Task
 
-## Chiến dịch mới: Cập nhật Toán học & Hình ảnh (Theo update_fomula_imagine)
+- [?] **Task 1.1: Vẽ ACF/PACF & Đánh giá Lag Đơn Lẻ (Lag 1 đến 24)**
+  - **Description:** Tạo thư mục `code/ACF_PACF`. Viết script `single_lag_evaluation.py` đọc `EV_train.csv`. 
+    1) Vẽ đồ thị ACF và PACF của chuỗi dữ liệu.
+    2) Chạy vòng lặp test độc lập từng độ trễ (Lag) một từ 1 đến 24 bằng mô hình **LightGBM thuần (Default)**.
+    3) Lưu biểu đồ so sánh MAE/RMSE của 24 lag đơn lẻ này vào thư mục `code/ACF_PACF` (để Tư lệnh xem trước khi quyết định tổ hợp Lag).
+  - **Assignee:** `code_generator`
 
-- [x] **Task 5:** Bổ sung công thức Custom Peak Loss
-  - **Description:** Thêm công thức WMSE với trọng số phạt động $w_i$ vào phần giới thiệu hàm Loss.
+- [ ] **Task 1.2: Đánh giá Tổ hợp Lag (Kết hợp Lag)**
+  - **Description:** (WAITING) Sẽ thực hiện sau khi Tư lệnh review kết quả từ Task 1.1 và ra lệnh cụ thể.
+  - **Assignee:** `code_generator`
+
+- [ ] **Task 2: Phân tích Feature Selection (LGBM Feature Importance / SHAP)**
+  - **Description:** Viết script `code/feature_selection_analysis.py` chạy trên **LightGBM thuần**. Trích xuất Feature Importance và vẽ biểu đồ Bar Chart. 
+  - **Assignee:** `code_generator`
+
+- [ ] **Task 3: Cập nhật Nội dung Báo cáo LaTeX Tiếng Anh**
+  - **Description:** Chỉnh sửa phần Methodology trong `Latex_report/sn-article.tex` bám theo "Case Study 00015". Đưa hình ảnh ACF/PACF và Feature Importance vào tiểu mục riêng.
   - **Assignee:** `latex_writer`
-  
-- [x] **Task 6:** Bổ sung công thức Residual Learning
-  - **Description:** Thêm định nghĩa toán học phần dư $\epsilon_t$ vào phần trình bày của 1-hour micro-corrector.
-  - **Assignee:** `latex_writer`
 
-- [x] **Task 7:** Chèn Architecture Block Diagram
-  - **Description:** Vẽ sơ đồ khối kiến trúc tổng thể (Proxy-Lag Cascade) bằng TikZ (hoặc tương đương) chèn vào Section 2, thể hiện rõ dòng chảy dữ liệu.
+- [ ] **Task 4: Đồng bộ Báo cáo LaTeX Tiếng Việt**
+  - **Description:** Cập nhật `Latex_report_VN/sn-article.tex` khớp với cấu trúc tiếng Anh.
   - **Assignee:** `latex_writer`

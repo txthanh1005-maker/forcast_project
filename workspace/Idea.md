@@ -1,24 +1,24 @@
-# IDEA & STATIC SPEC: Chiến dịch "Càn quét & Tái thiết" Bibliography
+# IDEA & STATIC SPEC: Chiến dịch Case-Study-Driven Revision
 
 ## 1. Objective & Success Criteria
-- **Objective:** Tái thiết lập toàn bộ file `sn-bibliography.bib` với dữ liệu (metadata) chuẩn xác 100% (từ nguồn OpenAlex/Web), không còn tác giả "Unknown". Cập nhật file LaTeX `sn-article.tex` để sử dụng các trích dẫn mới, nâng cao độ tin cậy của bài báo khoa học.
+- **Objective:** Đổi trọng tâm báo cáo sang "Case-Study-Driven", chỉ tập trung huấn luyện và phân tích duy nhất trên dữ liệu Trạm EV 00015 (đã được cô lập). Chứng minh định lượng việc chọn Lag và Feature Selection bằng các biểu đồ minh bạch.
 - **Success Criteria:** 
-  - Hoàn tất tra cứu 14 bài báo (từ `ref1_2` đến `ref4_3`) và lấy chính xác BibTeX (Author, Journal, Year, Volume, DOI, etc.).
-  - Tìm mới 1-2 bài báo thực tế (Real papers) thay thế `ref1_0` và `ref1_1` nhằm chứng minh sự hiệu quả của Tree-based models (XGBoost, RF) với dữ liệu nhỏ trong lĩnh vực dự báo EV/tải trọng.
-  - File `sn-bibliography.bib` mới không còn bất kỳ entry nào chứa `author={Unknown}`.
-  - File `sn-article.tex` được cập nhật thay thế trích dẫn `ref1_0` và `ref1_1` thành công.
+  - Đưa ra được biểu đồ ACF/PACF và biểu đồ/bảng so sánh hiệu suất khi thay đổi Lag (dùng Base Model, không dùng kỹ thuật tối ưu).
+  - Đưa ra được biểu đồ SHAP / Feature Importance cho các đặc trưng để chứng minh độ quan trọng.
+  - Sửa báo cáo LaTeX bám theo kết quả của trạm 00015.
 
 ## 2. Assumptions
-- Các DOI hoặc tiêu đề từ `ref1_2` đến `ref4_3` hiện tại có thể tìm thấy metadata chuẩn xác trên các hệ thống cơ sở dữ liệu học thuật (OpenAlex, Crossref, etc.).
-- File LaTeX sử dụng định dạng BibTeX chuẩn để quản lý tài liệu tham khảo.
+- Dữ liệu `EV_train.csv`, `EV_test.csv`, `EV_val.csv` đang có sẵn trong thư mục chính là dữ liệu ĐÃ LỌC riêng cho trạm EV 00015. Không cần tiền xử lý thêm phần lọc trạm.
+- Mô hình chạy kiểm thử Lag và Feature Importance là mô hình LGBM thuần (Base Model), hoàn toàn KHÔNG áp dụng các kỹ thuật nâng cao (như custom loss, SMOGN, hay ensemble) nhằm giữ tính khách quan tuyệt đối cho baseline.
 
 ## 3. Tech Stack & Structure
-- **Tools:** `literature-search-openalex`, `search_web`.
+- **Tools:** Python (Pandas, Statsmodels, LightGBM, SHAP, Matplotlib).
 - **Target Files:**
-  - `Latex_report/sn-bibliography.bib` (Tạo mới hoàn toàn).
-  - `Latex_report/sn-article.tex` (Thay thế nội dung).
+  - `code/lag_evaluation.py`
+  - `code/feature_selection_analysis.py`
+  - `Latex_report/sn-article.tex`
 
 ## 4. Boundaries
-- **ALWAYS DO:** Đảm bảo chính tả, định dạng chuẩn BibTeX.
-- **ASK FIRST:** Bất cứ khi nào việc thay thế nội dung file `.tex` có nguy cơ hỏng định dạng tài liệu, hoặc không tìm thấy bài báo nào trong số 14 bài, phải báo cáo.
-- **FORBIDDEN:** TUYỆT ĐỐI không sử dụng `author={Unknown}`. Không bịa đặt bài báo (hallucination).
+- **ALWAYS DO:** Dùng LightGBM mặc định. Trả về kết quả đầu ra bằng file biểu đồ (.png/.pdf).
+- **ASK FIRST:** Thay đổi bất kỳ thông số siêu tham số (hyperparameter) nào, vì Tư lệnh đã yêu cầu chỉ dùng model thuần.
+- **FORBIDDEN:** KHÔNG code kỹ thuật lọc dữ liệu các trạm khác nữa vì data đã sẵn sàng. KHÔNG thêm kỹ thuật tối ưu hóa vào bước đánh giá Feature/Lag.

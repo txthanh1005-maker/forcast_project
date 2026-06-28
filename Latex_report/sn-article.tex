@@ -159,7 +159,7 @@ A comprehensive analysis of the EV charging station utilization dataset reveals 
 \begin{figure}[ht]%
 \centering
 \includegraphics[width=0.9\textwidth]{images/eda_bimodal_peak.pdf}
-\caption{Exploratory Data Analysis: Real-world EV charging station utilization over a 1-week period (ACN-Data). The visualization clearly illustrates the extreme temporal sparsity and bimodal peak volatility, where long periods of near-zero utilization are abruptly interrupted by localized charging spikes.}\label{fig:eda_bimodal}
+\caption{Exploratory Data Analysis: Real-world EV charging statithôi non utilization over a 1-week period (ACN-Data). The visualization clearly illustrates the extreme temporal sparsity and bimodal peak volatility, where long periods of near-zero utilization are abruptly interrupted by localized charging spikes.}\label{fig:eda_bimodal}
 \end{figure}
 
 This dual challenge of extreme sparsity and constrained sample size dictates the strategic selection of forecasting algorithms. Load forecasting literature frequently defaults to Deep Learning architectures, particularly Long Short-Term Memory (LSTM) networks, due to their prowess in modeling sequential dependencies. However, deep neural networks are data-intensive and susceptible to overfitting when confronted with stochastic, small-scale datasets. They optimize over continuous, high-dimensional manifolds, struggling to map the discontinuous, discrete jumps that characterize sudden EV charging spikes.
